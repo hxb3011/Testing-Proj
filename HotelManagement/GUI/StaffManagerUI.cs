@@ -87,13 +87,18 @@
             if (selectedIndex >= 0
                 || StaffManagerBO.Instance.SelectedStaff != null)
             {
+                lbStaffs.Visible = ClientSize.Width >= 600;
                 pnStaffInfo.Visible = true;
                 ucStaffInfo.LoadStaff();
                 ucStaffInfo.Editing = editing;
                 ucGranting.LoadPermissions();
                 ucGranting.Editing = editing;
             }
-            else pnStaffInfo.Visible = false;
+            else
+            {
+                lbStaffs.Visible = true;
+                pnStaffInfo.Visible = false;
+            }
         }
 
         private void AdjustSelectedIndex()
@@ -342,11 +347,13 @@
                 lbStaffs.ClientSize = s;
                 pnStaffInfo.Location = new(s.Width, 0);
                 s.Width = width - s.Width;
+                lbStaffs.Visible = true;
             }
             else
             {
                 lbStaffs.ClientSize = s;
                 pnStaffInfo.Location = new(0, 0);
+                lbStaffs.Visible = selectedIndex < 0;
             }
             pnStaffInfo.ClientSize = s;
             s -= scrollSize;

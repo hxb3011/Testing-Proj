@@ -45,7 +45,7 @@
                     lbPhoneError.Visible = !bo.IsValidPhone(tbPhone.Text);
                     cbRole.Enabled = true;
                     tbSalary.ReadOnly = false;
-                    lbSalaryError.Visible = !double.TryParse(tbSalary.Text, NumberStyles.Any, CultureInfo.CurrentCulture, out _);
+                    lbSalaryError.Visible = !double.TryParse(tbSalary.Text, NumberStyles.Any, CultureInfo.CurrentCulture, out double salary) || salary < 0;
                     cbAccount.Enabled = true;
                     cbGroup.Enabled = true;
                     cbStatus.Enabled = true;
@@ -233,7 +233,7 @@
         private void OnPhoneNumberChanged(object sender, EventArgs e)
             => lbPhoneError.Visible = !StaffManagerBO.Instance.IsValidPhone(tbPhone.Text);
         private void OnSalaryChanged(object sender, EventArgs e)
-            => lbSalaryError.Visible = !double.TryParse(tbSalary.Text, NumberStyles.Any, CultureInfo.CurrentCulture, out _);
+            => lbSalaryError.Visible = !double.TryParse(tbSalary.Text, NumberStyles.Any, CultureInfo.CurrentCulture, out double salary) || salary < 0;
 
         public event EventHandler PermissionsInfoChanged;
 

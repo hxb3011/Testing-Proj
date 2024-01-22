@@ -77,11 +77,16 @@
             if (selectedIndex >= 0
                 || AccountManagerBO.Instance.SelectedAccount != null)
             {
+                lbAccounts.Visible = ClientSize.Width >= 600;
                 pnAccountInfo.Visible = true;
                 ucAccountInfo.LoadAccount();
                 ucAccountInfo.Editing = editing;
             }
-            else pnAccountInfo.Visible = false;
+            else
+            {
+                lbAccounts.Visible = true;
+                pnAccountInfo.Visible = false;
+            }
         }
 
         private void AdjustSelectedIndex()
@@ -307,11 +312,13 @@
                 lbAccounts.ClientSize = s;
                 pnAccountInfo.Location = new(s.Width, 0);
                 s.Width = width - s.Width;
+                lbAccounts.Visible = true;
             }
             else
             {
                 lbAccounts.ClientSize = s;
                 pnAccountInfo.Location = new(0, 0);
+                lbAccounts.Visible = selectedIndex < 0;
             }
             pnAccountInfo.ClientSize = s;
             s -= scrollSize;

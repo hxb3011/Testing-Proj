@@ -88,9 +88,8 @@
             int istart = 0, iend = bo.RevenueByMonth.Count - 1;
             if (!double.IsNaN(start))
             {
-                if (start < 0) istart = 0;
-                else if (start > iend) istart = iend;
-                else istart = (int)start;
+                if (start >= 0)
+                    istart = start > iend ? iend : (int)start;
                 if (!double.IsNaN(end))
                     end += start - 1;
             }

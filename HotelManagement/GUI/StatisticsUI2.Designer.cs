@@ -146,6 +146,7 @@
             series3.ChartArea = "arService";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series3.IsValueShownAsLabel = true;
+            series3.Label = "#PERCENT";
             series3.Legend = "leService";
             series3.LegendText = "#VALX";
             series3.Name = "seService";

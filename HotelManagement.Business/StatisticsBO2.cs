@@ -41,8 +41,8 @@
                     for (; ld < d; ++ld)
                         RevenueByMonth.Add((ld, 0));
                 }
-                ld = d;
                 RevenueByMonth.Add((d, t));
+                ld = d + 1;
             }
             if (RevenueByMonth.Count == 0)
             {
