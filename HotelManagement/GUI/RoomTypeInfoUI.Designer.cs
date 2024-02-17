@@ -52,8 +52,10 @@
             dtgvConvinienceRoomType = new DataGridView();
             panel9 = new Panel();
             groupBox3 = new GroupBox();
+            errPrice = new Label();
             txbPrice = new TextBox();
             groupBox2 = new GroupBox();
+            errName = new Label();
             txbName = new TextBox();
             groupBox1 = new GroupBox();
             txbID = new TextBox();
@@ -106,9 +108,9 @@
             labelTitle.Anchor = AnchorStyles.None;
             labelTitle.AutoSize = true;
             labelTitle.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelTitle.Location = new Point(354, 24);
+            labelTitle.Location = new Point(369, 26);
             labelTitle.Name = "labelTitle";
-            labelTitle.Size = new Size(167, 24);
+            labelTitle.Size = new Size(136, 19);
             labelTitle.TabIndex = 0;
             labelTitle.Text = "Thông tin phòng";
             // 
@@ -187,7 +189,7 @@
             panel7.Controls.Add(label1);
             panel7.Controls.Add(btnActive);
             panel7.Dock = DockStyle.Top;
-            panel7.Location = new Point(0, 427);
+            panel7.Location = new Point(0, 460);
             panel7.Name = "panel7";
             panel7.Size = new Size(875, 98);
             panel7.TabIndex = 6;
@@ -199,7 +201,7 @@
             cbbQuantity.Items.AddRange(new object[] { "1", "2", "3", "4" });
             cbbQuantity.Location = new Point(104, 13);
             cbbQuantity.Name = "cbbQuantity";
-            cbbQuantity.Size = new Size(151, 28);
+            cbbQuantity.Size = new Size(151, 23);
             cbbQuantity.TabIndex = 12;
             // 
             // label1
@@ -207,7 +209,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(12, 16);
             label1.Name = "label1";
-            label1.Size = new Size(69, 20);
+            label1.Size = new Size(54, 15);
             label1.TabIndex = 11;
             label1.Text = "Số lượng";
             // 
@@ -226,7 +228,7 @@
             // 
             panel4.Controls.Add(tableLayoutPanelThongTin);
             panel4.Dock = DockStyle.Top;
-            panel4.Location = new Point(0, 217);
+            panel4.Location = new Point(0, 250);
             panel4.Name = "panel4";
             panel4.Size = new Size(875, 210);
             panel4.TabIndex = 5;
@@ -273,9 +275,9 @@
             panel6.AutoScroll = true;
             panel6.Controls.Add(dtgvConvinience);
             panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(3, 23);
+            panel6.Location = new Point(3, 19);
             panel6.Name = "panel6";
-            panel6.Size = new Size(425, 178);
+            panel6.Size = new Size(425, 182);
             panel6.TabIndex = 0;
             // 
             // dtgvConvinience
@@ -291,7 +293,7 @@
             dtgvConvinience.ReadOnly = true;
             dtgvConvinience.RowHeadersWidth = 51;
             dtgvConvinience.RowTemplate.Height = 29;
-            dtgvConvinience.Size = new Size(425, 178);
+            dtgvConvinience.Size = new Size(425, 182);
             dtgvConvinience.TabIndex = 2;
             dtgvConvinience.CellClick += dtgvConvinience_CellClick;
             // 
@@ -312,9 +314,9 @@
             panel10.AutoScroll = true;
             panel10.Controls.Add(dtgvConvinienceRoomType);
             panel10.Dock = DockStyle.Fill;
-            panel10.Location = new Point(3, 23);
+            panel10.Location = new Point(3, 19);
             panel10.Name = "panel10";
-            panel10.Size = new Size(426, 178);
+            panel10.Size = new Size(426, 182);
             panel10.TabIndex = 0;
             // 
             // dtgvConvinienceRoomType
@@ -330,55 +332,77 @@
             dtgvConvinienceRoomType.ReadOnly = true;
             dtgvConvinienceRoomType.RowHeadersWidth = 51;
             dtgvConvinienceRoomType.RowTemplate.Height = 29;
-            dtgvConvinienceRoomType.Size = new Size(426, 178);
+            dtgvConvinienceRoomType.Size = new Size(426, 182);
             dtgvConvinienceRoomType.TabIndex = 2;
             dtgvConvinienceRoomType.CellClick += dtgvConvinienceRoomType_CellClick;
             // 
             // panel9
             // 
             panel9.Dock = DockStyle.Top;
-            panel9.Location = new Point(0, 174);
+            panel9.Location = new Point(0, 207);
             panel9.Name = "panel9";
             panel9.Size = new Size(875, 43);
             panel9.TabIndex = 4;
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(errPrice);
             groupBox3.Controls.Add(txbPrice);
             groupBox3.Dock = DockStyle.Top;
-            groupBox3.Location = new Point(0, 116);
+            groupBox3.Location = new Point(0, 134);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(875, 58);
+            groupBox3.Size = new Size(875, 73);
             groupBox3.TabIndex = 2;
             groupBox3.TabStop = false;
             groupBox3.Text = "Giá loại phòng";
             // 
+            // errPrice
+            // 
+            errPrice.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            errPrice.ForeColor = Color.Red;
+            errPrice.Location = new Point(3, 45);
+            errPrice.Name = "errPrice";
+            errPrice.Size = new Size(866, 22);
+            errPrice.TabIndex = 3;
+            // 
             // txbPrice
             // 
             txbPrice.Dock = DockStyle.Fill;
-            txbPrice.Location = new Point(3, 23);
+            txbPrice.Location = new Point(3, 19);
             txbPrice.Name = "txbPrice";
-            txbPrice.Size = new Size(869, 27);
+            txbPrice.Size = new Size(869, 23);
             txbPrice.TabIndex = 1;
+            txbPrice.TextChanged += txbPrice_TextChanged;
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(errName);
             groupBox2.Controls.Add(txbName);
             groupBox2.Dock = DockStyle.Top;
             groupBox2.Location = new Point(0, 58);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(875, 58);
+            groupBox2.Size = new Size(875, 76);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Tên loại phòng";
             // 
+            // errName
+            // 
+            errName.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            errName.ForeColor = Color.Red;
+            errName.Location = new Point(3, 51);
+            errName.Name = "errName";
+            errName.Size = new Size(866, 22);
+            errName.TabIndex = 2;
+            // 
             // txbName
             // 
             txbName.Dock = DockStyle.Fill;
-            txbName.Location = new Point(3, 23);
+            txbName.Location = new Point(3, 19);
             txbName.Name = "txbName";
-            txbName.Size = new Size(869, 27);
+            txbName.Size = new Size(869, 23);
             txbName.TabIndex = 1;
+            txbName.TextChanged += txbName_TextChanged;
             // 
             // groupBox1
             // 
@@ -394,9 +418,9 @@
             // txbID
             // 
             txbID.Dock = DockStyle.Fill;
-            txbID.Location = new Point(3, 23);
+            txbID.Location = new Point(3, 19);
             txbID.Name = "txbID";
-            txbID.Size = new Size(869, 27);
+            txbID.Size = new Size(869, 23);
             txbID.TabIndex = 0;
             // 
             // RoomTypeInfoUI
@@ -466,5 +490,7 @@
         private Label label1;
         private Button btnActive;
         private ComboBox cbbQuantity;
+        private Label errPrice;
+        private Label errName;
     }
 }

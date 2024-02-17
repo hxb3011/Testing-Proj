@@ -36,23 +36,36 @@
             btnReset = new Button();
             btnSave = new Button();
             panel2 = new Panel();
-            tableLayoutPanel3 = new TableLayoutPanel();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            panel4 = new Panel();
+            txtId = new TextBox();
+            label2 = new Label();
+            panel5 = new Panel();
+            errName = new Label();
+            txtName = new TextBox();
+            txt = new Label();
+            panel6 = new Panel();
+            cbxServiceType = new ComboBox();
+            label4 = new Label();
+            panel7 = new Panel();
+            errUnitPrice = new Label();
+            txtUnitPrice = new TextBox();
+            label5 = new Label();
+            panel8 = new Panel();
+            errUnit = new Label();
             txtUnit = new TextBox();
             label7 = new Label();
-            label6 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            txtUnitPrice = new TextBox();
-            txtName = new TextBox();
-            label2 = new Label();
-            txtId = new TextBox();
-            cbxServiceType = new ComboBox();
             panel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel3.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panel2.SuspendLayout();
-            tableLayoutPanel3.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
+            panel4.SuspendLayout();
+            panel5.SuspendLayout();
+            panel6.SuspendLayout();
+            panel7.SuspendLayout();
+            panel8.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -84,9 +97,9 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(141, 24);
+            label1.Location = new Point(158, 26);
             label1.Name = "label1";
-            label1.Size = new Size(176, 24);
+            label1.Size = new Size(142, 19);
             label1.TabIndex = 0;
             label1.Text = "Thông tin dịch vụ";
             // 
@@ -94,7 +107,7 @@
             // 
             panel3.Controls.Add(tableLayoutPanel1);
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 477);
+            panel3.Location = new Point(0, 447);
             panel3.Name = "panel3";
             panel3.Size = new Size(459, 51);
             panel3.TabIndex = 1;
@@ -146,157 +159,189 @@
             // panel2
             // 
             panel2.AutoScroll = true;
-            panel2.Controls.Add(tableLayoutPanel3);
+            panel2.Controls.Add(flowLayoutPanel1);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 72);
             panel2.Margin = new Padding(20, 0, 20, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(459, 405);
+            panel2.Size = new Size(459, 375);
             panel2.TabIndex = 2;
             // 
-            // tableLayoutPanel3
+            // flowLayoutPanel1
             // 
-            tableLayoutPanel3.AutoScroll = true;
-            tableLayoutPanel3.ColumnCount = 1;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Controls.Add(txtUnit, 0, 9);
-            tableLayoutPanel3.Controls.Add(label7, 0, 8);
-            tableLayoutPanel3.Controls.Add(label6, 0, 6);
-            tableLayoutPanel3.Controls.Add(label5, 0, 4);
-            tableLayoutPanel3.Controls.Add(label4, 0, 2);
-            tableLayoutPanel3.Controls.Add(txtUnitPrice, 0, 7);
-            tableLayoutPanel3.Controls.Add(txtName, 0, 3);
-            tableLayoutPanel3.Controls.Add(label2, 0, 0);
-            tableLayoutPanel3.Controls.Add(txtId, 0, 1);
-            tableLayoutPanel3.Controls.Add(cbxServiceType, 0, 5);
-            tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(0, 0);
-            tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 10;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.Size = new Size(459, 405);
-            tableLayoutPanel3.TabIndex = 0;
+            flowLayoutPanel1.Controls.Add(panel4);
+            flowLayoutPanel1.Controls.Add(panel5);
+            flowLayoutPanel1.Controls.Add(panel6);
+            flowLayoutPanel1.Controls.Add(panel7);
+            flowLayoutPanel1.Controls.Add(panel8);
+            flowLayoutPanel1.Location = new Point(3, 0);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(453, 362);
+            flowLayoutPanel1.TabIndex = 0;
             // 
-            // txtUnit
+            // panel4
             // 
-            txtUnit.Dock = DockStyle.Fill;
-            txtUnit.Location = new Point(15, 360);
-            txtUnit.Margin = new Padding(15, 0, 15, 0);
-            txtUnit.Name = "txtUnit";
-            txtUnit.Size = new Size(429, 27);
-            txtUnit.TabIndex = 29;
+            panel4.Controls.Add(txtId);
+            panel4.Controls.Add(label2);
+            panel4.Location = new Point(3, 3);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(450, 52);
+            panel4.TabIndex = 0;
             // 
-            // label7
+            // txtId
             // 
-            label7.AutoSize = true;
-            label7.Dock = DockStyle.Bottom;
-            label7.Location = new Point(15, 340);
-            label7.Margin = new Padding(15, 0, 0, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(444, 20);
-            label7.TabIndex = 26;
-            label7.Text = "Đơn vị";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Dock = DockStyle.Bottom;
-            label6.Location = new Point(15, 260);
-            label6.Margin = new Padding(15, 0, 0, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(444, 20);
-            label6.TabIndex = 25;
-            label6.Text = "Giá dịch vụ";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Dock = DockStyle.Bottom;
-            label5.Location = new Point(15, 180);
-            label5.Margin = new Padding(15, 0, 0, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(444, 20);
-            label5.TabIndex = 24;
-            label5.Text = "Loại dịch vụ";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Dock = DockStyle.Bottom;
-            label4.Location = new Point(15, 100);
-            label4.Margin = new Padding(15, 0, 0, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(444, 20);
-            label4.TabIndex = 23;
-            label4.Text = "Tên dịch vụ";
-            // 
-            // txtUnitPrice
-            // 
-            txtUnitPrice.Dock = DockStyle.Fill;
-            txtUnitPrice.Location = new Point(15, 280);
-            txtUnitPrice.Margin = new Padding(15, 0, 15, 0);
-            txtUnitPrice.Name = "txtUnitPrice";
-            txtUnitPrice.Size = new Size(429, 27);
-            txtUnitPrice.TabIndex = 22;
-            // 
-            // txtName
-            // 
-            txtName.Dock = DockStyle.Fill;
-            txtName.Location = new Point(15, 120);
-            txtName.Margin = new Padding(15, 0, 15, 0);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(429, 27);
-            txtName.TabIndex = 18;
+            txtId.Enabled = false;
+            txtId.Location = new Point(6, 18);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(435, 23);
+            txtId.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Dock = DockStyle.Bottom;
-            label2.Location = new Point(15, 20);
-            label2.Margin = new Padding(15, 0, 0, 0);
+            label2.Location = new Point(3, 0);
             label2.Name = "label2";
-            label2.Size = new Size(444, 20);
+            label2.Size = new Size(66, 15);
             label2.TabIndex = 0;
             label2.Text = "Mã dịch vụ";
             // 
-            // txtId
+            // panel5
             // 
-            txtId.BackColor = SystemColors.Window;
-            txtId.Dock = DockStyle.Fill;
-            txtId.Location = new Point(15, 40);
-            txtId.Margin = new Padding(15, 0, 15, 0);
-            txtId.Name = "txtId";
-            txtId.ReadOnly = true;
-            txtId.Size = new Size(429, 27);
-            txtId.TabIndex = 1;
+            panel5.Controls.Add(errName);
+            panel5.Controls.Add(txtName);
+            panel5.Controls.Add(txt);
+            panel5.Location = new Point(3, 61);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(450, 72);
+            panel5.TabIndex = 1;
+            // 
+            // errName
+            // 
+            errName.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            errName.ForeColor = Color.Red;
+            errName.Location = new Point(3, 44);
+            errName.Name = "errName";
+            errName.Size = new Size(438, 22);
+            errName.TabIndex = 3;
+            // 
+            // txtName
+            // 
+            txtName.Location = new Point(6, 18);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(435, 23);
+            txtName.TabIndex = 1;
+            txtName.TextChanged += txtName_TextChanged;
+            // 
+            // txt
+            // 
+            txt.AutoSize = true;
+            txt.Location = new Point(3, 0);
+            txt.Name = "txt";
+            txt.Size = new Size(67, 15);
+            txt.TabIndex = 0;
+            txt.Text = "Tên dịch vụ";
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(cbxServiceType);
+            panel6.Controls.Add(label4);
+            panel6.Location = new Point(3, 139);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(450, 55);
+            panel6.TabIndex = 2;
             // 
             // cbxServiceType
             // 
-            cbxServiceType.Dock = DockStyle.Fill;
-            cbxServiceType.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxServiceType.FormattingEnabled = true;
-            cbxServiceType.Location = new Point(15, 200);
-            cbxServiceType.Margin = new Padding(15, 0, 15, 0);
+            cbxServiceType.Location = new Point(6, 18);
             cbxServiceType.Name = "cbxServiceType";
-            cbxServiceType.Size = new Size(429, 28);
-            cbxServiceType.TabIndex = 45;
+            cbxServiceType.Size = new Size(435, 23);
+            cbxServiceType.TabIndex = 1;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(3, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(71, 15);
+            label4.TabIndex = 0;
+            label4.Text = "Loại dịch vụ";
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(errUnitPrice);
+            panel7.Controls.Add(txtUnitPrice);
+            panel7.Controls.Add(label5);
+            panel7.Location = new Point(3, 200);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(450, 72);
+            panel7.TabIndex = 3;
+            // 
+            // errUnitPrice
+            // 
+            errUnitPrice.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            errUnitPrice.ForeColor = Color.Red;
+            errUnitPrice.Location = new Point(3, 44);
+            errUnitPrice.Name = "errUnitPrice";
+            errUnitPrice.Size = new Size(438, 22);
+            errUnitPrice.TabIndex = 3;
+            // 
+            // txtUnitPrice
+            // 
+            txtUnitPrice.Location = new Point(6, 18);
+            txtUnitPrice.Name = "txtUnitPrice";
+            txtUnitPrice.Size = new Size(435, 23);
+            txtUnitPrice.TabIndex = 1;
+            txtUnitPrice.TextChanged += txtUnitPrice_TextChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(3, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(66, 15);
+            label5.TabIndex = 0;
+            label5.Text = "Giá dịch vụ";
+            // 
+            // panel8
+            // 
+            panel8.Controls.Add(errUnit);
+            panel8.Controls.Add(txtUnit);
+            panel8.Controls.Add(label7);
+            panel8.Location = new Point(3, 278);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(450, 72);
+            panel8.TabIndex = 4;
+            // 
+            // errUnit
+            // 
+            errUnit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            errUnit.ForeColor = Color.Red;
+            errUnit.Location = new Point(3, 44);
+            errUnit.Name = "errUnit";
+            errUnit.Size = new Size(438, 22);
+            errUnit.TabIndex = 3;
+            // 
+            // txtUnit
+            // 
+            txtUnit.Location = new Point(6, 18);
+            txtUnit.Name = "txtUnit";
+            txtUnit.Size = new Size(435, 23);
+            txtUnit.TabIndex = 1;
+            txtUnit.TextChanged += txtUnit_TextChanged;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(3, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(41, 15);
+            label7.TabIndex = 0;
+            label7.Text = "Đơn vị";
             // 
             // ServiceInfoUI
             // 
-            ClientSize = new Size(459, 528);
+            ClientSize = new Size(459, 498);
             Controls.Add(panel2);
             Controls.Add(panel3);
             Controls.Add(panel1);
@@ -308,8 +353,17 @@
             panel3.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
-            tableLayoutPanel3.ResumeLayout(false);
-            tableLayoutPanel3.PerformLayout();
+            flowLayoutPanel1.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -328,19 +382,27 @@
         private Panel panel2;
         private TableLayoutPanel tableLayoutPanel1;
         private Button btnSave;
-        private TableLayoutPanel tableLayoutPanel3;
-        private Label label2;
-        private TextBox txtId;
-        private TextBox txtUnit;
-        private Label label7;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private TextBox txtUnitPrice;
-        private TextBox txtName;
         private Button btnReset;
         private Panel panel3;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Panel panel4;
+        private TextBox txtId;
+        private Label label2;
+        private Panel panel5;
+        private TextBox txtName;
+        private Label txt;
+        private Label errName;
+        private Panel panel6;
+        private Label label4;
         private ComboBox cbxServiceType;
+        private Panel panel7;
+        private Label errUnitPrice;
+        private TextBox txtUnitPrice;
+        private Label label5;
+        private Panel panel8;
+        private Label errUnit;
+        private TextBox txtUnit;
+        private Label label7;
     }
 
     #endregion

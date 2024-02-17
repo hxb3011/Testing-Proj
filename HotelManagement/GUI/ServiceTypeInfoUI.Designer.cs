@@ -37,6 +37,7 @@
             btnSave = new Button();
             panel2 = new Panel();
             tableLayoutPanel3 = new TableLayoutPanel();
+            errName = new Label();
             label4 = new Label();
             txtName = new TextBox();
             label2 = new Label();
@@ -78,9 +79,9 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(93, 24);
+            label1.Location = new Point(114, 26);
             label1.Name = "label1";
-            label1.Size = new Size(215, 24);
+            label1.Size = new Size(173, 19);
             label1.TabIndex = 0;
             label1.Text = "Thông tin loại dịch vụ";
             // 
@@ -88,7 +89,7 @@
             // 
             panel3.Controls.Add(tableLayoutPanel1);
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 252);
+            panel3.Location = new Point(0, 275);
             panel3.Name = "panel3";
             panel3.Size = new Size(401, 51);
             panel3.TabIndex = 1;
@@ -145,7 +146,7 @@
             panel2.Location = new Point(0, 72);
             panel2.Margin = new Padding(20, 0, 20, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(401, 180);
+            panel2.Size = new Size(401, 203);
             panel2.TabIndex = 2;
             // 
             // tableLayoutPanel3
@@ -153,6 +154,7 @@
             tableLayoutPanel3.AutoScroll = true;
             tableLayoutPanel3.ColumnCount = 1;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel3.Controls.Add(errName, 0, 4);
             tableLayoutPanel3.Controls.Add(label4, 0, 2);
             tableLayoutPanel3.Controls.Add(txtName, 0, 3);
             tableLayoutPanel3.Controls.Add(label2, 0, 0);
@@ -160,11 +162,13 @@
             tableLayoutPanel3.Dock = DockStyle.Fill;
             tableLayoutPanel3.Location = new Point(0, 0);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 4;
+            tableLayoutPanel3.RowCount = 6;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 27F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 48F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
@@ -173,39 +177,50 @@
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.Size = new Size(401, 180);
+            tableLayoutPanel3.Size = new Size(401, 203);
             tableLayoutPanel3.TabIndex = 0;
+            // 
+            // errName
+            // 
+            errName.AutoSize = true;
+            errName.Dock = DockStyle.Bottom;
+            errName.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            errName.ForeColor = Color.Red;
+            errName.Location = new Point(15, 137);
+            errName.Margin = new Padding(15, 0, 0, 0);
+            errName.Name = "errName";
+            errName.Size = new Size(386, 15);
+            errName.TabIndex = 24;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Dock = DockStyle.Bottom;
-            label4.Location = new Point(15, 100);
+            label4.Location = new Point(15, 85);
             label4.Margin = new Padding(15, 0, 0, 0);
             label4.Name = "label4";
-            label4.Size = new Size(386, 20);
+            label4.Size = new Size(386, 15);
             label4.TabIndex = 23;
             label4.Text = "Tên dịch vụ";
             // 
             // txtName
             // 
             txtName.Dock = DockStyle.Fill;
-            txtName.Location = new Point(15, 120);
+            txtName.Location = new Point(15, 100);
             txtName.Margin = new Padding(15, 0, 15, 0);
             txtName.Name = "txtName";
-            txtName.Size = new Size(371, 27);
+            txtName.Size = new Size(371, 23);
             txtName.TabIndex = 18;
+            txtName.TextChanged += txtName_TextChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Dock = DockStyle.Bottom;
-            label2.Location = new Point(15, 20);
+            label2.Location = new Point(15, 25);
             label2.Margin = new Padding(15, 0, 0, 0);
             label2.Name = "label2";
-            label2.Size = new Size(386, 20);
+            label2.Size = new Size(386, 15);
             label2.TabIndex = 0;
             label2.Text = "Mã dịch vụ";
             // 
@@ -217,12 +232,12 @@
             txtId.Margin = new Padding(15, 0, 15, 0);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
-            txtId.Size = new Size(371, 27);
+            txtId.Size = new Size(371, 23);
             txtId.TabIndex = 1;
             // 
             // ServiceTypeInfoUI
             // 
-            ClientSize = new Size(401, 303);
+            ClientSize = new Size(401, 326);
             Controls.Add(panel2);
             Controls.Add(panel3);
             Controls.Add(panel1);
@@ -264,5 +279,7 @@
 
 
         #endregion
+
+        private Label errName;
     }
 }

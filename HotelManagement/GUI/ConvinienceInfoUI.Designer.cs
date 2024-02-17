@@ -41,6 +41,7 @@
             txbName = new TextBox();
             groupBox1 = new GroupBox();
             txbID = new TextBox();
+            errName = new Label();
             panel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -79,9 +80,9 @@
             labelTitle.Anchor = AnchorStyles.None;
             labelTitle.AutoSize = true;
             labelTitle.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelTitle.Location = new Point(151, 24);
+            labelTitle.Location = new Point(166, 26);
             labelTitle.Name = "labelTitle";
-            labelTitle.Size = new Size(167, 24);
+            labelTitle.Size = new Size(136, 19);
             labelTitle.TabIndex = 0;
             labelTitle.Text = "Thông tin phòng";
             // 
@@ -153,10 +154,11 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(txbName);
+            groupBox2.Controls.Add(errName);
             groupBox2.Dock = DockStyle.Top;
             groupBox2.Location = new Point(0, 58);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(469, 58);
+            groupBox2.Size = new Size(469, 72);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Tên tiện nghi";
@@ -164,10 +166,11 @@
             // txbName
             // 
             txbName.Dock = DockStyle.Fill;
-            txbName.Location = new Point(3, 23);
+            txbName.Location = new Point(3, 19);
             txbName.Name = "txbName";
-            txbName.Size = new Size(463, 27);
+            txbName.Size = new Size(463, 23);
             txbName.TabIndex = 1;
+            txbName.TextChanged += txbName_TextChanged;
             // 
             // groupBox1
             // 
@@ -183,10 +186,19 @@
             // txbID
             // 
             txbID.Dock = DockStyle.Fill;
-            txbID.Location = new Point(3, 23);
+            txbID.Location = new Point(3, 19);
             txbID.Name = "txbID";
-            txbID.Size = new Size(463, 27);
+            txbID.Size = new Size(463, 23);
             txbID.TabIndex = 0;
+            // 
+            // errName
+            // 
+            errName.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            errName.ForeColor = Color.Red;
+            errName.Location = new Point(6, 45);
+            errName.Name = "errName";
+            errName.Size = new Size(457, 22);
+            errName.TabIndex = 3;
             // 
             // ConvinienceInfoUI
             // 
@@ -225,5 +237,6 @@
         private GroupBox groupBox1;
         private TextBox txbID;
         private TextBox txbName;
+        private Label errName;
     }
 }

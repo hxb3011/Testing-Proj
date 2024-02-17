@@ -99,6 +99,22 @@ namespace HotelManagement.GUI
                 }
             }
         }
+        private bool validateForm()
+        {
+            bool isNameValid =
+            Validator.Instance.checkTextBox(txtFullname, errFullName, new string[] { "not-empty", "name" });
+
+            bool isCCCDValid =
+            Validator.Instance.checkTextBox(txtCCCD, errCCCD, new string[] { "citizen-id" });
+
+            bool isPhoneValid =
+            Validator.Instance.checkTextBox(txtPhone, errPhone, new string[] { "not-empty", "phone-number" });
+
+            bool isAddressValid =
+            Validator.Instance.checkTextBox(txtAddress, errAddress, new string[] { "not-empty" });
+
+            return isNameValid && isCCCDValid &&  isPhoneValid && isAddressValid; 
+        }
 
         #endregion
 
@@ -113,17 +129,21 @@ namespace HotelManagement.GUI
             string address = txtAddress.Text;
             string phone = txtPhone.Text;
             string cccd = txtCCCD.Text;
-
-            Customer customer = new Customer(id, fullname, gender, birthday, address, cccd, phone);
-            if (isEdit)
+            if (validateForm())
             {
-                updateCustomer(customer);
-            }
-            else
-            {
-                addCustomer(customer);
-            }
+                Customer customer = new Customer(id, fullname, gender, birthday, address, cccd, phone);
+                if (isEdit)
+                {
+                    updateCustomer(customer);
+                }
+                else
+                {
+                    addCustomer(customer);
+                }
+            }    
         }
+
+        
 
         private void btnReset_Click(object sender, EventArgs e)
         {
@@ -134,6 +154,26 @@ namespace HotelManagement.GUI
 
             cbxGender.SelectedIndex = 0;
             dateTimeBirthday.Value = DateTime.Now;
+        }
+
+        private void txtFullname_TextChanged(object sender, EventArgs e)
+        {
+            Validator.Instance.checkTextBox(txtFullname, errFullName, new string[] { "not-empty", "name" });
+        }
+
+        private void txtCCCD_TextChanged(object sender, EventArgs e)
+        {
+            Validator.Instance.checkTextBox(txtCCCD, errCCCD, new string[] { "citizen-id" });
+        }
+
+        private void txtPhone_TextChanged(object sender, EventArgs e)
+        {
+            Validator.Instance.checkTextBox(txtPhone, errPhone, new string[] { "not-empty","phone-number" });
+        }
+
+        private void txtAddress_TextChanged(object sender, EventArgs e)
+        {
+            Validator.Instance.checkTextBox(txtAddress, errAddress, new string[] { "not-empty" });
         }
         #endregion
 

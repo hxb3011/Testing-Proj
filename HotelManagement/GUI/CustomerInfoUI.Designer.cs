@@ -30,27 +30,46 @@
             btnReset = new Button();
             btnSave = new Button();
             panel2 = new Panel();
-            tableLayoutPanel3 = new TableLayoutPanel();
-            txtAddress = new TextBox();
-            txtPhone = new TextBox();
-            label9 = new Label();
-            label7 = new Label();
-            label6 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            txtCCCD = new TextBox();
-            txtFullname = new TextBox();
-            label2 = new Label();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            panel4 = new Panel();
             txtId = new TextBox();
-            label10 = new Label();
+            label2 = new Label();
+            panel5 = new Panel();
+            errFullName = new Label();
+            txtFullname = new TextBox();
+            label5 = new Label();
+            panel6 = new Panel();
             cbxGender = new ComboBox();
+            label7 = new Label();
+            panel7 = new Panel();
+            errCCCD = new Label();
+            txtCCCD = new TextBox();
+            label9 = new Label();
+            panel8 = new Panel();
+            errPhone = new Label();
+            txtPhone = new TextBox();
+            label11 = new Label();
+            panel9 = new Panel();
             dateTimeBirthday = new DateTimePicker();
+            label12 = new Label();
+            label13 = new Label();
+            panel10 = new Panel();
+            errAddress = new Label();
+            txtAddress = new TextBox();
+            label15 = new Label();
             panel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel3.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panel2.SuspendLayout();
-            tableLayoutPanel3.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
+            panel4.SuspendLayout();
+            panel5.SuspendLayout();
+            panel6.SuspendLayout();
+            panel7.SuspendLayout();
+            panel8.SuspendLayout();
+            panel9.SuspendLayout();
+            panel10.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -92,7 +111,7 @@
             // 
             panel3.Controls.Add(tableLayoutPanel1);
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 643);
+            panel3.Location = new Point(0, 658);
             panel3.Name = "panel3";
             panel3.Size = new Size(491, 51);
             panel3.TabIndex = 1;
@@ -144,212 +163,264 @@
             // panel2
             // 
             panel2.AutoScroll = true;
-            panel2.Controls.Add(tableLayoutPanel3);
+            panel2.Controls.Add(flowLayoutPanel1);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 72);
             panel2.Margin = new Padding(20, 0, 20, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(491, 571);
+            panel2.Size = new Size(491, 586);
             panel2.TabIndex = 2;
             // 
-            // tableLayoutPanel3
+            // flowLayoutPanel1
             // 
-            tableLayoutPanel3.AutoScroll = true;
-            tableLayoutPanel3.ColumnCount = 1;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Controls.Add(txtAddress, 0, 13);
-            tableLayoutPanel3.Controls.Add(txtPhone, 0, 9);
-            tableLayoutPanel3.Controls.Add(label9, 0, 10);
-            tableLayoutPanel3.Controls.Add(label7, 0, 8);
-            tableLayoutPanel3.Controls.Add(label6, 0, 6);
-            tableLayoutPanel3.Controls.Add(label5, 0, 4);
-            tableLayoutPanel3.Controls.Add(label4, 0, 2);
-            tableLayoutPanel3.Controls.Add(txtCCCD, 0, 7);
-            tableLayoutPanel3.Controls.Add(txtFullname, 0, 3);
-            tableLayoutPanel3.Controls.Add(label2, 0, 0);
-            tableLayoutPanel3.Controls.Add(txtId, 0, 1);
-            tableLayoutPanel3.Controls.Add(label10, 0, 12);
-            tableLayoutPanel3.Controls.Add(cbxGender, 0, 5);
-            tableLayoutPanel3.Controls.Add(dateTimeBirthday, 0, 11);
-            tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(0, 0);
-            tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 14;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.Size = new Size(491, 571);
-            tableLayoutPanel3.TabIndex = 0;
+            flowLayoutPanel1.Controls.Add(panel4);
+            flowLayoutPanel1.Controls.Add(panel5);
+            flowLayoutPanel1.Controls.Add(panel6);
+            flowLayoutPanel1.Controls.Add(panel7);
+            flowLayoutPanel1.Controls.Add(panel8);
+            flowLayoutPanel1.Controls.Add(panel9);
+            flowLayoutPanel1.Controls.Add(panel10);
+            flowLayoutPanel1.Location = new Point(3, 0);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(485, 579);
+            flowLayoutPanel1.TabIndex = 0;
             // 
-            // txtAddress
+            // panel4
             // 
-            txtAddress.Dock = DockStyle.Fill;
-            txtAddress.Location = new Point(15, 520);
-            txtAddress.Margin = new Padding(15, 0, 15, 0);
-            txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(461, 23);
-            txtAddress.TabIndex = 44;
+            panel4.Controls.Add(txtId);
+            panel4.Controls.Add(label2);
+            panel4.Location = new Point(3, 3);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(473, 60);
+            panel4.TabIndex = 0;
             // 
-            // txtPhone
+            // txtId
             // 
-            txtPhone.Dock = DockStyle.Fill;
-            txtPhone.Location = new Point(15, 360);
-            txtPhone.Margin = new Padding(15, 0, 15, 0);
-            txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(461, 23);
-            txtPhone.TabIndex = 29;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Dock = DockStyle.Bottom;
-            label9.Location = new Point(15, 425);
-            label9.Margin = new Padding(15, 0, 0, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(476, 15);
-            label9.TabIndex = 28;
-            label9.Text = "Ngày sinh";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Dock = DockStyle.Bottom;
-            label7.Location = new Point(15, 345);
-            label7.Margin = new Padding(15, 0, 0, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(476, 15);
-            label7.TabIndex = 26;
-            label7.Text = "Số điện thoại";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Dock = DockStyle.Bottom;
-            label6.Location = new Point(15, 265);
-            label6.Margin = new Padding(15, 0, 0, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(476, 15);
-            label6.TabIndex = 25;
-            label6.Text = "CCCD/CMND";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Dock = DockStyle.Bottom;
-            label5.Location = new Point(15, 185);
-            label5.Margin = new Padding(15, 0, 0, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(476, 15);
-            label5.TabIndex = 24;
-            label5.Text = "Giới tính";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Dock = DockStyle.Bottom;
-            label4.Location = new Point(15, 105);
-            label4.Margin = new Padding(15, 0, 0, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(476, 15);
-            label4.TabIndex = 23;
-            label4.Text = "Tên khách hàng";
-            // 
-            // txtCCCD
-            // 
-            txtCCCD.Dock = DockStyle.Fill;
-            txtCCCD.Location = new Point(15, 280);
-            txtCCCD.Margin = new Padding(15, 0, 15, 0);
-            txtCCCD.Name = "txtCCCD";
-            txtCCCD.Size = new Size(461, 23);
-            txtCCCD.TabIndex = 22;
-            // 
-            // txtFullname
-            // 
-            txtFullname.Dock = DockStyle.Fill;
-            txtFullname.Location = new Point(15, 120);
-            txtFullname.Margin = new Padding(15, 0, 15, 0);
-            txtFullname.Name = "txtFullname";
-            txtFullname.Size = new Size(461, 23);
-            txtFullname.TabIndex = 18;
+            txtId.Enabled = false;
+            txtId.Location = new Point(16, 28);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(440, 23);
+            txtId.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Dock = DockStyle.Bottom;
-            label2.Location = new Point(15, 25);
-            label2.Margin = new Padding(15, 0, 0, 0);
+            label2.Location = new Point(16, 10);
             label2.Name = "label2";
-            label2.Size = new Size(476, 15);
+            label2.Size = new Size(89, 15);
             label2.TabIndex = 0;
             label2.Text = "Mã khách hàng";
             // 
-            // txtId
+            // panel5
             // 
-            txtId.BackColor = SystemColors.Window;
-            txtId.Dock = DockStyle.Fill;
-            txtId.Location = new Point(15, 40);
-            txtId.Margin = new Padding(15, 0, 15, 0);
-            txtId.Name = "txtId";
-            txtId.ReadOnly = true;
-            txtId.Size = new Size(461, 23);
-            txtId.TabIndex = 1;
+            panel5.Controls.Add(errFullName);
+            panel5.Controls.Add(txtFullname);
+            panel5.Controls.Add(label5);
+            panel5.Location = new Point(3, 69);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(473, 80);
+            panel5.TabIndex = 1;
             // 
-            // label10
+            // errFullName
             // 
-            label10.AutoSize = true;
-            label10.Dock = DockStyle.Bottom;
-            label10.Location = new Point(20, 505);
-            label10.Margin = new Padding(20, 0, 20, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(451, 15);
-            label10.TabIndex = 35;
-            label10.Text = "Địa chỉ";
+            errFullName.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            errFullName.ForeColor = Color.Red;
+            errFullName.Location = new Point(16, 54);
+            errFullName.Name = "errFullName";
+            errFullName.Size = new Size(440, 18);
+            errFullName.TabIndex = 2;
+            // 
+            // txtFullname
+            // 
+            txtFullname.Location = new Point(16, 28);
+            txtFullname.Name = "txtFullname";
+            txtFullname.Size = new Size(440, 23);
+            txtFullname.TabIndex = 1;
+            txtFullname.TextChanged += txtFullname_TextChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(16, 10);
+            label5.Name = "label5";
+            label5.Size = new Size(90, 15);
+            label5.TabIndex = 0;
+            label5.Text = "Tên khách hàng";
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(cbxGender);
+            panel6.Controls.Add(label7);
+            panel6.Location = new Point(3, 155);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(473, 68);
+            panel6.TabIndex = 2;
             // 
             // cbxGender
             // 
-            cbxGender.Dock = DockStyle.Fill;
-            cbxGender.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxGender.FormattingEnabled = true;
-            cbxGender.Location = new Point(15, 200);
-            cbxGender.Margin = new Padding(15, 0, 15, 0);
+            cbxGender.Location = new Point(15, 31);
             cbxGender.Name = "cbxGender";
-            cbxGender.Size = new Size(461, 23);
-            cbxGender.TabIndex = 45;
+            cbxGender.Size = new Size(441, 23);
+            cbxGender.TabIndex = 3;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(16, 10);
+            label7.Name = "label7";
+            label7.Size = new Size(52, 15);
+            label7.TabIndex = 0;
+            label7.Text = "Giới tính";
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(errCCCD);
+            panel7.Controls.Add(txtCCCD);
+            panel7.Controls.Add(label9);
+            panel7.Location = new Point(3, 229);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(473, 80);
+            panel7.TabIndex = 3;
+            // 
+            // errCCCD
+            // 
+            errCCCD.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            errCCCD.ForeColor = Color.Red;
+            errCCCD.Location = new Point(16, 54);
+            errCCCD.Name = "errCCCD";
+            errCCCD.Size = new Size(440, 18);
+            errCCCD.TabIndex = 2;
+            // 
+            // txtCCCD
+            // 
+            txtCCCD.Location = new Point(16, 28);
+            txtCCCD.Name = "txtCCCD";
+            txtCCCD.Size = new Size(440, 23);
+            txtCCCD.TabIndex = 1;
+            txtCCCD.TextChanged += txtCCCD_TextChanged;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(16, 10);
+            label9.Name = "label9";
+            label9.Size = new Size(80, 15);
+            label9.TabIndex = 0;
+            label9.Text = "CCCD/CMND";
+            // 
+            // panel8
+            // 
+            panel8.Controls.Add(errPhone);
+            panel8.Controls.Add(txtPhone);
+            panel8.Controls.Add(label11);
+            panel8.Location = new Point(3, 315);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(473, 80);
+            panel8.TabIndex = 4;
+            // 
+            // errPhone
+            // 
+            errPhone.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            errPhone.ForeColor = Color.Red;
+            errPhone.Location = new Point(16, 54);
+            errPhone.Name = "errPhone";
+            errPhone.Size = new Size(440, 18);
+            errPhone.TabIndex = 2;
+            // 
+            // txtPhone
+            // 
+            txtPhone.Location = new Point(16, 28);
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(440, 23);
+            txtPhone.TabIndex = 1;
+            txtPhone.TextChanged += txtPhone_TextChanged;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(16, 10);
+            label11.Name = "label11";
+            label11.Size = new Size(76, 15);
+            label11.TabIndex = 0;
+            label11.Text = "Số điện thoại";
+            // 
+            // panel9
+            // 
+            panel9.Controls.Add(dateTimeBirthday);
+            panel9.Controls.Add(label12);
+            panel9.Controls.Add(label13);
+            panel9.Location = new Point(3, 401);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(473, 80);
+            panel9.TabIndex = 5;
             // 
             // dateTimeBirthday
             // 
             dateTimeBirthday.CustomFormat = "dd/MM/yyyy";
-            dateTimeBirthday.Dock = DockStyle.Fill;
             dateTimeBirthday.Format = DateTimePickerFormat.Custom;
-            dateTimeBirthday.Location = new Point(15, 440);
-            dateTimeBirthday.Margin = new Padding(15, 0, 15, 0);
+            dateTimeBirthday.Location = new Point(16, 28);
             dateTimeBirthday.Name = "dateTimeBirthday";
-            dateTimeBirthday.Size = new Size(461, 23);
-            dateTimeBirthday.TabIndex = 46;
+            dateTimeBirthday.Size = new Size(440, 23);
+            dateTimeBirthday.TabIndex = 3;
+            // 
+            // label12
+            // 
+            label12.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.ForeColor = Color.Red;
+            label12.Location = new Point(16, 54);
+            label12.Name = "label12";
+            label12.Size = new Size(440, 18);
+            label12.TabIndex = 2;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(16, 10);
+            label13.Name = "label13";
+            label13.Size = new Size(60, 15);
+            label13.TabIndex = 0;
+            label13.Text = "Ngày sinh";
+            // 
+            // panel10
+            // 
+            panel10.Controls.Add(errAddress);
+            panel10.Controls.Add(txtAddress);
+            panel10.Controls.Add(label15);
+            panel10.Location = new Point(3, 487);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(473, 80);
+            panel10.TabIndex = 6;
+            // 
+            // errAddress
+            // 
+            errAddress.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            errAddress.ForeColor = Color.Red;
+            errAddress.Location = new Point(16, 54);
+            errAddress.Name = "errAddress";
+            errAddress.Size = new Size(440, 18);
+            errAddress.TabIndex = 2;
+            // 
+            // txtAddress
+            // 
+            txtAddress.Location = new Point(16, 28);
+            txtAddress.Name = "txtAddress";
+            txtAddress.Size = new Size(440, 23);
+            txtAddress.TabIndex = 1;
+            txtAddress.TextChanged += txtAddress_TextChanged;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(16, 10);
+            label15.Name = "label15";
+            label15.Size = new Size(43, 15);
+            label15.TabIndex = 0;
+            label15.Text = "Địa chỉ";
             // 
             // CustomerInfoUI
             // 
-            ClientSize = new Size(491, 694);
+            ClientSize = new Size(491, 709);
             Controls.Add(panel2);
             Controls.Add(panel3);
             Controls.Add(panel1);
@@ -361,8 +432,21 @@
             panel3.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
-            tableLayoutPanel3.ResumeLayout(false);
-            tableLayoutPanel3.PerformLayout();
+            flowLayoutPanel1.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            panel9.ResumeLayout(false);
+            panel9.PerformLayout();
+            panel10.ResumeLayout(false);
+            panel10.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -381,22 +465,34 @@
         private Panel panel2;
         private TableLayoutPanel tableLayoutPanel1;
         private Button btnSave;
-        private TableLayoutPanel tableLayoutPanel3;
-        private Label label2;
-        private TextBox txtId;
-        private TextBox txtPhone;
-        private Label label9;
-        private Label label7;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private TextBox txtCCCD;
-        private TextBox txtFullname;
-        private Label label10;
-        private TextBox txtAddress;
         private Button btnReset;
         private Panel panel3;
-        private ComboBox cbxGender;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Panel panel4;
+        private TextBox txtId;
+        private Label label2;
+        private Panel panel5;
+        private Label errFullName;
+        private TextBox txtFullname;
+        private Label label5;
+        private Panel panel6;
+        private Label label7;
+        private Panel panel7;
+        private Label errCCCD;
+        private TextBox txtCCCD;
+        private Label label9;
+        private Panel panel8;
+        private Label errPhone;
+        private TextBox txtPhone;
+        private Label label11;
+        private Panel panel9;
+        private Label label12;
+        private Label label13;
+        private Panel panel10;
+        private Label errAddress;
+        private TextBox txtAddress;
+        private Label label15;
         private DateTimePicker dateTimeBirthday;
+        private ComboBox cbxGender;
     }
 }

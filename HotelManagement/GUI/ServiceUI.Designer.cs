@@ -151,11 +151,11 @@ namespace HotelManagement.GUI
             // tabPage1
             // 
             tabPage1.Controls.Add(tableLayoutPanel1);
-            tabPage1.Location = new Point(4, 37);
+            tabPage1.Location = new Point(4, 30);
             tabPage1.Margin = new Padding(0);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1142, 613);
+            tabPage1.Size = new Size(1142, 620);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Dịch vụ";
             tabPage1.UseVisualStyleBackColor = true;
@@ -174,7 +174,7 @@ namespace HotelManagement.GUI
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(1136, 607);
+            tableLayoutPanel1.Size = new Size(1136, 614);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // panel1
@@ -184,7 +184,7 @@ namespace HotelManagement.GUI
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(852, 607);
+            panel1.Size = new Size(852, 614);
             panel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -200,7 +200,7 @@ namespace HotelManagement.GUI
             tableLayoutPanel2.RowCount = 2;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 165F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(852, 607);
+            tableLayoutPanel2.Size = new Size(852, 614);
             tableLayoutPanel2.TabIndex = 0;
             // 
             // panel3
@@ -210,7 +210,7 @@ namespace HotelManagement.GUI
             panel3.Location = new Point(0, 165);
             panel3.Margin = new Padding(0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(852, 442);
+            panel3.Size = new Size(852, 449);
             panel3.TabIndex = 1;
             // 
             // groupBox2
@@ -221,7 +221,7 @@ namespace HotelManagement.GUI
             groupBox2.Location = new Point(0, 0);
             groupBox2.Margin = new Padding(0);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(852, 442);
+            groupBox2.Size = new Size(852, 449);
             groupBox2.TabIndex = 0;
             groupBox2.TabStop = false;
             groupBox2.Text = "Data";
@@ -235,7 +235,7 @@ namespace HotelManagement.GUI
             dtgvService.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dtgvService.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvService.Dock = DockStyle.Fill;
-            dtgvService.Location = new Point(3, 30);
+            dtgvService.Location = new Point(3, 25);
             dtgvService.Margin = new Padding(0);
             dtgvService.MultiSelect = false;
             dtgvService.Name = "dtgvService";
@@ -244,7 +244,7 @@ namespace HotelManagement.GUI
             dtgvService.RowHeadersWidth = 51;
             dtgvService.RowTemplate.Height = 29;
             dtgvService.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtgvService.Size = new Size(846, 409);
+            dtgvService.Size = new Size(846, 421);
             dtgvService.TabIndex = 1;
             // 
             // panel2
@@ -277,13 +277,13 @@ namespace HotelManagement.GUI
             tableLayoutPanel3.Controls.Add(tabControl2, 0, 0);
             tableLayoutPanel3.Controls.Add(tableLayoutPanel5, 0, 1);
             tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(3, 30);
+            tableLayoutPanel3.Location = new Point(3, 25);
             tableLayoutPanel3.Margin = new Padding(0);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 2;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 65F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 35F));
-            tableLayoutPanel3.Size = new Size(846, 132);
+            tableLayoutPanel3.Size = new Size(846, 137);
             tableLayoutPanel3.TabIndex = 0;
             // 
             // tabControl2
@@ -296,18 +296,18 @@ namespace HotelManagement.GUI
             tabControl2.Margin = new Padding(0);
             tabControl2.Name = "tabControl2";
             tabControl2.SelectedIndex = 0;
-            tabControl2.Size = new Size(846, 85);
+            tabControl2.Size = new Size(846, 89);
             tabControl2.TabIndex = 2;
             // 
             // tabPage3
             // 
             tabPage3.BackColor = Color.White;
             tabPage3.Controls.Add(tableLayoutPanel6);
-            tabPage3.Location = new Point(4, 37);
+            tabPage3.Location = new Point(4, 30);
             tabPage3.Margin = new Padding(0);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(838, 44);
+            tabPage3.Size = new Size(838, 55);
             tabPage3.TabIndex = 0;
             tabPage3.Text = "Mã DV";
             // 
@@ -324,7 +324,7 @@ namespace HotelManagement.GUI
             tableLayoutPanel6.Name = "tableLayoutPanel6";
             tableLayoutPanel6.RowCount = 1;
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel6.Size = new Size(832, 38);
+            tableLayoutPanel6.Size = new Size(832, 49);
             tableLayoutPanel6.TabIndex = 2;
             // 
             // mbtnDelFilterServiceID
@@ -340,7 +340,7 @@ namespace HotelManagement.GUI
             mbtnDelFilterServiceID.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnDelFilterServiceID.Name = "mbtnDelFilterServiceID";
             mbtnDelFilterServiceID.NoAccentTextColor = Color.Empty;
-            mbtnDelFilterServiceID.Size = new Size(242, 26);
+            mbtnDelFilterServiceID.Size = new Size(242, 37);
             mbtnDelFilterServiceID.TabIndex = 5;
             mbtnDelFilterServiceID.Text = "XÓA";
             mbtnDelFilterServiceID.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -358,17 +358,17 @@ namespace HotelManagement.GUI
             cbxFilterServiceID.Location = new Point(4, 6);
             cbxFilterServiceID.Margin = new Padding(4, 6, 4, 6);
             cbxFilterServiceID.Name = "cbxFilterServiceID";
-            cbxFilterServiceID.Size = new Size(574, 31);
+            cbxFilterServiceID.Size = new Size(574, 27);
             cbxFilterServiceID.TabIndex = 4;
             // 
             // tabPage4
             // 
             tabPage4.Controls.Add(tableLayoutPanel4);
-            tabPage4.Location = new Point(4, 29);
+            tabPage4.Location = new Point(4, 24);
             tabPage4.Margin = new Padding(0);
             tabPage4.Name = "tabPage4";
             tabPage4.Padding = new Padding(3);
-            tabPage4.Size = new Size(838, 57);
+            tabPage4.Size = new Size(838, 64);
             tabPage4.TabIndex = 1;
             tabPage4.Text = "Tên DV";
             tabPage4.UseVisualStyleBackColor = true;
@@ -387,7 +387,7 @@ namespace HotelManagement.GUI
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Size = new Size(832, 51);
+            tableLayoutPanel4.Size = new Size(832, 58);
             tableLayoutPanel4.TabIndex = 2;
             // 
             // cbxFilterServiceName
@@ -400,7 +400,7 @@ namespace HotelManagement.GUI
             cbxFilterServiceName.Location = new Point(4, 6);
             cbxFilterServiceName.Margin = new Padding(4, 6, 4, 6);
             cbxFilterServiceName.Name = "cbxFilterServiceName";
-            cbxFilterServiceName.Size = new Size(574, 31);
+            cbxFilterServiceName.Size = new Size(574, 27);
             cbxFilterServiceName.TabIndex = 4;
             // 
             // mbtnDelFilterServiceName
@@ -416,7 +416,7 @@ namespace HotelManagement.GUI
             mbtnDelFilterServiceName.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnDelFilterServiceName.Name = "mbtnDelFilterServiceName";
             mbtnDelFilterServiceName.NoAccentTextColor = Color.Empty;
-            mbtnDelFilterServiceName.Size = new Size(242, 39);
+            mbtnDelFilterServiceName.Size = new Size(242, 46);
             mbtnDelFilterServiceName.TabIndex = 9;
             mbtnDelFilterServiceName.Text = "XÓA";
             mbtnDelFilterServiceName.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -426,11 +426,11 @@ namespace HotelManagement.GUI
             // tabPage5
             // 
             tabPage5.Controls.Add(tableLayoutPanel14);
-            tabPage5.Location = new Point(4, 29);
+            tabPage5.Location = new Point(4, 24);
             tabPage5.Margin = new Padding(0);
             tabPage5.Name = "tabPage5";
             tabPage5.Padding = new Padding(3);
-            tabPage5.Size = new Size(838, 57);
+            tabPage5.Size = new Size(838, 64);
             tabPage5.TabIndex = 2;
             tabPage5.Text = "Loại DV";
             tabPage5.UseVisualStyleBackColor = true;
@@ -449,7 +449,7 @@ namespace HotelManagement.GUI
             tableLayoutPanel14.Name = "tableLayoutPanel14";
             tableLayoutPanel14.RowCount = 1;
             tableLayoutPanel14.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel14.Size = new Size(832, 51);
+            tableLayoutPanel14.Size = new Size(832, 58);
             tableLayoutPanel14.TabIndex = 4;
             // 
             // mbtnDelFilterServiceType
@@ -465,7 +465,7 @@ namespace HotelManagement.GUI
             mbtnDelFilterServiceType.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnDelFilterServiceType.Name = "mbtnDelFilterServiceType";
             mbtnDelFilterServiceType.NoAccentTextColor = Color.Empty;
-            mbtnDelFilterServiceType.Size = new Size(242, 39);
+            mbtnDelFilterServiceType.Size = new Size(242, 46);
             mbtnDelFilterServiceType.TabIndex = 7;
             mbtnDelFilterServiceType.Text = "XÓA";
             mbtnDelFilterServiceType.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -484,7 +484,7 @@ namespace HotelManagement.GUI
             cbxFilterServiceType.Location = new Point(4, 6);
             cbxFilterServiceType.Margin = new Padding(4, 6, 4, 6);
             cbxFilterServiceType.Name = "cbxFilterServiceType";
-            cbxFilterServiceType.Size = new Size(574, 31);
+            cbxFilterServiceType.Size = new Size(574, 27);
             cbxFilterServiceType.TabIndex = 5;
             // 
             // tableLayoutPanel5
@@ -496,13 +496,13 @@ namespace HotelManagement.GUI
             tableLayoutPanel5.Controls.Add(mbtnFilterService, 1, 0);
             tableLayoutPanel5.Controls.Add(mbtnDeleteAllFilterService, 0, 0);
             tableLayoutPanel5.Dock = DockStyle.Fill;
-            tableLayoutPanel5.Location = new Point(0, 85);
+            tableLayoutPanel5.Location = new Point(0, 89);
             tableLayoutPanel5.Margin = new Padding(0);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 1;
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.Size = new Size(846, 47);
+            tableLayoutPanel5.Size = new Size(846, 48);
             tableLayoutPanel5.TabIndex = 1;
             // 
             // mbtnFilterService
@@ -518,7 +518,7 @@ namespace HotelManagement.GUI
             mbtnFilterService.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnFilterService.Name = "mbtnFilterService";
             mbtnFilterService.NoAccentTextColor = Color.Empty;
-            mbtnFilterService.Size = new Size(409, 35);
+            mbtnFilterService.Size = new Size(409, 36);
             mbtnFilterService.TabIndex = 9;
             mbtnFilterService.Text = "LỌC";
             mbtnFilterService.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -539,7 +539,7 @@ namespace HotelManagement.GUI
             mbtnDeleteAllFilterService.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnDeleteAllFilterService.Name = "mbtnDeleteAllFilterService";
             mbtnDeleteAllFilterService.NoAccentTextColor = Color.Empty;
-            mbtnDeleteAllFilterService.Size = new Size(409, 35);
+            mbtnDeleteAllFilterService.Size = new Size(409, 36);
             mbtnDeleteAllFilterService.TabIndex = 8;
             mbtnDeleteAllFilterService.Text = "XÓA TẤT CẢ";
             mbtnDeleteAllFilterService.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -554,7 +554,7 @@ namespace HotelManagement.GUI
             panel4.Location = new Point(852, 0);
             panel4.Margin = new Padding(0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(284, 607);
+            panel4.Size = new Size(284, 614);
             panel4.TabIndex = 1;
             // 
             // groupBox1
@@ -565,7 +565,7 @@ namespace HotelManagement.GUI
             groupBox1.Location = new Point(0, 0);
             groupBox1.Margin = new Padding(0);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(284, 607);
+            groupBox1.Size = new Size(284, 614);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Chức năng";
@@ -577,11 +577,11 @@ namespace HotelManagement.GUI
             panel5.Controls.Add(mbtnUpdateService);
             panel5.Controls.Add(mbtnAddService);
             panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(3, 30);
+            panel5.Location = new Point(3, 25);
             panel5.Margin = new Padding(0);
             panel5.Name = "panel5";
             panel5.Padding = new Padding(3);
-            panel5.Size = new Size(278, 574);
+            panel5.Size = new Size(278, 586);
             panel5.TabIndex = 0;
             // 
             // mbtnDeleteService
@@ -653,11 +653,11 @@ namespace HotelManagement.GUI
             // tabPage2
             // 
             tabPage2.Controls.Add(tableLayoutPanel7);
-            tabPage2.Location = new Point(4, 37);
+            tabPage2.Location = new Point(4, 24);
             tabPage2.Margin = new Padding(0);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1142, 613);
+            tabPage2.Size = new Size(1142, 626);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Loại dịch vụ";
             tabPage2.UseVisualStyleBackColor = true;
@@ -676,7 +676,7 @@ namespace HotelManagement.GUI
             tableLayoutPanel7.Name = "tableLayoutPanel7";
             tableLayoutPanel7.RowCount = 1;
             tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel7.Size = new Size(1136, 607);
+            tableLayoutPanel7.Size = new Size(1136, 620);
             tableLayoutPanel7.TabIndex = 2;
             // 
             // panel6
@@ -686,7 +686,7 @@ namespace HotelManagement.GUI
             panel6.Location = new Point(0, 0);
             panel6.Margin = new Padding(0);
             panel6.Name = "panel6";
-            panel6.Size = new Size(852, 607);
+            panel6.Size = new Size(852, 620);
             panel6.TabIndex = 0;
             // 
             // tableLayoutPanel8
@@ -702,7 +702,7 @@ namespace HotelManagement.GUI
             tableLayoutPanel8.RowCount = 2;
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 165F));
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel8.Size = new Size(852, 607);
+            tableLayoutPanel8.Size = new Size(852, 620);
             tableLayoutPanel8.TabIndex = 0;
             // 
             // panel7
@@ -712,7 +712,7 @@ namespace HotelManagement.GUI
             panel7.Location = new Point(0, 165);
             panel7.Margin = new Padding(0);
             panel7.Name = "panel7";
-            panel7.Size = new Size(852, 442);
+            panel7.Size = new Size(852, 455);
             panel7.TabIndex = 1;
             // 
             // groupBox4
@@ -723,7 +723,7 @@ namespace HotelManagement.GUI
             groupBox4.Location = new Point(0, 0);
             groupBox4.Margin = new Padding(0);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(852, 442);
+            groupBox4.Size = new Size(852, 455);
             groupBox4.TabIndex = 0;
             groupBox4.TabStop = false;
             groupBox4.Text = "Data";
@@ -736,7 +736,7 @@ namespace HotelManagement.GUI
             dtgvType.BorderStyle = BorderStyle.None;
             dtgvType.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvType.Dock = DockStyle.Fill;
-            dtgvType.Location = new Point(3, 30);
+            dtgvType.Location = new Point(3, 25);
             dtgvType.Margin = new Padding(0);
             dtgvType.MultiSelect = false;
             dtgvType.Name = "dtgvType";
@@ -745,7 +745,7 @@ namespace HotelManagement.GUI
             dtgvType.RowHeadersWidth = 51;
             dtgvType.RowTemplate.Height = 29;
             dtgvType.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtgvType.Size = new Size(846, 409);
+            dtgvType.Size = new Size(846, 427);
             dtgvType.TabIndex = 1;
             // 
             // panel8
@@ -778,13 +778,13 @@ namespace HotelManagement.GUI
             tableLayoutPanel9.Controls.Add(tabControl3, 0, 0);
             tableLayoutPanel9.Controls.Add(tableLayoutPanel12, 0, 1);
             tableLayoutPanel9.Dock = DockStyle.Fill;
-            tableLayoutPanel9.Location = new Point(3, 30);
+            tableLayoutPanel9.Location = new Point(3, 25);
             tableLayoutPanel9.Margin = new Padding(0);
             tableLayoutPanel9.Name = "tableLayoutPanel9";
             tableLayoutPanel9.RowCount = 2;
             tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Percent, 65F));
             tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Percent, 35F));
-            tableLayoutPanel9.Size = new Size(846, 132);
+            tableLayoutPanel9.Size = new Size(846, 137);
             tableLayoutPanel9.TabIndex = 0;
             // 
             // tabControl3
@@ -796,17 +796,17 @@ namespace HotelManagement.GUI
             tabControl3.Margin = new Padding(0);
             tabControl3.Name = "tabControl3";
             tabControl3.SelectedIndex = 0;
-            tabControl3.Size = new Size(846, 85);
+            tabControl3.Size = new Size(846, 89);
             tabControl3.TabIndex = 2;
             // 
             // tabPage6
             // 
             tabPage6.Controls.Add(tableLayoutPanel11);
-            tabPage6.Location = new Point(4, 37);
+            tabPage6.Location = new Point(4, 30);
             tabPage6.Margin = new Padding(0);
             tabPage6.Name = "tabPage6";
             tabPage6.Padding = new Padding(3);
-            tabPage6.Size = new Size(838, 44);
+            tabPage6.Size = new Size(838, 55);
             tabPage6.TabIndex = 0;
             tabPage6.Text = "Mã loại";
             tabPage6.UseVisualStyleBackColor = true;
@@ -825,7 +825,7 @@ namespace HotelManagement.GUI
             tableLayoutPanel11.Name = "tableLayoutPanel11";
             tableLayoutPanel11.RowCount = 1;
             tableLayoutPanel11.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel11.Size = new Size(832, 38);
+            tableLayoutPanel11.Size = new Size(832, 49);
             tableLayoutPanel11.TabIndex = 2;
             // 
             // mbtnDelFilterTypeID
@@ -841,7 +841,7 @@ namespace HotelManagement.GUI
             mbtnDelFilterTypeID.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnDelFilterTypeID.Name = "mbtnDelFilterTypeID";
             mbtnDelFilterTypeID.NoAccentTextColor = Color.Empty;
-            mbtnDelFilterTypeID.Size = new Size(270, 26);
+            mbtnDelFilterTypeID.Size = new Size(270, 37);
             mbtnDelFilterTypeID.TabIndex = 4;
             mbtnDelFilterTypeID.Text = "XÓA";
             mbtnDelFilterTypeID.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -859,17 +859,17 @@ namespace HotelManagement.GUI
             cbxFilterTypeID.Location = new Point(4, 6);
             cbxFilterTypeID.Margin = new Padding(4, 6, 4, 6);
             cbxFilterTypeID.Name = "cbxFilterTypeID";
-            cbxFilterTypeID.Size = new Size(546, 31);
+            cbxFilterTypeID.Size = new Size(546, 27);
             cbxFilterTypeID.TabIndex = 4;
             // 
             // tabPage7
             // 
             tabPage7.Controls.Add(tableLayoutPanel13);
-            tabPage7.Location = new Point(4, 29);
+            tabPage7.Location = new Point(4, 24);
             tabPage7.Margin = new Padding(0);
             tabPage7.Name = "tabPage7";
             tabPage7.Padding = new Padding(3);
-            tabPage7.Size = new Size(838, 57);
+            tabPage7.Size = new Size(838, 64);
             tabPage7.TabIndex = 1;
             tabPage7.Text = "Tên loại";
             tabPage7.UseVisualStyleBackColor = true;
@@ -888,7 +888,7 @@ namespace HotelManagement.GUI
             tableLayoutPanel13.Name = "tableLayoutPanel13";
             tableLayoutPanel13.RowCount = 1;
             tableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel13.Size = new Size(832, 51);
+            tableLayoutPanel13.Size = new Size(832, 58);
             tableLayoutPanel13.TabIndex = 2;
             // 
             // mbtnDelFilterTypeName
@@ -904,7 +904,7 @@ namespace HotelManagement.GUI
             mbtnDelFilterTypeName.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnDelFilterTypeName.Name = "mbtnDelFilterTypeName";
             mbtnDelFilterTypeName.NoAccentTextColor = Color.Empty;
-            mbtnDelFilterTypeName.Size = new Size(242, 39);
+            mbtnDelFilterTypeName.Size = new Size(242, 46);
             mbtnDelFilterTypeName.TabIndex = 5;
             mbtnDelFilterTypeName.Text = "XÓA";
             mbtnDelFilterTypeName.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -922,7 +922,7 @@ namespace HotelManagement.GUI
             cbxFilterTypeName.Location = new Point(4, 6);
             cbxFilterTypeName.Margin = new Padding(4, 6, 4, 6);
             cbxFilterTypeName.Name = "cbxFilterTypeName";
-            cbxFilterTypeName.Size = new Size(574, 31);
+            cbxFilterTypeName.Size = new Size(574, 27);
             cbxFilterTypeName.TabIndex = 4;
             // 
             // tableLayoutPanel12
@@ -934,13 +934,13 @@ namespace HotelManagement.GUI
             tableLayoutPanel12.Controls.Add(mbtnFilterType, 1, 0);
             tableLayoutPanel12.Controls.Add(mbtnDeleteAllFilterType, 0, 0);
             tableLayoutPanel12.Dock = DockStyle.Fill;
-            tableLayoutPanel12.Location = new Point(0, 85);
+            tableLayoutPanel12.Location = new Point(0, 89);
             tableLayoutPanel12.Margin = new Padding(0);
             tableLayoutPanel12.Name = "tableLayoutPanel12";
             tableLayoutPanel12.RowCount = 1;
             tableLayoutPanel12.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel12.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel12.Size = new Size(846, 47);
+            tableLayoutPanel12.Size = new Size(846, 48);
             tableLayoutPanel12.TabIndex = 1;
             // 
             // mbtnFilterType
@@ -956,7 +956,7 @@ namespace HotelManagement.GUI
             mbtnFilterType.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnFilterType.Name = "mbtnFilterType";
             mbtnFilterType.NoAccentTextColor = Color.Empty;
-            mbtnFilterType.Size = new Size(409, 35);
+            mbtnFilterType.Size = new Size(409, 36);
             mbtnFilterType.TabIndex = 7;
             mbtnFilterType.Text = "LỌC";
             mbtnFilterType.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -977,7 +977,7 @@ namespace HotelManagement.GUI
             mbtnDeleteAllFilterType.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnDeleteAllFilterType.Name = "mbtnDeleteAllFilterType";
             mbtnDeleteAllFilterType.NoAccentTextColor = Color.Empty;
-            mbtnDeleteAllFilterType.Size = new Size(409, 35);
+            mbtnDeleteAllFilterType.Size = new Size(409, 36);
             mbtnDeleteAllFilterType.TabIndex = 6;
             mbtnDeleteAllFilterType.Text = "XÓA TẤT CẢ";
             mbtnDeleteAllFilterType.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -992,7 +992,7 @@ namespace HotelManagement.GUI
             panel9.Location = new Point(852, 0);
             panel9.Margin = new Padding(0);
             panel9.Name = "panel9";
-            panel9.Size = new Size(284, 607);
+            panel9.Size = new Size(284, 620);
             panel9.TabIndex = 1;
             // 
             // groupBox6
@@ -1003,7 +1003,7 @@ namespace HotelManagement.GUI
             groupBox6.Location = new Point(0, 0);
             groupBox6.Margin = new Padding(0);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(284, 607);
+            groupBox6.Size = new Size(284, 620);
             groupBox6.TabIndex = 0;
             groupBox6.TabStop = false;
             groupBox6.Text = "Chức năng";
@@ -1015,11 +1015,11 @@ namespace HotelManagement.GUI
             panel10.Controls.Add(mbtnAddType);
             panel10.Controls.Add(mbtnDeleteType);
             panel10.Dock = DockStyle.Fill;
-            panel10.Location = new Point(3, 30);
+            panel10.Location = new Point(3, 25);
             panel10.Margin = new Padding(0);
             panel10.Name = "panel10";
             panel10.Padding = new Padding(3);
-            panel10.Size = new Size(278, 574);
+            panel10.Size = new Size(278, 592);
             panel10.TabIndex = 0;
             // 
             // mbtnUpdateType
@@ -1127,7 +1127,7 @@ namespace HotelManagement.GUI
             comboBox2.Location = new Point(3, 3);
             comboBox2.Margin = new Padding(0);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(134, 31);
+            comboBox2.Size = new Size(134, 27);
             comboBox2.TabIndex = 4;
             // 
             // ServiceUI

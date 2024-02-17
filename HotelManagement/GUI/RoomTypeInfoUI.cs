@@ -22,7 +22,7 @@ namespace HotelManagement.GUI
 
         private bool isEdit = false;
         private RoomUI roomUI;
-        
+
         private RoomBUS roomBus = new RoomBUS();
 
         private List<RoomType> roomTypeList;
@@ -33,7 +33,7 @@ namespace HotelManagement.GUI
         {
             InitializeComponent();
             initCbx();
-            
+
 
             this.roomUI = roomUI;
         }
@@ -58,11 +58,11 @@ namespace HotelManagement.GUI
 
             dtgvConvinience.DataSource = dataTableConvinience;
 
-            foreach(DataGridViewColumn column in dtgvConvinience.Columns)
+            foreach (DataGridViewColumn column in dtgvConvinience.Columns)
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
-            
+
 
             createHeaderText2();
         }
@@ -159,8 +159,16 @@ namespace HotelManagement.GUI
                     tableLayoutPanelThongTin.Visible = false;
                 }
             }
-            
+
             convinientRoomTypeData();
+        }
+        //Kiểm tra dữ liệu trước khi cập nhật hay tạo mới
+        private bool validateForm()
+        {
+            bool isNameValid = Validator.Instance.checkTextBox(txbName, errName, new string[] { "not-empty" });
+            bool isPriceValid = Validator.Instance.checkTextBox(txbPrice, errPrice, new string[] { "positive-number", "room-price" });
+            
+            return isNameValid && isPriceValid;
         }
 
         #endregion
@@ -173,19 +181,18 @@ namespace HotelManagement.GUI
             String name = txbName.Text;
             String unitPrice = txbPrice.Text;
 
-
-            if (!Double.TryParse(unitPrice, out double price) || (price < 0 || price > 10000000))
+            if (!validateForm())
             {
-                MessageBox.Show("Bạn nhập giá phòng chưa đúng định dạng, giá loại phòng phải lớn hơn 0 và nhỏ hơn 10 triệu đồng");
                 return;
             }
-
-            RoomType roomType = new RoomType(id, name, price);
-
+            
+            RoomType roomType = new RoomType(id, name,Double.Parse(unitPrice));
+            
             if (!roomBus.validate(roomType))
             {
                 return;
             }
+            
             if (isEdit)
             {
                 if (roomBus.updateRoomType(roomType) > 0)
@@ -214,10 +221,11 @@ namespace HotelManagement.GUI
             }
         }
 
+       
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            if(isEdit)
+            if (isEdit)
             {
                 foreach (var item in roomTypeList)
                 {
@@ -234,7 +242,16 @@ namespace HotelManagement.GUI
                 txbPrice.Text = string.Empty;
                 cbbQuantity.Text = string.Empty;
             }
-            
+
+        }
+        private void txbName_TextChanged(object sender, EventArgs e)
+        {
+            Validator.Instance.checkTextBox(txbName, errName, new string[] { "not-empty" });
+        }
+
+        private void txbPrice_TextChanged(object sender, EventArgs e)
+        {
+            Validator.Instance.checkTextBox(txbPrice, errPrice, new string[] { "positive-number", "room-price" });
         }
         #endregion
 
@@ -309,21 +326,21 @@ namespace HotelManagement.GUI
                     convinientRoomTypeData();
                 }
             }
-            else if(btnActive.Text == "Xóa")
+            else if (btnActive.Text == "Xóa")
             {
                 if (index1 < 0 || index1 >= dtgvConvinienceRoomType.RowCount)
                 {
                     MessageBox.Show("Bạn chưa chọn tiện nghi muốn xóa");
                     return;
                 }
-                    
+
 
                 for (int i = 0; i < convinience_roomTypeList.Count; i++)
                 {
                     if (convinience_roomTypeList[i].ConvinienceId == dtgvConvinienceRoomType.Rows[index1].Cells[0].Value.ToString()
                         && convinience_roomTypeList[i].RoomTypeId == txbID.Text)
                     {
-                        if(MessageBox.Show("Bạn có muốn xóa tiện nghi " + convinience_roomTypeList[i].ConvinienceId + " khỏi loại phòng " + convinience_roomTypeList[i].RoomTypeId +" không.", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                        if (MessageBox.Show("Bạn có muốn xóa tiện nghi " + convinience_roomTypeList[i].ConvinienceId + " khỏi loại phòng " + convinience_roomTypeList[i].RoomTypeId + " không.", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                         {
                             if (roomBus.deleteRoomTypeConvinience(convinience_roomTypeList[i].ConvinienceId, convinience_roomTypeList[i].RoomTypeId) > 0)
                             {
@@ -337,5 +354,7 @@ namespace HotelManagement.GUI
                 }
             }
         }
+
+
     }
 }
