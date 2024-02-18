@@ -92,6 +92,7 @@
             {
                 tbID.Text = sa.IdString();
                 tbFullName.Text = sa.FullName;
+                cbGender.Items.Clear();
                 cbGender.Items.Add(Staff.GenderFemaleString);
                 cbGender.Items.Add(Staff.GenderMaleString);
                 cbGender.SelectedIndex = sa.Gender == Staff.GenderMale ? 1 : 0;

@@ -63,8 +63,7 @@ namespace HotelManagement.GUI
 
         public void addService(string id, string name, string unit, string unitPrice, string serviceTypeId)
         {
-            if (serviceBUS.validateService(id, name, unit, unitPrice))
-            {
+            
                 Service service = new Service()
                 { Id = id, Name = name, Unit = unit, UnitPrice = int.Parse(unitPrice) };
                 service.ServiceTypeId = serviceTypeId;
@@ -79,13 +78,12 @@ namespace HotelManagement.GUI
                 {
                     MessageBox.Show("Thêm dịch vụ không thành công!");
                 }
-            }
+            
         }
 
         public void updateService(string id, string name, string unit, string unitPrice, string serviceTypeId)
         {
-            if (serviceBUS.validateService(id,  name, unit, unitPrice))
-            {
+            
                 Service service = new Service()
                 { Id = id, Name = name, Unit = unit, UnitPrice = int.Parse(unitPrice) };
                 service.ServiceTypeId = serviceTypeId;
@@ -100,7 +98,20 @@ namespace HotelManagement.GUI
                 {
                     MessageBox.Show("Cập nhật dịch vụ không thành công!");
                 }
-            }
+            
+        }
+        private bool validateForm()
+        {
+            bool isNameValid =
+            Validator.Instance.checkTextBox(txtName, errName, new string[] { "not-empty" });
+
+            bool isUnitValid =
+            Validator.Instance.checkTextBox(txtUnit, errUnit, new string[] { "not-empty" });
+
+            bool isUnitPriceValid  =
+            Validator.Instance.checkTextBox(txtUnitPrice, errUnitPrice, new string[] {"positive-number" });
+
+            return isNameValid && isUnitValid && isUnitPriceValid;  
         }
 
         #endregion
@@ -115,16 +126,20 @@ namespace HotelManagement.GUI
             string unit = txtUnit.Text;
             string unitPrice = txtUnitPrice.Text;
             string serviceTypeId = cbxServiceType.SelectedValue.ToString() + "";
-
-            if (isEdit)
+            if (validateForm())
             {
-                updateService(id, name, unit, unitPrice, serviceTypeId);
-            }
-            else
-            {
-                addService(id, name, unit, unitPrice, serviceTypeId);
-            }
+                if (isEdit)
+                {
+                    updateService(id, name, unit, unitPrice, serviceTypeId);
+                }
+                else
+                {
+                    addService(id, name, unit, unitPrice, serviceTypeId);
+                }
+            }    
         }
+
+     
 
         private void btnReset_Click(object sender, EventArgs e)
         {
@@ -133,10 +148,19 @@ namespace HotelManagement.GUI
             txtUnitPrice.Text = "";
             cbxServiceType.SelectedIndex = 0;
         }
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            Validator.Instance.checkTextBox(txtName, errName, new string[] { "not-empty" });
+        }
+        private void txtUnitPrice_TextChanged(object sender, EventArgs e)
+        {
+            Validator.Instance.checkTextBox(txtUnitPrice, errUnitPrice, new string[] { "positive-number" });
+        }
+        private void txtUnit_TextChanged(object sender, EventArgs e)
+        {
+            Validator.Instance.checkTextBox(txtUnit, errUnit, new string[] { "not-empty" });
 
-
+        }
         #endregion
-
-
     }
 }

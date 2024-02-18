@@ -57,6 +57,8 @@ namespace HotelManagement.GUI
                     MessageBox.Show("Thêm loại dịch vụ không thành công!");
                 }
             }
+
+
         }
 
         public void updateType(string id, string name)
@@ -87,15 +89,18 @@ namespace HotelManagement.GUI
         {
             string id = txtId.Text;
             string name = txtName.Text;
+            if (Validator.Instance.checkTextBox(txtName, errName, new string[] { "not-empty" }))
+            {
+                if (isEdit)
+                {
+                    updateType(id, name);
+                }
+                else
+                {
+                    addType(id, name);
+                }
+            }
 
-            if (isEdit)
-            {
-                updateType(id, name);
-            }
-            else
-            {
-                addType(id, name);
-            }
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -103,6 +108,12 @@ namespace HotelManagement.GUI
             txtName.Text = "";
         }
 
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            Validator.Instance.checkTextBox(txtName, errName, new string[] { "not-empty" });
+        }
         #endregion
+
+
     }
 }

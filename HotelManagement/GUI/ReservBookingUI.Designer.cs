@@ -104,14 +104,14 @@ namespace HotelManagement.GUI
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 1, 1);
             tableLayoutPanel1.Controls.Add(panel6, 1, 2);
             tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(3, 85);
+            tableLayoutPanel1.Location = new Point(3, 64);
             tableLayoutPanel1.Margin = new Padding(0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 13F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 10F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 67F));
-            tableLayoutPanel1.Size = new Size(1409, 935);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
+            tableLayoutPanel1.Size = new Size(1232, 701);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -124,13 +124,13 @@ namespace HotelManagement.GUI
             tableLayoutPanel2.Controls.Add(panel1, 0, 1);
             tableLayoutPanel2.Controls.Add(panel2, 1, 1);
             tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(70, 13);
+            tableLayoutPanel2.Location = new Point(61, 10);
             tableLayoutPanel2.Margin = new Padding(0);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 2;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 53F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(1268, 855);
+            tableLayoutPanel2.Size = new Size(1108, 641);
             tableLayoutPanel2.TabIndex = 0;
             // 
             // materialLabel2
@@ -141,11 +141,11 @@ namespace HotelManagement.GUI
             materialLabel2.Font = new Font("Roboto", 24F, FontStyle.Bold, GraphicsUnit.Pixel);
             materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
             materialLabel2.ForeColor = SystemColors.ControlText;
-            materialLabel2.Location = new Point(3, 4);
-            materialLabel2.Margin = new Padding(3, 4, 3, 4);
+            materialLabel2.Location = new Point(3, 3);
+            materialLabel2.Margin = new Padding(3, 3, 3, 3);
             materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel2.Name = "materialLabel2";
-            materialLabel2.Size = new Size(374, 45);
+            materialLabel2.Size = new Size(326, 34);
             materialLabel2.TabIndex = 2;
             materialLabel2.Text = "Customer Information";
             materialLabel2.TextAlign = ContentAlignment.MiddleCenter;
@@ -157,11 +157,11 @@ namespace HotelManagement.GUI
             materialLabel3.Dock = DockStyle.Fill;
             materialLabel3.Font = new Font("Roboto", 24F, FontStyle.Bold, GraphicsUnit.Pixel);
             materialLabel3.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            materialLabel3.Location = new Point(383, 4);
-            materialLabel3.Margin = new Padding(3, 4, 3, 4);
+            materialLabel3.Location = new Point(335, 3);
+            materialLabel3.Margin = new Padding(3, 3, 3, 3);
             materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel3.Name = "materialLabel3";
-            materialLabel3.Size = new Size(882, 45);
+            materialLabel3.Size = new Size(770, 34);
             materialLabel3.TabIndex = 3;
             materialLabel3.Text = "Room Information";
             materialLabel3.TextAlign = ContentAlignment.MiddleCenter;
@@ -180,11 +180,11 @@ namespace HotelManagement.GUI
             panel1.Controls.Add(materialLabel5);
             panel1.Controls.Add(materialLabel1);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 53);
+            panel1.Location = new Point(0, 40);
             panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
-            panel1.Padding = new Padding(17, 20, 17, 20);
-            panel1.Size = new Size(380, 802);
+            panel1.Padding = new Padding(15, 15, 15, 15);
+            panel1.Size = new Size(332, 601);
             panel1.TabIndex = 4;
             // 
             // panelGender
@@ -192,9 +192,10 @@ namespace HotelManagement.GUI
             panelGender.Controls.Add(radioBtnMale);
             panelGender.Controls.Add(radioBtnFemale);
             panelGender.Enabled = false;
-            panelGender.Location = new Point(158, 395);
+            panelGender.Location = new Point(138, 296);
+            panelGender.Margin = new Padding(3, 2, 3, 2);
             panelGender.Name = "panelGender";
-            panelGender.Size = new Size(198, 59);
+            panelGender.Size = new Size(173, 44);
             panelGender.TabIndex = 22;
             // 
             // radioBtnMale
@@ -203,7 +204,7 @@ namespace HotelManagement.GUI
             radioBtnMale.AutoSize = true;
             radioBtnMale.Checked = true;
             radioBtnMale.Depth = 0;
-            radioBtnMale.Location = new Point(6, 14);
+            radioBtnMale.Location = new Point(-4, 10);
             radioBtnMale.Margin = new Padding(0);
             radioBtnMale.MouseLocation = new Point(-1, -1);
             radioBtnMale.MouseState = MaterialSkin.MouseState.HOVER;
@@ -220,7 +221,7 @@ namespace HotelManagement.GUI
             radioBtnFemale.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             radioBtnFemale.AutoSize = true;
             radioBtnFemale.Depth = 0;
-            radioBtnFemale.Location = new Point(87, 14);
+            radioBtnFemale.Location = new Point(65, 10);
             radioBtnFemale.Margin = new Padding(0);
             radioBtnFemale.MouseLocation = new Point(-1, -1);
             radioBtnFemale.MouseState = MaterialSkin.MouseState.HOVER;
@@ -240,14 +241,13 @@ namespace HotelManagement.GUI
             txtId.Depth = 0;
             txtId.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtId.LeadingIcon = null;
-            txtId.Location = new Point(17, 58);
-            txtId.Margin = new Padding(3, 4, 3, 4);
+            txtId.Location = new Point(15, 44);
             txtId.MaxLength = 50;
             txtId.MouseState = MaterialSkin.MouseState.OUT;
             txtId.Multiline = false;
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
-            txtId.Size = new Size(343, 50);
+            txtId.Size = new Size(300, 50);
             txtId.TabIndex = 21;
             txtId.Text = "";
             txtId.TrailingIcon = null;
@@ -260,14 +260,13 @@ namespace HotelManagement.GUI
             txtName.Depth = 0;
             txtName.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtName.LeadingIcon = null;
-            txtName.Location = new Point(21, 473);
-            txtName.Margin = new Padding(3, 4, 3, 4);
+            txtName.Location = new Point(18, 355);
             txtName.MaxLength = 50;
             txtName.MouseState = MaterialSkin.MouseState.OUT;
             txtName.Multiline = false;
             txtName.Name = "txtName";
             txtName.ReadOnly = true;
-            txtName.Size = new Size(339, 50);
+            txtName.Size = new Size(297, 50);
             txtName.TabIndex = 20;
             txtName.Text = "";
             txtName.TrailingIcon = null;
@@ -278,7 +277,7 @@ namespace HotelManagement.GUI
             materialLabel8.Depth = 0;
             materialLabel8.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
             materialLabel8.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            materialLabel8.Location = new Point(17, 20);
+            materialLabel8.Location = new Point(15, 15);
             materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel8.Name = "materialLabel8";
             materialLabel8.Size = new Size(160, 24);
@@ -293,14 +292,13 @@ namespace HotelManagement.GUI
             txtPhone.Depth = 0;
             txtPhone.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtPhone.LeadingIcon = null;
-            txtPhone.Location = new Point(17, 328);
-            txtPhone.Margin = new Padding(3, 4, 3, 4);
+            txtPhone.Location = new Point(15, 246);
             txtPhone.MaxLength = 50;
             txtPhone.MouseState = MaterialSkin.MouseState.OUT;
             txtPhone.Multiline = false;
             txtPhone.Name = "txtPhone";
             txtPhone.ReadOnly = true;
-            txtPhone.Size = new Size(339, 50);
+            txtPhone.Size = new Size(297, 50);
             txtPhone.TabIndex = 19;
             txtPhone.Text = "";
             txtPhone.TrailingIcon = null;
@@ -313,13 +311,12 @@ namespace HotelManagement.GUI
             txtCCCD.Depth = 0;
             txtCCCD.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtCCCD.LeadingIcon = null;
-            txtCCCD.Location = new Point(17, 192);
-            txtCCCD.Margin = new Padding(3, 4, 3, 4);
+            txtCCCD.Location = new Point(15, 144);
             txtCCCD.MaxLength = 50;
             txtCCCD.MouseState = MaterialSkin.MouseState.OUT;
             txtCCCD.Multiline = false;
             txtCCCD.Name = "txtCCCD";
-            txtCCCD.Size = new Size(339, 50);
+            txtCCCD.Size = new Size(297, 50);
             txtCCCD.TabIndex = 18;
             txtCCCD.Text = "";
             txtCCCD.TrailingIcon = null;
@@ -332,7 +329,7 @@ namespace HotelManagement.GUI
             labelDontExist.Depth = 0;
             labelDontExist.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
             labelDontExist.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            labelDontExist.Location = new Point(21, 566);
+            labelDontExist.Location = new Point(18, 424);
             labelDontExist.MouseState = MaterialSkin.MouseState.HOVER;
             labelDontExist.Name = "labelDontExist";
             labelDontExist.Size = new Size(104, 24);
@@ -347,8 +344,8 @@ namespace HotelManagement.GUI
             btnAddCustomer.Depth = 0;
             btnAddCustomer.HighEmphasis = true;
             btnAddCustomer.Icon = null;
-            btnAddCustomer.Location = new Point(191, 554);
-            btnAddCustomer.Margin = new Padding(5, 8, 5, 8);
+            btnAddCustomer.Location = new Point(146, 416);
+            btnAddCustomer.Margin = new Padding(4, 6, 4, 6);
             btnAddCustomer.MouseState = MaterialSkin.MouseState.HOVER;
             btnAddCustomer.Name = "btnAddCustomer";
             btnAddCustomer.NoAccentTextColor = Color.Empty;
@@ -366,7 +363,7 @@ namespace HotelManagement.GUI
             materialLabel6.Depth = 0;
             materialLabel6.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
             materialLabel6.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            materialLabel6.Location = new Point(21, 430);
+            materialLabel6.Location = new Point(18, 322);
             materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel6.Name = "materialLabel6";
             materialLabel6.Size = new Size(62, 24);
@@ -379,7 +376,7 @@ namespace HotelManagement.GUI
             materialLabel5.Depth = 0;
             materialLabel5.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
             materialLabel5.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            materialLabel5.Location = new Point(17, 286);
+            materialLabel5.Location = new Point(15, 214);
             materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel5.Name = "materialLabel5";
             materialLabel5.Size = new Size(72, 24);
@@ -392,7 +389,7 @@ namespace HotelManagement.GUI
             materialLabel1.Depth = 0;
             materialLabel1.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
             materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            materialLabel1.Location = new Point(17, 150);
+            materialLabel1.Location = new Point(15, 112);
             materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel1.Name = "materialLabel1";
             materialLabel1.Size = new Size(104, 24);
@@ -403,10 +400,10 @@ namespace HotelManagement.GUI
             // 
             panel2.Controls.Add(tableLayoutPanel4);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(380, 53);
+            panel2.Location = new Point(332, 40);
             panel2.Margin = new Padding(0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(888, 802);
+            panel2.Size = new Size(776, 601);
             panel2.TabIndex = 5;
             // 
             // tableLayoutPanel4
@@ -423,9 +420,9 @@ namespace HotelManagement.GUI
             tableLayoutPanel4.Margin = new Padding(0);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 2;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 64F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 48F));
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Size = new Size(888, 802);
+            tableLayoutPanel4.Size = new Size(776, 601);
             tableLayoutPanel4.TabIndex = 1;
             // 
             // panel7
@@ -436,8 +433,8 @@ namespace HotelManagement.GUI
             panel7.Location = new Point(0, 0);
             panel7.Margin = new Padding(0);
             panel7.Name = "panel7";
-            panel7.Padding = new Padding(17, 20, 17, 20);
-            panel7.Size = new Size(444, 64);
+            panel7.Padding = new Padding(15, 15, 15, 15);
+            panel7.Size = new Size(388, 48);
             panel7.TabIndex = 16;
             // 
             // fromTime
@@ -445,10 +442,9 @@ namespace HotelManagement.GUI
             fromTime.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             fromTime.CustomFormat = "dd/MM/yyyy";
             fromTime.Format = DateTimePickerFormat.Custom;
-            fromTime.Location = new Point(97, 21);
-            fromTime.Margin = new Padding(3, 4, 3, 4);
+            fromTime.Location = new Point(85, 16);
             fromTime.Name = "fromTime";
-            fromTime.Size = new Size(326, 27);
+            fromTime.Size = new Size(286, 23);
             fromTime.TabIndex = 15;
             fromTime.ValueChanged += fromTime_ValueChanged;
             // 
@@ -458,7 +454,7 @@ namespace HotelManagement.GUI
             materialLabel4.Depth = 0;
             materialLabel4.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
             materialLabel4.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            materialLabel4.Location = new Point(21, 20);
+            materialLabel4.Location = new Point(18, 15);
             materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel4.Name = "materialLabel4";
             materialLabel4.Size = new Size(61, 24);
@@ -470,11 +466,11 @@ namespace HotelManagement.GUI
             panel5.Controls.Add(tableRoom);
             panel5.Controls.Add(materialLabel11);
             panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(0, 64);
+            panel5.Location = new Point(0, 48);
             panel5.Margin = new Padding(0);
             panel5.Name = "panel5";
-            panel5.Padding = new Padding(21, 20, 21, 20);
-            panel5.Size = new Size(444, 738);
+            panel5.Padding = new Padding(18, 15, 18, 15);
+            panel5.Size = new Size(388, 553);
             panel5.TabIndex = 3;
             // 
             // tableRoom
@@ -484,8 +480,7 @@ namespace HotelManagement.GUI
             tableRoom.BackgroundColor = SystemColors.Control;
             tableRoom.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tableRoom.Dock = DockStyle.Fill;
-            tableRoom.Location = new Point(21, 44);
-            tableRoom.Margin = new Padding(3, 4, 3, 4);
+            tableRoom.Location = new Point(18, 39);
             tableRoom.MultiSelect = false;
             tableRoom.Name = "tableRoom";
             tableRoom.ReadOnly = true;
@@ -495,7 +490,7 @@ namespace HotelManagement.GUI
             tableRoom.RowHeadersWidth = 51;
             tableRoom.RowTemplate.Height = 25;
             tableRoom.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            tableRoom.Size = new Size(402, 674);
+            tableRoom.Size = new Size(352, 499);
             tableRoom.TabIndex = 16;
             tableRoom.CellContentClick += tableRoom_CellContentClick;
             // 
@@ -506,7 +501,7 @@ namespace HotelManagement.GUI
             materialLabel11.Dock = DockStyle.Top;
             materialLabel11.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
             materialLabel11.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            materialLabel11.Location = new Point(21, 20);
+            materialLabel11.Location = new Point(18, 15);
             materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel11.Name = "materialLabel11";
             materialLabel11.Size = new Size(173, 24);
@@ -518,11 +513,11 @@ namespace HotelManagement.GUI
             panel4.Controls.Add(tableBook);
             panel4.Controls.Add(materialLabel10);
             panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(444, 64);
+            panel4.Location = new Point(388, 48);
             panel4.Margin = new Padding(0);
             panel4.Name = "panel4";
-            panel4.Padding = new Padding(21, 20, 21, 20);
-            panel4.Size = new Size(444, 738);
+            panel4.Padding = new Padding(18, 15, 18, 15);
+            panel4.Size = new Size(388, 553);
             panel4.TabIndex = 2;
             // 
             // tableBook
@@ -531,8 +526,7 @@ namespace HotelManagement.GUI
             tableBook.BackgroundColor = SystemColors.Control;
             tableBook.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tableBook.Dock = DockStyle.Fill;
-            tableBook.Location = new Point(21, 44);
-            tableBook.Margin = new Padding(3, 4, 3, 4);
+            tableBook.Location = new Point(18, 39);
             tableBook.MultiSelect = false;
             tableBook.Name = "tableBook";
             tableBook.ReadOnly = true;
@@ -541,7 +535,7 @@ namespace HotelManagement.GUI
             tableBook.RowHeadersWidth = 51;
             tableBook.RowTemplate.Height = 25;
             tableBook.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            tableBook.Size = new Size(402, 674);
+            tableBook.Size = new Size(352, 499);
             tableBook.TabIndex = 15;
             tableBook.CellContentClick += tableBook_CellContentClick;
             // 
@@ -552,7 +546,7 @@ namespace HotelManagement.GUI
             materialLabel10.Dock = DockStyle.Top;
             materialLabel10.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
             materialLabel10.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            materialLabel10.Location = new Point(21, 20);
+            materialLabel10.Location = new Point(18, 15);
             materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel10.Name = "materialLabel10";
             materialLabel10.Size = new Size(163, 24);
@@ -564,11 +558,11 @@ namespace HotelManagement.GUI
             panel3.Controls.Add(toTime);
             panel3.Controls.Add(materialLabel9);
             panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(444, 0);
+            panel3.Location = new Point(388, 0);
             panel3.Margin = new Padding(0);
             panel3.Name = "panel3";
-            panel3.Padding = new Padding(17, 20, 17, 20);
-            panel3.Size = new Size(444, 64);
+            panel3.Padding = new Padding(15, 15, 15, 15);
+            panel3.Size = new Size(388, 48);
             panel3.TabIndex = 15;
             // 
             // toTime
@@ -576,10 +570,9 @@ namespace HotelManagement.GUI
             toTime.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             toTime.CustomFormat = "dd/MM/yyyy";
             toTime.Format = DateTimePickerFormat.Custom;
-            toTime.Location = new Point(64, 21);
-            toTime.Margin = new Padding(3, 4, 3, 4);
+            toTime.Location = new Point(56, 16);
             toTime.Name = "toTime";
-            toTime.Size = new Size(360, 27);
+            toTime.Size = new Size(316, 23);
             toTime.TabIndex = 16;
             toTime.ValueChanged += toTime_ValueChanged;
             // 
@@ -589,7 +582,7 @@ namespace HotelManagement.GUI
             materialLabel9.Depth = 0;
             materialLabel9.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
             materialLabel9.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            materialLabel9.Location = new Point(21, 20);
+            materialLabel9.Location = new Point(18, 15);
             materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel9.Name = "materialLabel9";
             materialLabel9.Size = new Size(32, 24);
@@ -601,10 +594,10 @@ namespace HotelManagement.GUI
             panel6.Controls.Add(btnCancel);
             panel6.Controls.Add(btnSave);
             panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(70, 868);
+            panel6.Location = new Point(61, 651);
             panel6.Margin = new Padding(0);
             panel6.Name = "panel6";
-            panel6.Size = new Size(1268, 67);
+            panel6.Size = new Size(1108, 50);
             panel6.TabIndex = 1;
             // 
             // btnCancel
@@ -616,12 +609,12 @@ namespace HotelManagement.GUI
             btnCancel.Depth = 0;
             btnCancel.HighEmphasis = true;
             btnCancel.Icon = null;
-            btnCancel.Location = new Point(1067, 8);
-            btnCancel.Margin = new Padding(5, 8, 5, 8);
+            btnCancel.Location = new Point(932, 6);
+            btnCancel.Margin = new Padding(4, 6, 4, 6);
             btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
             btnCancel.Name = "btnCancel";
             btnCancel.NoAccentTextColor = Color.Empty;
-            btnCancel.Size = new Size(181, 48);
+            btnCancel.Size = new Size(158, 36);
             btnCancel.TabIndex = 1;
             btnCancel.Text = "CANCEL";
             btnCancel.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
@@ -638,12 +631,12 @@ namespace HotelManagement.GUI
             btnSave.Depth = 0;
             btnSave.HighEmphasis = true;
             btnSave.Icon = null;
-            btnSave.Location = new Point(877, 8);
-            btnSave.Margin = new Padding(5, 8, 5, 8);
+            btnSave.Location = new Point(765, 6);
+            btnSave.Margin = new Padding(4, 6, 4, 6);
             btnSave.MouseState = MaterialSkin.MouseState.HOVER;
             btnSave.Name = "btnSave";
             btnSave.NoAccentTextColor = Color.Empty;
-            btnSave.Size = new Size(181, 48);
+            btnSave.Size = new Size(158, 36);
             btnSave.TabIndex = 0;
             btnSave.Text = "SAVE";
             btnSave.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -653,13 +646,11 @@ namespace HotelManagement.GUI
             // 
             // ReservBookingUI
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1415, 1024);
+            ClientSize = new Size(1238, 768);
             Controls.Add(tableLayoutPanel1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "ReservBookingUI";
-            Padding = new Padding(3, 85, 3, 4);
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ROOM BOOKING";
             tableLayoutPanel1.ResumeLayout(false);

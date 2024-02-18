@@ -109,9 +109,9 @@
             labelTitle.Anchor = AnchorStyles.None;
             labelTitle.AutoSize = true;
             labelTitle.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelTitle.Location = new Point(354, 24);
+            labelTitle.Location = new Point(369, 26);
             labelTitle.Name = "labelTitle";
-            labelTitle.Size = new Size(167, 24);
+            labelTitle.Size = new Size(136, 19);
             labelTitle.TabIndex = 0;
             labelTitle.Text = "Thông tin phòng";
             // 
@@ -234,7 +234,7 @@
             // 
             panel8.Controls.Add(tableLayoutPanel4);
             panel8.Dock = DockStyle.Top;
-            panel8.Location = new Point(3, 105);
+            panel8.Location = new Point(3, 101);
             panel8.Name = "panel8";
             panel8.Size = new Size(425, 46);
             panel8.TabIndex = 2;
@@ -258,9 +258,9 @@
             // 
             labelUnitPriceChange.Anchor = AnchorStyles.Left;
             labelUnitPriceChange.AutoSize = true;
-            labelUnitPriceChange.Location = new Point(156, 7);
+            labelUnitPriceChange.Location = new Point(156, 9);
             labelUnitPriceChange.Name = "labelUnitPriceChange";
-            labelUnitPriceChange.Size = new Size(62, 20);
+            labelUnitPriceChange.Size = new Size(48, 15);
             labelUnitPriceChange.TabIndex = 1;
             labelUnitPriceChange.Text = "Đơn giá";
             // 
@@ -268,9 +268,9 @@
             // 
             label3.Anchor = AnchorStyles.Left;
             label3.AutoSize = true;
-            label3.Location = new Point(3, 7);
+            label3.Location = new Point(3, 9);
             label3.Name = "label3";
-            label3.Size = new Size(62, 20);
+            label3.Size = new Size(48, 15);
             label3.TabIndex = 0;
             label3.Text = "Đơn giá";
             // 
@@ -278,7 +278,7 @@
             // 
             panel7.Controls.Add(tableLayoutPanel3);
             panel7.Dock = DockStyle.Top;
-            panel7.Location = new Point(3, 59);
+            panel7.Location = new Point(3, 55);
             panel7.Name = "panel7";
             panel7.Size = new Size(425, 46);
             panel7.TabIndex = 1;
@@ -302,9 +302,9 @@
             // 
             labelNameTypeChange.Anchor = AnchorStyles.Left;
             labelNameTypeChange.AutoSize = true;
-            labelNameTypeChange.Location = new Point(156, 7);
+            labelNameTypeChange.Location = new Point(156, 9);
             labelNameTypeChange.Name = "labelNameTypeChange";
-            labelNameTypeChange.Size = new Size(108, 20);
+            labelNameTypeChange.Size = new Size(85, 15);
             labelNameTypeChange.TabIndex = 1;
             labelNameTypeChange.Text = "Tên loại phòng";
             // 
@@ -312,16 +312,16 @@
             // 
             label1.Anchor = AnchorStyles.Left;
             label1.AutoSize = true;
-            label1.Location = new Point(3, 7);
+            label1.Location = new Point(3, 9);
             label1.Name = "label1";
-            label1.Size = new Size(108, 20);
+            label1.Size = new Size(85, 15);
             label1.TabIndex = 0;
             label1.Text = "Tên loại phòng";
             // 
             // panel6
             // 
             panel6.Dock = DockStyle.Top;
-            panel6.Location = new Point(3, 23);
+            panel6.Location = new Point(3, 19);
             panel6.Name = "panel6";
             panel6.Size = new Size(425, 36);
             panel6.TabIndex = 0;
@@ -343,9 +343,9 @@
             panel10.AutoScroll = true;
             panel10.Controls.Add(listViewConvinience);
             panel10.Dock = DockStyle.Fill;
-            panel10.Location = new Point(3, 23);
+            panel10.Location = new Point(3, 19);
             panel10.Name = "panel10";
-            panel10.Size = new Size(426, 131);
+            panel10.Size = new Size(426, 135);
             panel10.TabIndex = 0;
             // 
             // listViewConvinience
@@ -384,9 +384,9 @@
             cbbRoomTypeID.Dock = DockStyle.Fill;
             cbbRoomTypeID.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbRoomTypeID.FormattingEnabled = true;
-            cbbRoomTypeID.Location = new Point(3, 23);
+            cbbRoomTypeID.Location = new Point(3, 19);
             cbbRoomTypeID.Name = "cbbRoomTypeID";
-            cbbRoomTypeID.Size = new Size(869, 28);
+            cbbRoomTypeID.Size = new Size(869, 23);
             cbbRoomTypeID.TabIndex = 0;
             cbbRoomTypeID.SelectedValueChanged += cbbRoomTypeID_SelectedValueChanged;
             // 
@@ -406,9 +406,9 @@
             cbbStatus.Dock = DockStyle.Fill;
             cbbStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbStatus.FormattingEnabled = true;
-            cbbStatus.Location = new Point(3, 23);
+            cbbStatus.Location = new Point(3, 19);
             cbbStatus.Name = "cbbStatus";
-            cbbStatus.Size = new Size(869, 28);
+            cbbStatus.Size = new Size(869, 23);
             cbbStatus.TabIndex = 0;
             // 
             // groupBox1
@@ -425,9 +425,9 @@
             // txbID
             // 
             txbID.Dock = DockStyle.Fill;
-            txbID.Location = new Point(3, 23);
+            txbID.Location = new Point(3, 19);
             txbID.Name = "txbID";
-            txbID.Size = new Size(869, 27);
+            txbID.Size = new Size(869, 23);
             txbID.TabIndex = 0;
             // 
             // RoomInfoUI
