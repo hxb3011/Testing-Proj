@@ -13,21 +13,20 @@ namespace HotelManagement.Data.Access.Core
         public static MySqlConnection Connection
             => new(new MySqlConnectionStringBuilder()
             {
-                Server = "127.0.0.1",
+                Server = "localhost",
                 Database = "qlks",
-                UserID = "root",
-                Password = Environment.GetEnvironmentVariable("CS_QLKS_MySQL_PWD",
-                    EnvironmentVariableTarget.User) ?? "",
+                UserID = "toan",
+                Password = "123",
                 Port = 3306
             }.ToString());
 
         public static MySqlConnection getConnection()
         {
             var mysqlBuilder = new MySqlConnectionStringBuilder();
-            mysqlBuilder["Server"] = "127.0.0.1";
+            mysqlBuilder["Server"] = "localhost";
             mysqlBuilder["Database"] = "qlks";
-            mysqlBuilder["UID"] = "root";
-            mysqlBuilder["PWD"] = "";
+            mysqlBuilder["UID"] = "toan";
+            mysqlBuilder["PWD"] = "123";
             mysqlBuilder["Port"] = "3306";
 
             string mysqlStringConnection = mysqlBuilder.ToString();

@@ -113,7 +113,7 @@ namespace HotelManagement.GUI
             bool isAddressValid =
             Validator.Instance.checkTextBox(txtAddress, errAddress, new string[] { "not-empty" });
 
-            return isNameValid && isCCCDValid &&  isPhoneValid && isAddressValid; 
+            return isNameValid && isCCCDValid && isPhoneValid && isAddressValid;
         }
 
         #endregion
@@ -124,7 +124,7 @@ namespace HotelManagement.GUI
         {
             string id = txtId.Text;
             string fullname = txtFullname.Text;
-            string gender = cbxGender.Text == "Name" ? "1" : "0";
+            string gender = cbxGender.Text == "Nam" ? "1" : "0";
             DateTime birthday = dateTimeBirthday.Value;
             string address = txtAddress.Text;
             string phone = txtPhone.Text;
@@ -140,10 +140,10 @@ namespace HotelManagement.GUI
                 {
                     addCustomer(customer);
                 }
-            }    
+            }
         }
 
-        
+
 
         private void btnReset_Click(object sender, EventArgs e)
         {
@@ -168,7 +168,7 @@ namespace HotelManagement.GUI
 
         private void txtPhone_TextChanged(object sender, EventArgs e)
         {
-            Validator.Instance.checkTextBox(txtPhone, errPhone, new string[] { "not-empty","phone-number" });
+            Validator.Instance.checkTextBox(txtPhone, errPhone, new string[] { "not-empty", "phone-number" });
         }
 
         private void txtAddress_TextChanged(object sender, EventArgs e)

@@ -101,9 +101,9 @@
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(157, 26);
+            label1.Location = new Point(137, 24);
             label1.Name = "label1";
-            label1.Size = new Size(176, 19);
+            label1.Size = new Size(217, 24);
             label1.TabIndex = 0;
             label1.Text = "Thông tin khách hàng";
             // 
@@ -199,7 +199,7 @@
             txtId.Enabled = false;
             txtId.Location = new Point(16, 28);
             txtId.Name = "txtId";
-            txtId.Size = new Size(440, 23);
+            txtId.Size = new Size(440, 27);
             txtId.TabIndex = 1;
             // 
             // label2
@@ -207,7 +207,7 @@
             label2.AutoSize = true;
             label2.Location = new Point(16, 10);
             label2.Name = "label2";
-            label2.Size = new Size(89, 15);
+            label2.Size = new Size(109, 20);
             label2.TabIndex = 0;
             label2.Text = "Mã khách hàng";
             // 
@@ -234,7 +234,7 @@
             // 
             txtFullname.Location = new Point(16, 28);
             txtFullname.Name = "txtFullname";
-            txtFullname.Size = new Size(440, 23);
+            txtFullname.Size = new Size(440, 27);
             txtFullname.TabIndex = 1;
             txtFullname.TextChanged += txtFullname_TextChanged;
             // 
@@ -243,7 +243,7 @@
             label5.AutoSize = true;
             label5.Location = new Point(16, 10);
             label5.Name = "label5";
-            label5.Size = new Size(90, 15);
+            label5.Size = new Size(111, 20);
             label5.TabIndex = 0;
             label5.Text = "Tên khách hàng";
             // 
@@ -261,7 +261,7 @@
             cbxGender.FormattingEnabled = true;
             cbxGender.Location = new Point(15, 31);
             cbxGender.Name = "cbxGender";
-            cbxGender.Size = new Size(441, 23);
+            cbxGender.Size = new Size(441, 28);
             cbxGender.TabIndex = 3;
             // 
             // label7
@@ -269,7 +269,7 @@
             label7.AutoSize = true;
             label7.Location = new Point(16, 10);
             label7.Name = "label7";
-            label7.Size = new Size(52, 15);
+            label7.Size = new Size(65, 20);
             label7.TabIndex = 0;
             label7.Text = "Giới tính";
             // 
@@ -296,7 +296,7 @@
             // 
             txtCCCD.Location = new Point(16, 28);
             txtCCCD.Name = "txtCCCD";
-            txtCCCD.Size = new Size(440, 23);
+            txtCCCD.Size = new Size(440, 27);
             txtCCCD.TabIndex = 1;
             txtCCCD.TextChanged += txtCCCD_TextChanged;
             // 
@@ -305,7 +305,7 @@
             label9.AutoSize = true;
             label9.Location = new Point(16, 10);
             label9.Name = "label9";
-            label9.Size = new Size(80, 15);
+            label9.Size = new Size(97, 20);
             label9.TabIndex = 0;
             label9.Text = "CCCD/CMND";
             // 
@@ -332,7 +332,7 @@
             // 
             txtPhone.Location = new Point(16, 28);
             txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(440, 23);
+            txtPhone.Size = new Size(440, 27);
             txtPhone.TabIndex = 1;
             txtPhone.TextChanged += txtPhone_TextChanged;
             // 
@@ -341,7 +341,7 @@
             label11.AutoSize = true;
             label11.Location = new Point(16, 10);
             label11.Name = "label11";
-            label11.Size = new Size(76, 15);
+            label11.Size = new Size(97, 20);
             label11.TabIndex = 0;
             label11.Text = "Số điện thoại";
             // 
@@ -361,7 +361,7 @@
             dateTimeBirthday.Format = DateTimePickerFormat.Custom;
             dateTimeBirthday.Location = new Point(16, 28);
             dateTimeBirthday.Name = "dateTimeBirthday";
-            dateTimeBirthday.Size = new Size(440, 23);
+            dateTimeBirthday.Size = new Size(440, 27);
             dateTimeBirthday.TabIndex = 3;
             // 
             // label12
@@ -378,7 +378,7 @@
             label13.AutoSize = true;
             label13.Location = new Point(16, 10);
             label13.Name = "label13";
-            label13.Size = new Size(60, 15);
+            label13.Size = new Size(74, 20);
             label13.TabIndex = 0;
             label13.Text = "Ngày sinh";
             // 
@@ -405,7 +405,7 @@
             // 
             txtAddress.Location = new Point(16, 28);
             txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(440, 23);
+            txtAddress.Size = new Size(440, 27);
             txtAddress.TabIndex = 1;
             txtAddress.TextChanged += txtAddress_TextChanged;
             // 
@@ -414,7 +414,7 @@
             label15.AutoSize = true;
             label15.Location = new Point(16, 10);
             label15.Name = "label15";
-            label15.Size = new Size(43, 15);
+            label15.Size = new Size(55, 20);
             label15.TabIndex = 0;
             label15.Text = "Địa chỉ";
             // 

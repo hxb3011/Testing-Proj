@@ -3,7 +3,6 @@ using HotelManagement.Data.Access;
 using HotelManagement.Ultils;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
-
 namespace HotelManagement.BUS
 {
     public class CustomerBUS
