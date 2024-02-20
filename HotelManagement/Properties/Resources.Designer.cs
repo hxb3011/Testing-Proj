@@ -63,6 +63,36 @@ namespace HotelManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap account_circle_outline {
+            get {
+                object obj = ResourceManager.GetObject("account_circle_outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap account_outline {
+            get {
+                object obj = ResourceManager.GetObject("account_outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap briefcase_outline {
+            get {
+                object obj = ResourceManager.GetObject("briefcase_outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_bedroom_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-bedroom-48", resourceCulture);
@@ -196,6 +226,16 @@ namespace HotelManagement.Properties {
         internal static System.Drawing.Bitmap icons8_valet_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-valet-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_outline {
+            get {
+                object obj = ResourceManager.GetObject("key_outline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -32,7 +32,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PermissionGroupManagerUI));
-            lbGroups = new MaterialSkin.Controls.MaterialListBox();
+            lbGroups = new ListBox();
             pnGroupInfo = new Panel();
             ucGranting = new GrantingPermissionsUI();
             ucGroupInfo = new PermissonGroupInfoUI();
@@ -41,12 +41,10 @@
             btnBack = new ToolStripButton();
             txtTitle = new ToolStripLabel();
             tbSearchBox = new ToolStripTextBox();
-            btnMore = new ToolStripDropDownButton();
-            dbtnSave = new ToolStripMenuItem();
-            dbtnSearch = new ToolStripMenuItem();
-            dbtnAdd = new ToolStripMenuItem();
-            dbtnEdit = new ToolStripMenuItem();
-            dbtnDelete = new ToolStripMenuItem();
+            btnDelete = new ToolStripButton();
+            btnEdit = new ToolStripButton();
+            btnAdd = new ToolStripButton();
+            btnSave = new ToolStripButton();
             btnSearch = new ToolStripButton();
             pnAppBar = new Panel();
             pnGroupInfo.SuspendLayout();
@@ -57,17 +55,11 @@
             // lbGroups
             // 
             lbGroups.BackColor = Color.WhiteSmoke;
-            lbGroups.BorderColor = Color.LightGray;
-            lbGroups.Depth = 0;
             lbGroups.Dock = DockStyle.Left;
             lbGroups.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             lbGroups.Location = new Point(0, 56);
-            lbGroups.MouseState = MaterialSkin.MouseState.HOVER;
             lbGroups.Name = "lbGroups";
-            lbGroups.SelectedIndex = -1;
-            lbGroups.SelectedItem = null;
             lbGroups.Size = new Size(240, 544);
-            lbGroups.Style = MaterialSkin.Controls.MaterialListBox.ListBoxStyle.TwoLine;
             lbGroups.TabIndex = 0;
             lbGroups.SelectedIndexChanged += OnSelectedGroupIndex;
             // 
@@ -94,7 +86,7 @@
             ucGranting.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ucGranting.ForeColor = Color.Black;
             ucGranting.Location = new Point(0, 220);
-            ucGranting.Margin = new Padding(4, 4, 4, 4);
+            ucGranting.Margin = new Padding(4);
             ucGranting.MinimumSize = new Size(360, 0);
             ucGranting.Name = "ucGranting";
             ucGranting.Size = new Size(360, 1280);
@@ -119,7 +111,7 @@
             lbGroupInfoTitle.Font = new Font("Segoe UI", 26F, FontStyle.Bold, GraphicsUnit.Pixel);
             lbGroupInfoTitle.Location = new Point(0, 0);
             lbGroupInfoTitle.Name = "lbGroupInfoTitle";
-            lbGroupInfoTitle.Size = new Size(326, 84);
+            lbGroupInfoTitle.Size = new Size(334, 84);
             lbGroupInfoTitle.TabIndex = 2;
             lbGroupInfoTitle.Text = "Thông tin nhóm quyền";
             lbGroupInfoTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -130,7 +122,7 @@
             tsAppBar.Dock = DockStyle.Fill;
             tsAppBar.GripStyle = ToolStripGripStyle.Hidden;
             tsAppBar.ImageScalingSize = new Size(24, 24);
-            tsAppBar.Items.AddRange(new ToolStripItem[] { btnBack, txtTitle, tbSearchBox, btnMore, btnSearch });
+            tsAppBar.Items.AddRange(new ToolStripItem[] { btnBack, txtTitle, tbSearchBox, btnDelete, btnEdit, btnAdd, btnSave, btnSearch });
             tsAppBar.Location = new Point(0, 0);
             tsAppBar.Name = "tsAppBar";
             tsAppBar.Padding = new Padding(0);
@@ -166,62 +158,60 @@
             tbSearchBox.BorderStyle = BorderStyle.FixedSingle;
             tbSearchBox.Margin = new Padding(0);
             tbSearchBox.Name = "tbSearchBox";
-            tbSearchBox.Size = new Size(248, 39);
+            tbSearchBox.Size = new Size(248, 31);
             tbSearchBox.TextChanged += OnLookingUp;
             // 
-            // btnMore
+            // btnDelete
             // 
-            btnMore.Alignment = ToolStripItemAlignment.Right;
-            btnMore.AutoSize = false;
-            btnMore.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            btnMore.DropDownItems.AddRange(new ToolStripItem[] { dbtnSave, dbtnSearch, dbtnAdd, dbtnEdit, dbtnDelete });
-            btnMore.Image = (Image)resources.GetObject("btnMore.Image");
-            btnMore.ImageTransparentColor = Color.Magenta;
-            btnMore.Margin = new Padding(0);
-            btnMore.Name = "btnMore";
-            btnMore.ShowDropDownArrow = false;
-            btnMore.Size = new Size(56, 56);
-            btnMore.Text = "Tùy chọn khác";
+            btnDelete.Alignment = ToolStripItemAlignment.Right;
+            btnDelete.AutoSize = false;
+            btnDelete.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnDelete.Image = (Image)resources.GetObject("btnDelete.Image");
+            btnDelete.ImageTransparentColor = Color.Magenta;
+            btnDelete.Margin = new Padding(0);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(56, 56);
+            btnDelete.Text = "Xóa";
+            btnDelete.Click += OnDeleting;
             // 
-            // dbtnSave
+            // btnEdit
             // 
-            dbtnSave.Image = (Image)resources.GetObject("dbtnSave.Image");
-            dbtnSave.Name = "dbtnSave";
-            dbtnSave.Size = new Size(246, 44);
-            dbtnSave.Text = "Lưu";
-            dbtnSave.Click += OnSave;
+            btnEdit.Alignment = ToolStripItemAlignment.Right;
+            btnEdit.AutoSize = false;
+            btnEdit.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnEdit.Image = (Image)resources.GetObject("btnEdit.Image");
+            btnEdit.ImageTransparentColor = Color.Magenta;
+            btnEdit.Margin = new Padding(0);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(56, 56);
+            btnEdit.Text = "Sửa";
+            btnEdit.Click += OnEditing;
             // 
-            // dbtnSearch
+            // btnAdd
             // 
-            dbtnSearch.Image = (Image)resources.GetObject("dbtnSearch.Image");
-            dbtnSearch.Name = "dbtnSearch";
-            dbtnSearch.Size = new Size(246, 44);
-            dbtnSearch.Text = "Tìm kiếm";
-            dbtnSearch.Click += OnStartSearch;
+            btnAdd.Alignment = ToolStripItemAlignment.Right;
+            btnAdd.AutoSize = false;
+            btnAdd.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnAdd.Image = (Image)resources.GetObject("btnAdd.Image");
+            btnAdd.ImageTransparentColor = Color.Magenta;
+            btnAdd.Margin = new Padding(0);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(56, 56);
+            btnAdd.Text = "Thêm";
+            btnAdd.Click += OnAdding;
             // 
-            // dbtnAdd
+            // btnSave
             // 
-            dbtnAdd.Image = (Image)resources.GetObject("dbtnAdd.Image");
-            dbtnAdd.Name = "dbtnAdd";
-            dbtnAdd.Size = new Size(246, 44);
-            dbtnAdd.Text = "Thêm";
-            dbtnAdd.Click += OnAdding;
-            // 
-            // dbtnEdit
-            // 
-            dbtnEdit.Image = (Image)resources.GetObject("dbtnEdit.Image");
-            dbtnEdit.Name = "dbtnEdit";
-            dbtnEdit.Size = new Size(246, 44);
-            dbtnEdit.Text = "Sửa";
-            dbtnEdit.Click += OnEditing;
-            // 
-            // dbtnDelete
-            // 
-            dbtnDelete.Image = (Image)resources.GetObject("dbtnDelete.Image");
-            dbtnDelete.Name = "dbtnDelete";
-            dbtnDelete.Size = new Size(246, 44);
-            dbtnDelete.Text = "Xóa";
-            dbtnDelete.Click += OnDeleting;
+            btnSave.Alignment = ToolStripItemAlignment.Right;
+            btnSave.AutoSize = false;
+            btnSave.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnSave.Image = (Image)resources.GetObject("btnSave.Image");
+            btnSave.ImageTransparentColor = Color.Magenta;
+            btnSave.Margin = new Padding(0);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(56, 56);
+            btnSave.Text = "Hoàn tất";
+            btnSave.Click += OnSave;
             // 
             // btnSearch
             // 
@@ -265,7 +255,7 @@
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialListBox lbGroups;
+        private ListBox lbGroups;
         private PermissonGroupInfoUI ucGroupInfo;
         private GrantingPermissionsUI ucGranting;
         private Label lbGroupInfoTitle;
@@ -276,11 +266,9 @@
         private ToolStripLabel txtTitle;
         private ToolStripTextBox tbSearchBox;
         private ToolStripButton btnSearch;
-        private ToolStripDropDownButton btnMore;
-        private ToolStripMenuItem dbtnSave;
-        private ToolStripMenuItem dbtnSearch;
-        private ToolStripMenuItem dbtnAdd;
-        private ToolStripMenuItem dbtnEdit;
-        private ToolStripMenuItem dbtnDelete;
+        private ToolStripButton btnDelete;
+        private ToolStripButton btnEdit;
+        private ToolStripButton btnAdd;
+        private ToolStripButton btnSave;
     }
 }

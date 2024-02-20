@@ -3,6 +3,8 @@
     using HotelManagement.Business;
     using HotelManagement.Data;
 
+    using Org.BouncyCastle.Utilities.IO;
+
     using System;
     using System.Windows.Forms;
 
@@ -49,11 +51,19 @@
             };
             if (sfd.ShowDialog() == DialogResult.OK)
             {
-                using (var stream = sfd.OpenFile())
+                Stream stream = null;
+                try
                 {
-                    if (!StaffImexBO.Instance.ExportData(stream))
+                    if (!StaffImexBO.Instance.ExportData(stream = sfd.OpenFile()))
                         MessageBox.Show("Xuất file xuất thất bại", "Xuất file Excel", MessageBoxButtons.OK);
                     else MessageBox.Show("Xuất file xuất thành công.", "Xuất file Excel", MessageBoxButtons.OK);
+                    stream.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    stream?.Dispose();
+                    MessageBox.Show(ex.Message, "Xuất file Excel", MessageBoxButtons.OK);
+                    return;
                 }
             }
         }
@@ -69,12 +79,19 @@
             };
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                using (var stream = ofd.OpenFile())
+                Stream stream = null;
+                try
                 {
-                    var bo = StaffImexBO.Instance;
-                    if (!StaffImexBO.Instance.ImportData(stream))
+                    if (!StaffImexBO.Instance.ImportData(stream = ofd.OpenFile()))
                         MessageBox.Show("Tải file nhập thất bại", "Nhập file Excel", MessageBoxButtons.OK);
                     else MessageBox.Show("Tải file nhập thành công.", "Nhập file Excel", MessageBoxButtons.OK);
+                    stream.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    stream?.Dispose();
+                    MessageBox.Show(ex.Message, "Nhập file Excel", MessageBoxButtons.OK);
+                    return;
                 }
                 Text = "Xem trước khi nhập: File " + fileName;
                 btnSave.Visible = true;
@@ -91,11 +108,19 @@
             };
             if (sfd.ShowDialog() == DialogResult.OK)
             {
-                using (var stream = sfd.OpenFile())
+                Stream stream = null;
+                try
                 {
-                    if (!StaffImexBO.Instance.ExportTemplate(stream))
+                    if (!StaffImexBO.Instance.ExportTemplate(stream = sfd.OpenFile()))
                         MessageBox.Show("Xuất file mẫu thất bại.", "Xuất file mẫu", MessageBoxButtons.OK);
                     else MessageBox.Show("Xuất file mẫu thành công.", "Xuất file mẫu", MessageBoxButtons.OK);
+                    stream.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    stream?.Dispose();
+                    MessageBox.Show(ex.Message, "Xuất file mẫu", MessageBoxButtons.OK);
+                    return;
                 }
             }
         }

@@ -32,23 +32,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffManagerUI));
-            lbStaffs = new MaterialSkin.Controls.MaterialListBox();
+            lbStaffs = new ListBox();
             pnStaffInfo = new Panel();
-            ucGranting = new GrantingPermissionsUI();
             ucStaffInfo = new StaffInfoUI();
             lbStaffInfoTitle = new Label();
             tsAppBar = new ToolStrip();
             btnBack = new ToolStripButton();
             txtTitle = new ToolStripLabel();
             tbSearchBox = new ToolStripTextBox();
-            btnMore = new ToolStripDropDownButton();
-            dbtnSave = new ToolStripMenuItem();
-            dbtnSearch = new ToolStripMenuItem();
-            dbtnAdd = new ToolStripMenuItem();
-            dbtnEdit = new ToolStripMenuItem();
-            dbtnDelete = new ToolStripMenuItem();
-            dbtnImex = new ToolStripMenuItem();
-            dbtnRoleManager = new ToolStripMenuItem();
+            btnRoleManager = new ToolStripButton();
+            btnImex = new ToolStripButton();
+            btnDelete = new ToolStripButton();
+            btnEdit = new ToolStripButton();
+            btnAdd = new ToolStripButton();
+            btnSave = new ToolStripButton();
             btnSearch = new ToolStripButton();
             pnAppBar = new Panel();
             pnStaffInfo.SuspendLayout();
@@ -59,17 +56,12 @@
             // lbStaffs
             // 
             lbStaffs.BackColor = Color.WhiteSmoke;
-            lbStaffs.BorderColor = Color.LightGray;
-            lbStaffs.Depth = 0;
             lbStaffs.Dock = DockStyle.Left;
             lbStaffs.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lbStaffs.ItemHeight = 20;
             lbStaffs.Location = new Point(0, 56);
-            lbStaffs.MouseState = MaterialSkin.MouseState.HOVER;
             lbStaffs.Name = "lbStaffs";
-            lbStaffs.SelectedIndex = -1;
-            lbStaffs.SelectedItem = null;
             lbStaffs.Size = new Size(240, 544);
-            lbStaffs.Style = MaterialSkin.Controls.MaterialListBox.ListBoxStyle.TwoLine;
             lbStaffs.TabIndex = 0;
             lbStaffs.SelectedIndexChanged += OnSelectedStaffIndex;
             // 
@@ -77,7 +69,6 @@
             // 
             pnStaffInfo.AutoScroll = true;
             pnStaffInfo.BackColor = Color.FromArgb(255, 255, 255);
-            pnStaffInfo.Controls.Add(ucGranting);
             pnStaffInfo.Controls.Add(ucStaffInfo);
             pnStaffInfo.Controls.Add(lbStaffInfoTitle);
             pnStaffInfo.Dock = DockStyle.Right;
@@ -87,20 +78,6 @@
             pnStaffInfo.Name = "pnStaffInfo";
             pnStaffInfo.Size = new Size(360, 544);
             pnStaffInfo.TabIndex = 1;
-            // 
-            // ucGranting
-            // 
-            ucGranting.BackColor = Color.White;
-            ucGranting.Dock = DockStyle.Top;
-            ucGranting.Editing = false;
-            ucGranting.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ucGranting.ForeColor = Color.Black;
-            ucGranting.Location = new Point(0, 744);
-            ucGranting.Margin = new Padding(4, 4, 4, 4);
-            ucGranting.MinimumSize = new Size(360, 0);
-            ucGranting.Name = "ucGranting";
-            ucGranting.Size = new Size(360, 1280);
-            ucGranting.TabIndex = 1;
             // 
             // ucStaffInfo
             // 
@@ -121,7 +98,7 @@
             lbStaffInfoTitle.Font = new Font("Segoe UI", 26F, FontStyle.Bold, GraphicsUnit.Pixel);
             lbStaffInfoTitle.Location = new Point(0, 0);
             lbStaffInfoTitle.Name = "lbStaffInfoTitle";
-            lbStaffInfoTitle.Size = new Size(326, 84);
+            lbStaffInfoTitle.Size = new Size(334, 84);
             lbStaffInfoTitle.TabIndex = 2;
             lbStaffInfoTitle.Text = "Thông tin nhân viên";
             lbStaffInfoTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -132,7 +109,7 @@
             tsAppBar.Dock = DockStyle.Fill;
             tsAppBar.GripStyle = ToolStripGripStyle.Hidden;
             tsAppBar.ImageScalingSize = new Size(24, 24);
-            tsAppBar.Items.AddRange(new ToolStripItem[] { btnBack, txtTitle, tbSearchBox, btnMore, btnSearch });
+            tsAppBar.Items.AddRange(new ToolStripItem[] { btnBack, txtTitle, tbSearchBox, btnRoleManager, btnImex, btnDelete, btnEdit, btnAdd, btnSave, btnSearch });
             tsAppBar.Location = new Point(0, 0);
             tsAppBar.Name = "tsAppBar";
             tsAppBar.Padding = new Padding(0);
@@ -168,78 +145,86 @@
             tbSearchBox.BorderStyle = BorderStyle.FixedSingle;
             tbSearchBox.Margin = new Padding(0);
             tbSearchBox.Name = "tbSearchBox";
-            tbSearchBox.Size = new Size(248, 39);
+            tbSearchBox.Size = new Size(248, 31);
             tbSearchBox.TextChanged += OnLookingUp;
             // 
-            // btnMore
+            // btnRoleManager
             // 
-            btnMore.Alignment = ToolStripItemAlignment.Right;
-            btnMore.AutoSize = false;
-            btnMore.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            btnMore.DropDownItems.AddRange(new ToolStripItem[] { dbtnSave, dbtnSearch, dbtnAdd, dbtnEdit, dbtnDelete, dbtnImex, dbtnRoleManager });
-            btnMore.Image = (Image)resources.GetObject("btnMore.Image");
-            btnMore.ImageTransparentColor = Color.Magenta;
-            btnMore.Margin = new Padding(0);
-            btnMore.Name = "btnMore";
-            btnMore.ShowDropDownArrow = false;
-            btnMore.Size = new Size(56, 56);
-            btnMore.Text = "Tùy chọn khác";
+            btnRoleManager.Alignment = ToolStripItemAlignment.Right;
+            btnRoleManager.AutoSize = false;
+            btnRoleManager.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnRoleManager.Image = (Image)resources.GetObject("btnRoleManager.Image");
+            btnRoleManager.ImageTransparentColor = Color.Magenta;
+            btnRoleManager.Margin = new Padding(0);
+            btnRoleManager.Name = "btnRoleManager";
+            btnRoleManager.Size = new Size(56, 56);
+            btnRoleManager.Text = "Chức vụ";
+            btnRoleManager.Click += OnStartRoleManager;
             // 
-            // dbtnSave
+            // btnImex
             // 
-            dbtnSave.Image = (Image)resources.GetObject("dbtnSave.Image");
-            dbtnSave.Name = "dbtnSave";
-            dbtnSave.Size = new Size(262, 44);
-            dbtnSave.Text = "Lưu";
-            dbtnSave.Click += OnSave;
+            btnImex.Alignment = ToolStripItemAlignment.Right;
+            btnImex.AutoSize = false;
+            btnImex.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnImex.Image = (Image)resources.GetObject("btnImex.Image");
+            btnImex.ImageTransparentColor = Color.Magenta;
+            btnImex.Margin = new Padding(0);
+            btnImex.Name = "btnImex";
+            btnImex.Size = new Size(56, 56);
+            btnImex.Text = "Nhập/Xuất";
+            btnImex.Click += OnStartImex;
             // 
-            // dbtnSearch
+            // btnDelete
             // 
-            dbtnSearch.Image = (Image)resources.GetObject("dbtnSearch.Image");
-            dbtnSearch.Name = "dbtnSearch";
-            dbtnSearch.Size = new Size(262, 44);
-            dbtnSearch.Text = "Tìm kiếm";
-            dbtnSearch.Click += OnStartSearch;
+            btnDelete.Alignment = ToolStripItemAlignment.Right;
+            btnDelete.AutoSize = false;
+            btnDelete.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnDelete.Image = (Image)resources.GetObject("btnDelete.Image");
+            btnDelete.ImageTransparentColor = Color.Magenta;
+            btnDelete.Margin = new Padding(0);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(56, 56);
+            btnDelete.Text = "Xóa";
+            btnDelete.Click += OnDeleting;
             // 
-            // dbtnAdd
+            // btnEdit
             // 
-            dbtnAdd.Image = (Image)resources.GetObject("dbtnAdd.Image");
-            dbtnAdd.Name = "dbtnAdd";
-            dbtnAdd.Size = new Size(262, 44);
-            dbtnAdd.Text = "Thêm";
-            dbtnAdd.Click += OnAdding;
+            btnEdit.Alignment = ToolStripItemAlignment.Right;
+            btnEdit.AutoSize = false;
+            btnEdit.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnEdit.Image = (Image)resources.GetObject("btnEdit.Image");
+            btnEdit.ImageTransparentColor = Color.Magenta;
+            btnEdit.Margin = new Padding(0);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(56, 56);
+            btnEdit.Text = "Sửa";
+            btnEdit.Click += OnEditing;
             // 
-            // dbtnEdit
+            // btnAdd
             // 
-            dbtnEdit.Image = (Image)resources.GetObject("dbtnEdit.Image");
-            dbtnEdit.Name = "dbtnEdit";
-            dbtnEdit.Size = new Size(262, 44);
-            dbtnEdit.Text = "Sửa";
-            dbtnEdit.Click += OnEditing;
+            btnAdd.Alignment = ToolStripItemAlignment.Right;
+            btnAdd.AutoSize = false;
+            btnAdd.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnAdd.Image = (Image)resources.GetObject("btnAdd.Image");
+            btnAdd.ImageTransparentColor = Color.Magenta;
+            btnAdd.Margin = new Padding(0);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(56, 56);
+            btnAdd.Text = "Thêm";
+            btnAdd.Click += OnAdding;
             // 
-            // dbtnDelete
+            // btnSave
             // 
-            dbtnDelete.Image = (Image)resources.GetObject("dbtnDelete.Image");
-            dbtnDelete.Name = "dbtnDelete";
-            dbtnDelete.Size = new Size(262, 44);
-            dbtnDelete.Text = "Xóa";
-            dbtnDelete.Click += OnDeleting;
-            // 
-            // dbtnImex
-            // 
-            dbtnImex.Image = (Image)resources.GetObject("dbtnImex.Image");
-            dbtnImex.Name = "dbtnImex";
-            dbtnImex.Size = new Size(262, 44);
-            dbtnImex.Text = "Nhập/Xuất";
-            dbtnImex.Click += OnStartImex;
-            // 
-            // dbtnRoleManager
-            // 
-            dbtnRoleManager.Image = (Image)resources.GetObject("dbtnRoleManager.Image");
-            dbtnRoleManager.Name = "dbtnRoleManager";
-            dbtnRoleManager.Size = new Size(262, 44);
-            dbtnRoleManager.Text = "Chức vụ";
-            dbtnRoleManager.Click += OnStartRoleManager;
+            btnSave.Alignment = ToolStripItemAlignment.Right;
+            btnSave.AutoSize = false;
+            btnSave.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnSave.Image = (Image)resources.GetObject("btnSave.Image");
+            btnSave.ImageTransparentColor = Color.Magenta;
+            btnSave.Margin = new Padding(0);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(56, 56);
+            btnSave.Text = "Hoàn tất";
+            btnSave.Click += OnSave;
             // 
             // btnSearch
             // 
@@ -283,9 +268,8 @@
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialListBox lbStaffs;
+        private ListBox lbStaffs;
         private StaffInfoUI ucStaffInfo;
-        private GrantingPermissionsUI ucGranting;
         private Label lbStaffInfoTitle;
         private Panel pnStaffInfo;
         private ToolStrip tsAppBar;
@@ -294,13 +278,11 @@
         private ToolStripLabel txtTitle;
         private ToolStripTextBox tbSearchBox;
         private ToolStripButton btnSearch;
-        private ToolStripDropDownButton btnMore;
-        private ToolStripMenuItem dbtnSave;
-        private ToolStripMenuItem dbtnSearch;
-        private ToolStripMenuItem dbtnAdd;
-        private ToolStripMenuItem dbtnEdit;
-        private ToolStripMenuItem dbtnDelete;
-        private ToolStripMenuItem dbtnImex;
-        private ToolStripMenuItem dbtnRoleManager;
+        private ToolStripButton btnSave;
+        private ToolStripButton btnAdd;
+        private ToolStripButton btnEdit;
+        private ToolStripButton btnDelete;
+        private ToolStripButton btnImex;
+        private ToolStripButton btnRoleManager;
     }
 }

@@ -3,6 +3,8 @@
     using HotelManagement.Business;
     using HotelManagement.Data;
     using HotelManagement.Data.Transfer;
+    using HotelManagement.Presentation.ListControlHelpers;
+    using HotelManagement.Properties;
 
     using MaterialSkin;
 
@@ -14,13 +16,49 @@
     {
         private bool editing, searching;
         private int selectedIndex;
+        Bitmap defLogo;
+        Material2ItemRenderer<ListBox> lbStaffRenderer;
+
         public StaffManagerUI()
         {
             InitializeComponent();
-            ucStaffInfo.PermissionsInfoChanged += OnPermissionsInfoChanged;
+            defLogo = new Bitmap(Resources.account_circle_outline);
+            defLogo.SetResolution(40, 40);
+            lbStaffRenderer = new Material2ItemRenderer<ListBox>.Simple(lbStaffs, OnFillItem)
+            {
+                BackgroundBrushes =
+                {
+                    { DrawItemState.Selected, new SolidBrush(Color.Gainsboro) },
+                    { DrawItemState.None, new SolidBrush(Color.WhiteSmoke) }
+                },
+                TitleBrushes =
+                {
+                    { DrawItemState.None, new SolidBrush(Color.Black) }
+                },
+                SubtitleBrushes =
+                {
+                    { DrawItemState.None, new SolidBrush(Color.DimGray) }
+                },
+                Subtitle2Brushes =
+                {
+                    { DrawItemState.None, new SolidBrush(Color.DimGray) }
+                }
+            };
+            lbStaffs.IntegralHeight = false;
+            lbStaffs.ItemHeight = 72;
+            //ucStaffInfo.PermissionsInfoChanged += OnPermissionsInfoChanged;
             MinimumSize = new Size(360 + SystemInformation.VerticalScrollBarWidth, 360 + SystemInformation.HorizontalScrollBarHeight);
             ClientSize = new Size(600, 600);
             selectedIndex = -1;
+        }
+
+        private void OnFillItem(ListBox c, int itemIndex, DrawItemState state, ref string title, ref string subtitle, ref string subtitle2, ref Image logo, ref bool action)
+        {
+            var a = c.Items[itemIndex] as Staff;
+            title = a.FullName;
+            subtitle = a.Birthday.ToString();
+            subtitle2 = a.IdString();
+            logo = defLogo;
         }
 
         protected override void OnLoad(EventArgs e)
@@ -39,29 +77,31 @@
             OnResize(EventArgs.Empty);
         }
 
-        private void OnPermissionsInfoChanged(object? sender, EventArgs e) => ucGranting.LoadPermissions();
+        //private void OnPermissionsInfoChanged(object? sender, EventArgs e) => ucGranting.LoadPermissions();
 
         private void LoadStaffs()
         {
-            lbStaffs.Clear();
-            foreach (var staff in StaffManagerBO.Instance.Staffs)
-            {
-                lbStaffs.AddItem(new MaterialListBoxItem()
-                {
-                    Tag = staff,
-                    Text = staff.FullName,
-                    SecondaryText = staff.IdString()
-                });
-            }
+            lbStaffs.DataSource = null;
+            lbStaffs.DataSource = StaffManagerBO.Instance.Staffs;
+            //lbStaffs.Clear();
+            //foreach (var staff in StaffManagerBO.Instance.Staffs)
+            //{
+            //    lbStaffs.AddItem(new MaterialListBoxItem()
+            //    {
+            //        Tag = staff,
+            //        Text = staff.FullName,
+            //        SecondaryText = staff.IdString()
+            //    });
+            //}
         }
 
         private void LoadActions()
         {
-            dbtnRoleManager.Available = LoginBO.IsPermissionGranted(Permission.ReadRole);
-            dbtnSave.Available = false;
-            dbtnAdd.Available = false;
-            dbtnEdit.Available = false;
-            dbtnDelete.Available = false;
+            btnRoleManager.Available = LoginBO.IsPermissionGranted(Permission.ReadRole);
+            btnSave.Available = false;
+            btnAdd.Available = false;
+            btnEdit.Available = false;
+            btnDelete.Available = false;
             if (!searching)
             {
                 if (!editing)
@@ -69,15 +109,15 @@
                     bool write = LoginBO.IsPermissionGranted(Permission.WriteStaff);
                     if (selectedIndex >= 0)
                     {
-                        dbtnAdd.Available = write
+                        btnAdd.Available = write
                             && ClientSize.Width >= 600;
-                        dbtnEdit.Available = write;
-                        dbtnDelete.Available = write
+                        btnEdit.Available = write;
+                        btnDelete.Available = write
                             && StaffManagerBO.Instance.CanDelete;
                     }
-                    else dbtnAdd.Available = write;
+                    else btnAdd.Available = write;
                 }
-                else dbtnSave.Available = true;
+                else btnSave.Available = true;
             }
             AdjustToolbar();
         }
@@ -91,8 +131,8 @@
                 pnStaffInfo.Visible = true;
                 ucStaffInfo.LoadStaff();
                 ucStaffInfo.Editing = editing;
-                ucGranting.LoadPermissions();
-                ucGranting.Editing = editing;
+                //ucGranting.LoadPermissions();
+                //ucGranting.Editing = editing;
             }
             else
             {
@@ -118,7 +158,7 @@
             lbStaffs.SelectedIndex = sel;
         }
 
-        private void OnSelectedStaffIndex(object sender, MaterialListBoxItem selectedItem)
+        private void OnSelectedStaffIndex(object sender, EventArgs args)
         {
             var bo = StaffManagerBO.Instance;
             if (editing)
@@ -127,7 +167,8 @@
                 editing = false;
             }
             selectedIndex = lbStaffs.SelectedIndex;
-            var sa = (Staff?)selectedItem.Tag;
+            var items = lbStaffs.Items;
+            var sa = (uint)selectedIndex < (uint)items.Count ? items[selectedIndex] as Staff : null;
             bo.SelectedStaff = sa;
             GrantingPermissionsBO.Instance
                 .SelectedAccessable = sa;
@@ -178,7 +219,7 @@
                 && ucStaffInfo.CanSaveStaff())
             {
                 ucStaffInfo.SaveStaff();
-                ucGranting.SaveChange();
+                //ucGranting.SaveChange();
                 bo.AcceptEdit();
                 editing = false;
                 LoadStaffs();
@@ -187,7 +228,7 @@
             }
             else
             {
-                MessageBox.Show("Tên nhân viên không hợp lệ!",
+                MessageBox.Show("Thông tin nhân viên không hợp lệ!",
                     "Lưu nhân viên", MessageBoxButtons.OK);
             }
         }
@@ -275,7 +316,7 @@
 
         private void AdjustOptions(ref int width)
         {
-            dbtnSearch.Available = false;
+            btnSearch.Available = false;
             if (!searching)
             {
                 width -= btnSearch.Width;
@@ -283,22 +324,22 @@
             }
             else btnSearch.Available = false;
 
-            var list = btnMore.DropDownItems;
-            for (int i = 0, c = list.Count; i < c; ++i)
-            {
-                if (list[i].Available)
-                {
-                    btnMore.Available = true;
-                    if (!searching && width < btnSearch.Width)
-                    {
-                        btnSearch.Available = false;
-                        dbtnSearch.Available = true;
-                    }
-                    else width -= btnMore.Width;
-                    return;
-                }
-            }
-            btnMore.Available = false;
+            //var list = btnMore.DropDownItems;
+            //for (int i = 0, c = list.Count; i < c; ++i)
+            //{
+            //    if (list[i].Available)
+            //    {
+            //        btnMore.Available = true;
+            //        if (!searching && width < btnSearch.Width)
+            //        {
+            //            btnSearch.Available = false;
+            //            btnSearch.Available = true;
+            //        }
+            //        else width -= btnMore.Width;
+            //        return;
+            //    }
+            //}
+            //btnMore.Available = false;
         }
 
         private void AdjustToolbar()
@@ -358,7 +399,7 @@
             pnStaffInfo.ClientSize = s;
             s -= scrollSize;
             ucStaffInfo.ClientSize = new(s.Width, ucStaffInfo.ClientSize.Height);
-            ucGranting.ClientSize = new(s.Width, 0);
+            //ucGranting.ClientSize = new(s.Width, 0);
             pnStaffInfo.AutoScrollMinSize = s;
         }
     }

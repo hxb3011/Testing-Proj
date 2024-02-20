@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountManagerUI));
-            lbAccounts = new MaterialSkin.Controls.MaterialListBox();
+            lbAccounts = new ListBox();
             pnAccountInfo = new Panel();
             ucAccountInfo = new AccountInfoUI();
             lbAccountInfoTitle = new Label();
@@ -37,15 +37,14 @@
             btnBack = new ToolStripButton();
             txtTitle = new ToolStripLabel();
             tbSearchBox = new ToolStripTextBox();
-            btnMore = new ToolStripDropDownButton();
-            dbtnSave = new ToolStripMenuItem();
-            dbtnSearch = new ToolStripMenuItem();
-            dbtnAdd = new ToolStripMenuItem();
-            dbtnEdit = new ToolStripMenuItem();
-            dbtnDelete = new ToolStripMenuItem();
+            btnSave = new ToolStripButton();
+            btnSearch = new ToolStripButton();
+            btnAdd = new ToolStripButton();
+            btnEdit = new ToolStripButton();
+            btnDelete = new ToolStripButton();
             btnSearch = new ToolStripButton();
             panel1 = new Panel();
-            dbtnGroups = new ToolStripMenuItem();
+            btnGroups = new ToolStripButton();
             pnAccountInfo.SuspendLayout();
             toolStrip1.SuspendLayout();
             panel1.SuspendLayout();
@@ -54,17 +53,13 @@
             // lbAccounts
             // 
             lbAccounts.BackColor = Color.WhiteSmoke;
-            lbAccounts.BorderColor = Color.LightGray;
-            lbAccounts.Depth = 0;
             lbAccounts.Dock = DockStyle.Left;
             lbAccounts.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             lbAccounts.Location = new Point(0, 56);
-            lbAccounts.MouseState = MaterialSkin.MouseState.HOVER;
             lbAccounts.Name = "lbAccounts";
             lbAccounts.SelectedIndex = -1;
             lbAccounts.SelectedItem = null;
             lbAccounts.Size = new Size(240, 544);
-            lbAccounts.Style = MaterialSkin.Controls.MaterialListBox.ListBoxStyle.TwoLine;
             lbAccounts.TabIndex = 0;
             lbAccounts.SelectedIndexChanged += OnSelectedAccountIndex;
             // 
@@ -112,7 +107,7 @@
             toolStrip1.Dock = DockStyle.Fill;
             toolStrip1.GripStyle = ToolStripGripStyle.Hidden;
             toolStrip1.ImageScalingSize = new Size(24, 24);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnBack, txtTitle, tbSearchBox, btnMore, btnSearch });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnBack, txtTitle, tbSearchBox, btnGroups, btnDelete, btnEdit, btnAdd, btnSave, btnSearch });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Padding = new Padding(0);
@@ -151,59 +146,65 @@
             tbSearchBox.Size = new Size(248, 39);
             tbSearchBox.TextChanged += OnLookingUp;
             // 
-            // btnMore
+            // btnSave
             // 
-            btnMore.Alignment = ToolStripItemAlignment.Right;
-            btnMore.AutoSize = false;
-            btnMore.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            btnMore.DropDownItems.AddRange(new ToolStripItem[] { dbtnSave, dbtnSearch, dbtnAdd, dbtnEdit, dbtnDelete, dbtnGroups });
-            btnMore.Image = (Image)resources.GetObject("btnMore.Image");
-            btnMore.ImageTransparentColor = Color.Magenta;
-            btnMore.Margin = new Padding(0);
-            btnMore.Name = "btnMore";
-            btnMore.ShowDropDownArrow = false;
-            btnMore.Size = new Size(56, 56);
-            btnMore.Text = "Tùy chọn khác";
+            btnSave.Alignment = ToolStripItemAlignment.Right;
+            btnSave.AutoSize = false;
+            btnSave.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnSave.Image = (Image)resources.GetObject("btnSave.Image");
+            btnSave.ImageTransparentColor = Color.Magenta;
+            btnSave.Margin = new Padding(0);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(56, 56);
+            btnSave.Text = "Hoàn tất";
+            btnSave.Click += OnSave;
             // 
-            // dbtnSave
+            // btnSearch
             // 
-            dbtnSave.Image = (Image)resources.GetObject("dbtnSave.Image");
-            dbtnSave.Name = "dbtnSave";
-            dbtnSave.Size = new Size(359, 44);
-            dbtnSave.Text = "Lưu";
-            dbtnSave.Click += OnSave;
+            btnSearch.Image = (Image)resources.GetObject("btnSearch.Image");
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(246, 44);
+            btnSearch.Text = "Tìm kiếm";
+            btnSearch.Click += OnStartSearch;
             // 
-            // dbtnSearch
+            // btnAdd
             // 
-            dbtnSearch.Image = (Image)resources.GetObject("dbtnSearch.Image");
-            dbtnSearch.Name = "dbtnSearch";
-            dbtnSearch.Size = new Size(359, 44);
-            dbtnSearch.Text = "Tìm kiếm";
-            dbtnSearch.Click += OnStartSearch;
+            btnAdd.Alignment = ToolStripItemAlignment.Right;
+            btnAdd.AutoSize = false;
+            btnAdd.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnAdd.Image = (Image)resources.GetObject("btnAdd.Image");
+            btnAdd.ImageTransparentColor = Color.Magenta;
+            btnAdd.Margin = new Padding(0);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(56, 56);
+            btnAdd.Text = "Thêm";
+            btnAdd.Click += OnAdding;
             // 
-            // dbtnAdd
+            // btnEdit
             // 
-            dbtnAdd.Image = (Image)resources.GetObject("dbtnAdd.Image");
-            dbtnAdd.Name = "dbtnAdd";
-            dbtnAdd.Size = new Size(359, 44);
-            dbtnAdd.Text = "Thêm";
-            dbtnAdd.Click += OnAdding;
+            btnEdit.Alignment = ToolStripItemAlignment.Right;
+            btnEdit.AutoSize = false;
+            btnEdit.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnEdit.Image = (Image)resources.GetObject("btnEdit.Image");
+            btnEdit.ImageTransparentColor = Color.Magenta;
+            btnEdit.Margin = new Padding(0);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(56, 56);
+            btnEdit.Text = "Sửa";
+            btnEdit.Click += OnEditing;
             // 
-            // dbtnEdit
+            // btnDelete
             // 
-            dbtnEdit.Image = (Image)resources.GetObject("dbtnEdit.Image");
-            dbtnEdit.Name = "dbtnEdit";
-            dbtnEdit.Size = new Size(359, 44);
-            dbtnEdit.Text = "Sửa";
-            dbtnEdit.Click += OnEditing;
-            // 
-            // dbtnDelete
-            // 
-            dbtnDelete.Image = (Image)resources.GetObject("dbtnDelete.Image");
-            dbtnDelete.Name = "dbtnDelete";
-            dbtnDelete.Size = new Size(359, 44);
-            dbtnDelete.Text = "Xóa";
-            dbtnDelete.Click += OnDeleting;
+            btnDelete.Alignment = ToolStripItemAlignment.Right;
+            btnDelete.AutoSize = false;
+            btnDelete.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnDelete.Image = (Image)resources.GetObject("btnDelete.Image");
+            btnDelete.ImageTransparentColor = Color.Magenta;
+            btnDelete.Margin = new Padding(0);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(56, 56);
+            btnDelete.Text = "Xóa";
+            btnDelete.Click += OnDeleting;
             // 
             // btnSearch
             // 
@@ -227,13 +228,18 @@
             panel1.Size = new Size(600, 56);
             panel1.TabIndex = 3;
             // 
-            // dbtnGroups
-            // 
-            dbtnGroups.Image = (Image)resources.GetObject("dbtnGroups.Image");
-            dbtnGroups.Name = "dbtnGroups";
-            dbtnGroups.Size = new Size(359, 44);
-            dbtnGroups.Text = "Nhóm quyền";
-            dbtnGroups.Click += OnStartPermissionGroupManager;
+            // btnGroups
+            //
+            btnGroups.Alignment = ToolStripItemAlignment.Right;
+            btnGroups.AutoSize = false;
+            btnGroups.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnGroups.Image = (Image)resources.GetObject("btnGroups.Image");
+            btnGroups.ImageTransparentColor = Color.Magenta;
+            btnGroups.Margin = new Padding(0);
+            btnGroups.Name = "btnGroups";
+            btnGroups.Size = new Size(56, 56);
+            btnGroups.Text = "Nhóm quyền";
+            btnGroups.Click += OnStartPermissionGroupManager;
             // 
             // AccountManagerUI
             // 
@@ -254,7 +260,7 @@
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialListBox lbAccounts;
+        private ListBox lbAccounts;
         private AccountInfoUI ucAccountInfo;
         private Label lbAccountInfoTitle;
         private Panel pnAccountInfo;
@@ -264,12 +270,10 @@
         private ToolStripLabel txtTitle;
         private ToolStripTextBox tbSearchBox;
         private ToolStripButton btnSearch;
-        private ToolStripDropDownButton btnMore;
-        private ToolStripMenuItem dbtnSave;
-        private ToolStripMenuItem dbtnSearch;
-        private ToolStripMenuItem dbtnAdd;
-        private ToolStripMenuItem dbtnEdit;
-        private ToolStripMenuItem dbtnDelete;
-        private ToolStripMenuItem dbtnGroups;
+        private ToolStripButton btnSave;
+        private ToolStripButton btnAdd;
+        private ToolStripButton btnEdit;
+        private ToolStripButton btnDelete;
+        private ToolStripButton btnGroups;
     }
 }

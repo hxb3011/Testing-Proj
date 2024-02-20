@@ -204,34 +204,35 @@
             var bo = StaffManagerBO.Instance;
             var v = GetString(cells[i, cm[j++]].Value);
             if (!bo.IsValidName(v)) return false;
+            //MessageBox.Show(v + " |:FullName Passed");
             fullName = v;
-
             v = GetString(cells[i, cm[j++]].Value);
             if (Staff.GenderMaleString.Equals(v)) gender = Staff.GenderMale;
             else if (Staff.GenderFemaleString.Equals(v)) gender = Staff.GenderFemale;
             else return false;
-
+            //MessageBox.Show(v + " |:Gender Passed");
             v = GetString(cells[i, cm[j++]].Value);
             if (!DateOnly.TryParse(v, CultureInfo.CurrentCulture,
                 DateTimeStyles.AllowWhiteSpaces, out birthday))
                 return false;
-
+            //MessageBox.Show(v + " |:Birthday Passed");
             v = GetString(cells[i, cm[j++]].Value);
             if (!bo.IsValidCitizenId(v)) return false;
             citizenId = v;
-
+            //MessageBox.Show(v + " |:CitizenId Passed");
             v = GetString(cells[i, cm[j++]].Value);
             if (!bo.IsValidAddress(v)) return false;
             address = v;
-
+            //MessageBox.Show(v + " |:Address Passed");
             v = GetString(cells[i, cm[j++]].Value);
             if (!bo.IsValidPhone(v)) return false;
             phone = v;
-
+            //MessageBox.Show(v + " |:Phone Passed");
             v = GetString(cells[i, cm[j++]].Value);
             if (!double.TryParse(v, NumberStyles.Any,
                 CultureInfo.CurrentCulture, out salary))
                 return false;
+            //MessageBox.Show(v + " |:Row Passed" + i);
             return true;
         }
 

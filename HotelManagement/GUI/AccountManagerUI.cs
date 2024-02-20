@@ -3,6 +3,8 @@
     using HotelManagement.Business;
     using HotelManagement.Data;
     using HotelManagement.Data.Transfer;
+    using HotelManagement.Presentation.ListControlHelpers;
+    using HotelManagement.Properties;
 
     using MaterialSkin;
 
@@ -14,12 +16,42 @@
     {
         private bool editing, searching;
         private int selectedIndex;
+        Bitmap defLogo;
+        Material2ItemRenderer<ListBox> lbAccountRenderer;
         public AccountManagerUI()
         {
             InitializeComponent();
+            defLogo = new Bitmap(Resources.account_outline);
+            defLogo.SetResolution(40, 40);
+            lbAccountRenderer = new Material2ItemRenderer<ListBox>.Simple(lbAccounts, OnFillItem)
+            {
+                BackgroundBrushes =
+                {
+                    { DrawItemState.Selected, new SolidBrush(Color.Gainsboro) },
+                    { DrawItemState.None, new SolidBrush(Color.WhiteSmoke) }
+                },
+                TitleBrushes =
+                {
+                    { DrawItemState.None, new SolidBrush(Color.Black) }
+                },
+                SubtitleBrushes =
+                {
+                    { DrawItemState.None, new SolidBrush(Color.DimGray) }
+                }
+            };
+            lbAccounts.IntegralHeight = false;
+            lbAccounts.ItemHeight = 72;
             MinimumSize = new Size(360 + SystemInformation.VerticalScrollBarWidth, 360 + SystemInformation.HorizontalScrollBarHeight);
             ClientSize = new Size(600, 600);
             selectedIndex = -1;
+        }
+
+        private void OnFillItem(ListBox c, int itemIndex, DrawItemState state, ref string title, ref string subtitle, ref string subtitle2, ref Image logo, ref bool action)
+        {
+            var a = c.Items[itemIndex] as Account;
+            title = a.UserName;
+            subtitle = "UID " + a.Uid;
+            logo = defLogo;
         }
 
         protected override void OnLoad(EventArgs e)
@@ -33,25 +65,27 @@
 
         private void LoadAccounts()
         {
-            lbAccounts.Clear();
-            foreach (var account in AccountManagerBO.Instance.Accounts)
-            {
-                lbAccounts.AddItem(new MaterialListBoxItem()
-                {
-                    Tag = account,
-                    Text = account.UserName,
-                    SecondaryText = "UID " + account.UidString()
-                });
-            }
+            lbAccounts.DataSource = null;
+            lbAccounts.DataSource = AccountManagerBO.Instance.Accounts;
+            //lbAccounts.Clear();
+            //foreach (var account in AccountManagerBO.Instance.Accounts)
+            //{
+            //    lbAccounts.AddItem(new MaterialListBoxItem()
+            //    {
+            //        Tag = account,
+            //        Text = account.UserName,
+            //        SecondaryText = "UID " + account.UidString()
+            //    });
+            //}
         }
 
         private void LoadActions()
         {
-            dbtnGroups.Available = LoginBO.IsPermissionGranted(Permission.ReadPermissionGroup);
-            dbtnSave.Available = false;
-            dbtnAdd.Available = false;
-            dbtnEdit.Available = false;
-            dbtnDelete.Available = false;
+            btnGroups.Available = LoginBO.IsPermissionGranted(Permission.ReadPermissionGroup);
+            btnSave.Available = false;
+            btnAdd.Available = false;
+            btnEdit.Available = false;
+            btnDelete.Available = false;
             if (!searching)
             {
                 if (!editing)
@@ -59,15 +93,15 @@
                     bool write = LoginBO.IsPermissionGranted(Permission.WriteAccount);
                     if (selectedIndex >= 0)
                     {
-                        dbtnAdd.Available = write
+                        btnAdd.Available = write
                             && ClientSize.Width >= 600;
-                        dbtnEdit.Available = write;
-                        dbtnDelete.Available = write
+                        btnEdit.Available = write;
+                        btnDelete.Available = write
                             && AccountManagerBO.Instance.CanDelete;
                     }
-                    else dbtnAdd.Available = write;
+                    else btnAdd.Available = write;
                 }
-                else dbtnSave.Available = true;
+                else btnSave.Available = true;
             }
             AdjustToolbar();
         }
@@ -106,7 +140,7 @@
             lbAccounts.SelectedIndex = sel;
         }
 
-        private void OnSelectedAccountIndex(object sender, MaterialListBoxItem selectedItem)
+        private void OnSelectedAccountIndex(object sender, EventArgs args)
         {
             var bo = AccountManagerBO.Instance;
             if (editing)
@@ -115,7 +149,8 @@
                 editing = false;
             }
             selectedIndex = lbAccounts.SelectedIndex;
-            bo.SelectedAccount = (Account?)selectedItem.Tag;
+            var items = lbAccounts.Items;
+            bo.SelectedAccount = (uint)selectedIndex < (uint)items.Count ? items[selectedIndex] as Account : null;
             LoadActions();
             LoadInfo();
         }
@@ -240,7 +275,7 @@
 
         private void AdjustOptions(ref int width)
         {
-            dbtnSearch.Available = false;
+            btnSearch.Available = false;
             if (!searching)
             {
                 width -= btnSearch.Width;
@@ -248,22 +283,22 @@
             }
             else btnSearch.Available = false;
 
-            var list = btnMore.DropDownItems;
-            for (int i = 0, c = list.Count; i < c; ++i)
-            {
-                if (list[i].Available)
-                {
-                    btnMore.Available = true;
-                    if (!searching && width < btnSearch.Width)
-                    {
-                        btnSearch.Available = false;
-                        dbtnSearch.Available = true;
-                    }
-                    else width -= btnMore.Width;
-                    return;
-                }
-            }
-            btnMore.Available = false;
+            //var list = btnMore.DropDownItems;
+            //for (int i = 0, c = list.Count; i < c; ++i)
+            //{
+            //    if (list[i].Available)
+            //    {
+            //        btnMore.Available = true;
+            //        if (!searching && width < btnSearch.Width)
+            //        {
+            //            btnSearch.Available = false;
+            //            btnSearch.Available = true;
+            //        }
+            //        else width -= btnMore.Width;
+            //        return;
+            //    }
+            //}
+            //btnMore.Available = false;
         }
 
         private void AdjustToolbar()

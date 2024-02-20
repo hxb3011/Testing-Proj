@@ -3,6 +3,8 @@
     using HotelManagement.Business;
     using HotelManagement.Data;
     using HotelManagement.Data.Transfer;
+    using HotelManagement.Presentation.ListControlHelpers;
+    using HotelManagement.Properties;
 
     using MaterialSkin;
 
@@ -14,12 +16,42 @@
     {
         private bool editing, searching;
         private int selectedIndex;
+        Bitmap defLogo;
+        Material2ItemRenderer<ListBox> lbRoleRenderer;
         public RoleManagementUI()
         {
             InitializeComponent();
+            defLogo = new Bitmap(Resources.briefcase_outline);
+            defLogo.SetResolution(40, 40);
+            lbRoleRenderer = new Material2ItemRenderer<ListBox>.Simple(lbRoles, OnFillItem)
+            {
+                BackgroundBrushes =
+                {
+                    { DrawItemState.Selected, new SolidBrush(Color.Gainsboro) },
+                    { DrawItemState.None, new SolidBrush(Color.WhiteSmoke) }
+                },
+                TitleBrushes =
+                {
+                    { DrawItemState.None, new SolidBrush(Color.Black) }
+                },
+                SubtitleBrushes =
+                {
+                    { DrawItemState.None, new SolidBrush(Color.DimGray) }
+                }
+            };
+            lbRoles.IntegralHeight = false;
+            lbRoles.ItemHeight = 72;
             MinimumSize = new Size(360 + SystemInformation.VerticalScrollBarWidth, 360 + SystemInformation.HorizontalScrollBarHeight);
             ClientSize = new Size(600, 600);
             selectedIndex = -1;
+        }
+
+        private void OnFillItem(ListBox c, int itemIndex, DrawItemState state, ref string title, ref string subtitle, ref string subtitle2, ref Image logo, ref bool action)
+        {
+            var a = c.Items[itemIndex] as Role;
+            title = a.Name;
+            subtitle = a.IdString();
+            logo = defLogo;
         }
 
         protected override void OnLoad(EventArgs e)
@@ -34,24 +66,26 @@
 
         private void LoadRoles()
         {
-            lbRoles.Clear();
-            foreach (var group in RoleManagerBO.Instance.Roles)
-            {
-                lbRoles.AddItem(new MaterialListBoxItem()
-                {
-                    Tag = group,
-                    Text = group.Name,
-                    SecondaryText = group.IdString()
-                });
-            }
+            lbRoles.DataSource = null;
+            lbRoles.DataSource = RoleManagerBO.Instance.Roles;
+            //lbRoles.Clear();
+            //foreach (var group in RoleManagerBO.Instance.Roles)
+            //{
+            //    lbRoles.AddItem(new MaterialListBoxItem()
+            //    {
+            //        Tag = group,
+            //        Text = group.Name,
+            //        SecondaryText = group.IdString()
+            //    });
+            //}
         }
 
         private void LoadActions()
         {
-            dbtnSave.Available = false;
-            dbtnAdd.Available = false;
-            dbtnEdit.Available = false;
-            dbtnDelete.Available = false;
+            btnSave.Available = false;
+            btnAdd.Available = false;
+            btnEdit.Available = false;
+            btnDelete.Available = false;
             if (!searching)
             {
                 if (!editing)
@@ -59,15 +93,15 @@
                     bool write = LoginBO.IsPermissionGranted(Permission.WriteRole);
                     if (selectedIndex >= 0)
                     {
-                        dbtnAdd.Available = write
+                        btnAdd.Available = write
                             && ClientSize.Width >= 600;
-                        dbtnEdit.Available = write;
-                        dbtnDelete.Available = write
+                        btnEdit.Available = write;
+                        btnDelete.Available = write
                             && RoleManagerBO.Instance.CanDelete;
                     }
-                    else dbtnAdd.Available = write;
+                    else btnAdd.Available = write;
                 }
-                else dbtnSave.Available = true;
+                else btnSave.Available = true;
             }
             AdjustToolbar();
         }
@@ -101,7 +135,7 @@
             lbRoles.SelectedIndex = sel;
         }
 
-        private void OnSelectedRoleIndex(object sender, MaterialListBoxItem selectedItem)
+        private void OnSelectedRoleIndex(object sender, EventArgs args)
         {
             var bo = RoleManagerBO.Instance;
             if (editing)
@@ -110,7 +144,8 @@
                 editing = false;
             }
             selectedIndex = lbRoles.SelectedIndex;
-            var ro = (Role?)selectedItem.Tag;
+            var items = lbRoles.Items;
+            var ro = (uint)selectedIndex < (uint)items.Count ? items[selectedIndex] as Role : null;
             bo.SelectedRole = ro;
             LoadActions();
             LoadInfo();
@@ -233,7 +268,7 @@
 
         private void AdjustOptions(ref int width)
         {
-            dbtnSearch.Available = false;
+            btnSearch.Available = false;
             if (!searching)
             {
                 width -= btnSearch.Width;
@@ -241,22 +276,22 @@
             }
             else btnSearch.Available = false;
 
-            var list = btnMore.DropDownItems;
-            for (int i = 0, c = list.Count; i < c; ++i)
-            {
-                if (list[i].Available)
-                {
-                    btnMore.Available = true;
-                    if (!searching && width < btnSearch.Width)
-                    {
-                        btnSearch.Available = false;
-                        dbtnSearch.Available = true;
-                    }
-                    else width -= btnMore.Width;
-                    return;
-                }
-            }
-            btnMore.Available = false;
+            //var list = btnMore.DropDownItems;
+            //for (int i = 0, c = list.Count; i < c; ++i)
+            //{
+            //    if (list[i].Available)
+            //    {
+            //        btnMore.Available = true;
+            //        if (!searching && width < btnSearch.Width)
+            //        {
+            //            btnSearch.Available = false;
+            //            btnSearch.Available = true;
+            //        }
+            //        else width -= btnMore.Width;
+            //        return;
+            //    }
+            //}
+            //btnMore.Available = false;
         }
 
         private void AdjustToolbar()
