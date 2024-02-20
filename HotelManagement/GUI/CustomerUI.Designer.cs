@@ -105,7 +105,7 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(1260, 571);
+            tableLayoutPanel1.Size = new Size(1260, 564);
             tableLayoutPanel1.TabIndex = 2;
             // 
             // panel1
@@ -115,7 +115,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(945, 571);
+            panel1.Size = new Size(945, 564);
             panel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -131,7 +131,7 @@
             tableLayoutPanel2.RowCount = 2;
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(945, 571);
+            tableLayoutPanel2.Size = new Size(945, 564);
             tableLayoutPanel2.TabIndex = 0;
             // 
             // panel3
@@ -141,7 +141,7 @@
             panel3.Location = new Point(0, 165);
             panel3.Margin = new Padding(0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(945, 406);
+            panel3.Size = new Size(945, 399);
             panel3.TabIndex = 1;
             // 
             // groupBox2
@@ -154,7 +154,7 @@
             groupBox2.Margin = new Padding(4, 3, 4, 3);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(4, 3, 4, 3);
-            groupBox2.Size = new Size(945, 406);
+            groupBox2.Size = new Size(945, 399);
             groupBox2.TabIndex = 0;
             groupBox2.TabStop = false;
             groupBox2.Text = "Data";
@@ -167,7 +167,7 @@
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(4, 25);
+            dataGridView1.Location = new Point(4, 30);
             dataGridView1.Margin = new Padding(5, 3, 5, 3);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
@@ -175,7 +175,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(937, 378);
+            dataGridView1.Size = new Size(937, 366);
             dataGridView1.TabIndex = 1;
             // 
             // panel2
@@ -210,13 +210,13 @@
             tableLayoutPanel3.Controls.Add(tabControl2, 0, 0);
             tableLayoutPanel3.Controls.Add(tableLayoutPanel5, 0, 1);
             tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(4, 25);
+            tableLayoutPanel3.Location = new Point(4, 30);
             tableLayoutPanel3.Margin = new Padding(0);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 2;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 64F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 36F));
-            tableLayoutPanel3.Size = new Size(937, 137);
+            tableLayoutPanel3.Size = new Size(937, 132);
             tableLayoutPanel3.TabIndex = 0;
             // 
             // tabControl2
@@ -230,16 +230,16 @@
             tabControl2.Margin = new Padding(0);
             tabControl2.Name = "tabControl2";
             tabControl2.SelectedIndex = 0;
-            tabControl2.Size = new Size(937, 87);
+            tabControl2.Size = new Size(937, 84);
             tabControl2.TabIndex = 2;
             // 
             // tabPage4
             // 
             tabPage4.Controls.Add(tableLayoutPanel6);
-            tabPage4.Location = new Point(4, 30);
+            tabPage4.Location = new Point(4, 37);
             tabPage4.Margin = new Padding(0);
             tabPage4.Name = "tabPage4";
-            tabPage4.Size = new Size(929, 53);
+            tabPage4.Size = new Size(929, 43);
             tabPage4.TabIndex = 1;
             tabPage4.Text = "Mã KH";
             tabPage4.UseVisualStyleBackColor = true;
@@ -259,7 +259,7 @@
             tableLayoutPanel6.Padding = new Padding(3, 0, 3, 0);
             tableLayoutPanel6.RowCount = 1;
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel6.Size = new Size(929, 53);
+            tableLayoutPanel6.Size = new Size(929, 43);
             tableLayoutPanel6.TabIndex = 1;
             // 
             // mbtnDelFilterID
@@ -276,7 +276,7 @@
             mbtnDelFilterID.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnDelFilterID.Name = "mbtnDelFilterID";
             mbtnDelFilterID.NoAccentTextColor = Color.Empty;
-            mbtnDelFilterID.Size = new Size(300, 41);
+            mbtnDelFilterID.Size = new Size(300, 31);
             mbtnDelFilterID.TabIndex = 3;
             mbtnDelFilterID.Text = "Xóa";
             mbtnDelFilterID.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -294,16 +294,16 @@
             cbxFilterID.Location = new Point(7, 6);
             cbxFilterID.Margin = new Padding(4, 6, 4, 6);
             cbxFilterID.Name = "cbxFilterID";
-            cbxFilterID.Size = new Size(607, 29);
+            cbxFilterID.Size = new Size(607, 36);
             cbxFilterID.TabIndex = 4;
             // 
             // tabPage8
             // 
             tabPage8.Controls.Add(tableLayoutPanel4);
-            tabPage8.Location = new Point(4, 24);
+            tabPage8.Location = new Point(4, 29);
             tabPage8.Margin = new Padding(0);
             tabPage8.Name = "tabPage8";
-            tabPage8.Size = new Size(929, 63);
+            tabPage8.Size = new Size(929, 55);
             tabPage8.TabIndex = 2;
             tabPage8.Text = "Tên KH";
             tabPage8.UseVisualStyleBackColor = true;
@@ -323,7 +323,7 @@
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Size = new Size(929, 63);
+            tableLayoutPanel4.Size = new Size(929, 55);
             tableLayoutPanel4.TabIndex = 2;
             // 
             // mcbxDeleteFilterName
@@ -340,7 +340,7 @@
             mcbxDeleteFilterName.MouseState = MaterialSkin.MouseState.HOVER;
             mcbxDeleteFilterName.Name = "mcbxDeleteFilterName";
             mcbxDeleteFilterName.NoAccentTextColor = Color.Empty;
-            mcbxDeleteFilterName.Size = new Size(304, 53);
+            mcbxDeleteFilterName.Size = new Size(304, 45);
             mcbxDeleteFilterName.TabIndex = 4;
             mcbxDeleteFilterName.Text = "Xóa";
             mcbxDeleteFilterName.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -358,16 +358,16 @@
             cbxFilterName.Location = new Point(3, 5);
             cbxFilterName.Margin = new Padding(3, 5, 3, 5);
             cbxFilterName.Name = "cbxFilterName";
-            cbxFilterName.Size = new Size(613, 29);
+            cbxFilterName.Size = new Size(613, 36);
             cbxFilterName.TabIndex = 5;
             // 
             // tabPage9
             // 
             tabPage9.Controls.Add(tableLayoutPanel7);
-            tabPage9.Location = new Point(4, 24);
+            tabPage9.Location = new Point(4, 29);
             tabPage9.Margin = new Padding(0);
             tabPage9.Name = "tabPage9";
-            tabPage9.Size = new Size(929, 63);
+            tabPage9.Size = new Size(929, 55);
             tabPage9.TabIndex = 3;
             tabPage9.Text = "Giới Tính";
             tabPage9.UseVisualStyleBackColor = true;
@@ -386,7 +386,7 @@
             tableLayoutPanel7.Name = "tableLayoutPanel7";
             tableLayoutPanel7.RowCount = 1;
             tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel7.Size = new Size(929, 63);
+            tableLayoutPanel7.Size = new Size(929, 55);
             tableLayoutPanel7.TabIndex = 3;
             // 
             // mcbxDeleteFilterGender
@@ -403,7 +403,7 @@
             mcbxDeleteFilterGender.MouseState = MaterialSkin.MouseState.HOVER;
             mcbxDeleteFilterGender.Name = "mcbxDeleteFilterGender";
             mcbxDeleteFilterGender.NoAccentTextColor = Color.Empty;
-            mcbxDeleteFilterGender.Size = new Size(304, 53);
+            mcbxDeleteFilterGender.Size = new Size(304, 45);
             mcbxDeleteFilterGender.TabIndex = 5;
             mcbxDeleteFilterGender.Text = "Xóa";
             mcbxDeleteFilterGender.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -422,16 +422,16 @@
             cbxFilterGender.Location = new Point(3, 5);
             cbxFilterGender.Margin = new Padding(3, 5, 3, 5);
             cbxFilterGender.Name = "cbxFilterGender";
-            cbxFilterGender.Size = new Size(613, 29);
+            cbxFilterGender.Size = new Size(613, 36);
             cbxFilterGender.TabIndex = 5;
             // 
             // tabPage10
             // 
             tabPage10.Controls.Add(tableLayoutPanel8);
-            tabPage10.Location = new Point(4, 24);
+            tabPage10.Location = new Point(4, 29);
             tabPage10.Margin = new Padding(0);
             tabPage10.Name = "tabPage10";
-            tabPage10.Size = new Size(929, 63);
+            tabPage10.Size = new Size(929, 55);
             tabPage10.TabIndex = 4;
             tabPage10.Text = "CCCD";
             tabPage10.UseVisualStyleBackColor = true;
@@ -450,7 +450,7 @@
             tableLayoutPanel8.Name = "tableLayoutPanel8";
             tableLayoutPanel8.RowCount = 1;
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel8.Size = new Size(929, 63);
+            tableLayoutPanel8.Size = new Size(929, 55);
             tableLayoutPanel8.TabIndex = 3;
             // 
             // cbxFilterCCCD
@@ -463,7 +463,7 @@
             cbxFilterCCCD.Location = new Point(3, 5);
             cbxFilterCCCD.Margin = new Padding(3, 5, 3, 5);
             cbxFilterCCCD.Name = "cbxFilterCCCD";
-            cbxFilterCCCD.Size = new Size(613, 29);
+            cbxFilterCCCD.Size = new Size(613, 36);
             cbxFilterCCCD.TabIndex = 5;
             // 
             // mcbxDeleteFilterCCCD
@@ -479,7 +479,7 @@
             mcbxDeleteFilterCCCD.MouseState = MaterialSkin.MouseState.HOVER;
             mcbxDeleteFilterCCCD.Name = "mcbxDeleteFilterCCCD";
             mcbxDeleteFilterCCCD.NoAccentTextColor = Color.Empty;
-            mcbxDeleteFilterCCCD.Size = new Size(304, 53);
+            mcbxDeleteFilterCCCD.Size = new Size(304, 45);
             mcbxDeleteFilterCCCD.TabIndex = 6;
             mcbxDeleteFilterCCCD.Text = "Xóa";
             mcbxDeleteFilterCCCD.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -495,12 +495,12 @@
             tableLayoutPanel5.Controls.Add(mbtnFilter, 1, 0);
             tableLayoutPanel5.Controls.Add(mbtnDeleteAllFilter, 0, 0);
             tableLayoutPanel5.Dock = DockStyle.Fill;
-            tableLayoutPanel5.Location = new Point(0, 87);
+            tableLayoutPanel5.Location = new Point(0, 84);
             tableLayoutPanel5.Margin = new Padding(0);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 1;
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel5.Size = new Size(937, 50);
+            tableLayoutPanel5.Size = new Size(937, 48);
             tableLayoutPanel5.TabIndex = 1;
             // 
             // mbtnFilter
@@ -516,7 +516,7 @@
             mbtnFilter.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnFilter.Name = "mbtnFilter";
             mbtnFilter.NoAccentTextColor = Color.Empty;
-            mbtnFilter.Size = new Size(455, 38);
+            mbtnFilter.Size = new Size(455, 36);
             mbtnFilter.TabIndex = 5;
             mbtnFilter.Text = "LỌC";
             mbtnFilter.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -537,7 +537,7 @@
             mbtnDeleteAllFilter.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnDeleteAllFilter.Name = "mbtnDeleteAllFilter";
             mbtnDeleteAllFilter.NoAccentTextColor = Color.Empty;
-            mbtnDeleteAllFilter.Size = new Size(454, 38);
+            mbtnDeleteAllFilter.Size = new Size(454, 36);
             mbtnDeleteAllFilter.TabIndex = 4;
             mbtnDeleteAllFilter.Text = "Xóa tất cả";
             mbtnDeleteAllFilter.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -552,7 +552,7 @@
             panel4.Location = new Point(945, 0);
             panel4.Margin = new Padding(0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(315, 571);
+            panel4.Size = new Size(315, 564);
             panel4.TabIndex = 1;
             // 
             // groupBox1
@@ -565,7 +565,7 @@
             groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4, 3, 4, 3);
-            groupBox1.Size = new Size(315, 571);
+            groupBox1.Size = new Size(315, 564);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Chức năng";
@@ -576,11 +576,11 @@
             panel5.Controls.Add(mbtnUpdateCustomer);
             panel5.Controls.Add(mbtnAddCustomer);
             panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(4, 25);
+            panel5.Location = new Point(4, 30);
             panel5.Margin = new Padding(0);
             panel5.Name = "panel5";
             panel5.Padding = new Padding(3);
-            panel5.Size = new Size(307, 543);
+            panel5.Size = new Size(307, 531);
             panel5.TabIndex = 0;
             // 
             // mbtnDeleteCustomer
@@ -663,17 +663,17 @@
             // tabPage1
             // 
             tabPage1.Controls.Add(tableLayoutPanel1);
-            tabPage1.Location = new Point(4, 30);
+            tabPage1.Location = new Point(4, 37);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1266, 577);
+            tabPage1.Size = new Size(1266, 570);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Customer";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // CustomerUI
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1274, 611);
             Controls.Add(tabControl1);

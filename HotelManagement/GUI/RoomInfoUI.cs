@@ -20,7 +20,7 @@ namespace HotelManagement.GUI
         private RoomBUS roomBUS = new RoomBUS();
         private RoomUI roomUI;
 
-        private List<String> status = new List<string>() { "Đã dọn dẹp", "Chưa dọn dẹp", "Sửa chữa"};
+        private List<String> status = new List<string>() { "Đã dọn dẹp", "Chưa dọn dẹp", "Sửa chữa" };
         private List<Room> roomList;
         private List<RoomType> roomTypeList;
         private List<RoomTypeConvinience> convinience_roomType;
@@ -97,7 +97,7 @@ namespace HotelManagement.GUI
 
 
             btnSave.Text = type;
-            if(type == "Chi tiết phòng")
+            if (type == "Chi tiết phòng")
             {
                 cbbRoomTypeID.Text = room.RoomTypeId;
                 cbbRoomTypeID.Enabled = false;
@@ -117,7 +117,7 @@ namespace HotelManagement.GUI
                     cbbRoomTypeID.SelectedIndex = 0;
                 }
             }
-            
+
 
 
         }
@@ -165,10 +165,10 @@ namespace HotelManagement.GUI
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            
-            foreach(var item in roomList)
+
+            foreach (var item in roomList)
             {
-                if(txbID.Text == item.Id)
+                if (txbID.Text == item.Id)
                 {
                     cbbStatus.SelectedIndex = item.Status;
                     cbbRoomTypeID.Text = item.RoomTypeId;

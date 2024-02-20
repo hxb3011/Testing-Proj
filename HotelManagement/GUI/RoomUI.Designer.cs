@@ -187,11 +187,11 @@
             // tabPage3
             // 
             tabPage3.Controls.Add(tableLayoutPanel10);
-            tabPage3.Location = new Point(4, 37);
+            tabPage3.Location = new Point(4, 30);
             tabPage3.Margin = new Padding(0);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(4, 3, 4, 3);
-            tabPage3.Size = new Size(1046, 44);
+            tabPage3.Size = new Size(1046, 55);
             tabPage3.TabIndex = 0;
             tabPage3.Text = "Mã loại phòng";
             tabPage3.UseVisualStyleBackColor = true;
@@ -210,7 +210,7 @@
             tableLayoutPanel10.Name = "tableLayoutPanel10";
             tableLayoutPanel10.RowCount = 1;
             tableLayoutPanel10.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel10.Size = new Size(1038, 38);
+            tableLayoutPanel10.Size = new Size(1038, 49);
             tableLayoutPanel10.TabIndex = 0;
             // 
             // mbtnDeleteFilterIDRoomType
@@ -226,7 +226,7 @@
             mbtnDeleteFilterIDRoomType.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnDeleteFilterIDRoomType.Name = "mbtnDeleteFilterIDRoomType";
             mbtnDeleteFilterIDRoomType.NoAccentTextColor = Color.Empty;
-            mbtnDeleteFilterIDRoomType.Size = new Size(304, 26);
+            mbtnDeleteFilterIDRoomType.Size = new Size(304, 37);
             mbtnDeleteFilterIDRoomType.TabIndex = 5;
             mbtnDeleteFilterIDRoomType.Text = "XÓA";
             mbtnDeleteFilterIDRoomType.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -243,18 +243,18 @@
             cbbFilterIDRoomType.Location = new Point(4, 6);
             cbbFilterIDRoomType.Margin = new Padding(4, 6, 4, 6);
             cbbFilterIDRoomType.Name = "cbbFilterIDRoomType";
-            cbbFilterIDRoomType.Size = new Size(718, 36);
+            cbbFilterIDRoomType.Size = new Size(718, 29);
             cbbFilterIDRoomType.TabIndex = 4;
             // 
             // tabPage4
             // 
             tabPage4.BackColor = Color.White;
             tabPage4.Controls.Add(tableLayoutPanel11);
-            tabPage4.Location = new Point(4, 29);
+            tabPage4.Location = new Point(4, 24);
             tabPage4.Margin = new Padding(0);
             tabPage4.Name = "tabPage4";
             tabPage4.Padding = new Padding(4, 3, 4, 3);
-            tabPage4.Size = new Size(1046, 57);
+            tabPage4.Size = new Size(1046, 64);
             tabPage4.TabIndex = 1;
             tabPage4.Text = "Tên loại phòng";
             // 
@@ -271,7 +271,7 @@
             tableLayoutPanel11.Name = "tableLayoutPanel11";
             tableLayoutPanel11.RowCount = 1;
             tableLayoutPanel11.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel11.Size = new Size(1038, 51);
+            tableLayoutPanel11.Size = new Size(1038, 58);
             tableLayoutPanel11.TabIndex = 1;
             // 
             // mbtnDeleteFilterNameRoomType
@@ -287,7 +287,7 @@
             mbtnDeleteFilterNameRoomType.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnDeleteFilterNameRoomType.Name = "mbtnDeleteFilterNameRoomType";
             mbtnDeleteFilterNameRoomType.NoAccentTextColor = Color.Empty;
-            mbtnDeleteFilterNameRoomType.Size = new Size(304, 39);
+            mbtnDeleteFilterNameRoomType.Size = new Size(304, 46);
             mbtnDeleteFilterNameRoomType.TabIndex = 6;
             mbtnDeleteFilterNameRoomType.Text = "xóa";
             mbtnDeleteFilterNameRoomType.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -304,17 +304,17 @@
             cbbFilterNameRoomType.Location = new Point(4, 6);
             cbbFilterNameRoomType.Margin = new Padding(4, 6, 4, 6);
             cbbFilterNameRoomType.Name = "cbbFilterNameRoomType";
-            cbbFilterNameRoomType.Size = new Size(718, 36);
+            cbbFilterNameRoomType.Size = new Size(718, 29);
             cbbFilterNameRoomType.TabIndex = 4;
             // 
             // tabPage2
             // 
             tabPage2.Controls.Add(tableLayoutPanel17);
-            tabPage2.Location = new Point(4, 37);
+            tabPage2.Location = new Point(4, 30);
             tabPage2.Margin = new Padding(0);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(4, 3, 4, 3);
-            tabPage2.Size = new Size(1046, 44);
+            tabPage2.Size = new Size(1046, 55);
             tabPage2.TabIndex = 0;
             tabPage2.Text = "Mã tiện nghi";
             tabPage2.UseVisualStyleBackColor = true;
@@ -333,7 +333,7 @@
             tableLayoutPanel17.Name = "tableLayoutPanel17";
             tableLayoutPanel17.RowCount = 1;
             tableLayoutPanel17.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel17.Size = new Size(1038, 38);
+            tableLayoutPanel17.Size = new Size(1038, 49);
             tableLayoutPanel17.TabIndex = 0;
             // 
             // mbtnDeleteFilterConvinienceID
@@ -349,7 +349,7 @@
             mbtnDeleteFilterConvinienceID.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnDeleteFilterConvinienceID.Name = "mbtnDeleteFilterConvinienceID";
             mbtnDeleteFilterConvinienceID.NoAccentTextColor = Color.Empty;
-            mbtnDeleteFilterConvinienceID.Size = new Size(304, 26);
+            mbtnDeleteFilterConvinienceID.Size = new Size(304, 37);
             mbtnDeleteFilterConvinienceID.TabIndex = 7;
             mbtnDeleteFilterConvinienceID.Text = "xóa";
             mbtnDeleteFilterConvinienceID.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -365,21 +365,21 @@
             cbbFilterConvinienceID.DropDownHeight = 70;
             cbbFilterConvinienceID.FormattingEnabled = true;
             cbbFilterConvinienceID.IntegralHeight = false;
-            cbbFilterConvinienceID.ItemHeight = 28;
+            cbbFilterConvinienceID.ItemHeight = 21;
             cbbFilterConvinienceID.Location = new Point(4, 6);
             cbbFilterConvinienceID.Margin = new Padding(4, 6, 4, 6);
             cbbFilterConvinienceID.Name = "cbbFilterConvinienceID";
-            cbbFilterConvinienceID.Size = new Size(718, 36);
+            cbbFilterConvinienceID.Size = new Size(718, 29);
             cbbFilterConvinienceID.TabIndex = 3;
             // 
             // tabPage5
             // 
             tabPage5.Controls.Add(tableLayoutPanel18);
-            tabPage5.Location = new Point(4, 29);
+            tabPage5.Location = new Point(4, 24);
             tabPage5.Margin = new Padding(0);
             tabPage5.Name = "tabPage5";
             tabPage5.Padding = new Padding(4, 3, 4, 3);
-            tabPage5.Size = new Size(1046, 57);
+            tabPage5.Size = new Size(1046, 64);
             tabPage5.TabIndex = 1;
             tabPage5.Text = "Tên tiện nghi";
             tabPage5.UseVisualStyleBackColor = true;
@@ -398,7 +398,7 @@
             tableLayoutPanel18.Name = "tableLayoutPanel18";
             tableLayoutPanel18.RowCount = 1;
             tableLayoutPanel18.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel18.Size = new Size(1038, 51);
+            tableLayoutPanel18.Size = new Size(1038, 58);
             tableLayoutPanel18.TabIndex = 1;
             // 
             // mbtnDeleteFilterConvinienceName
@@ -414,7 +414,7 @@
             mbtnDeleteFilterConvinienceName.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnDeleteFilterConvinienceName.Name = "mbtnDeleteFilterConvinienceName";
             mbtnDeleteFilterConvinienceName.NoAccentTextColor = Color.Empty;
-            mbtnDeleteFilterConvinienceName.Size = new Size(304, 39);
+            mbtnDeleteFilterConvinienceName.Size = new Size(304, 46);
             mbtnDeleteFilterConvinienceName.TabIndex = 6;
             mbtnDeleteFilterConvinienceName.Text = "XÓA";
             mbtnDeleteFilterConvinienceName.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -431,7 +431,7 @@
             cbbFilterConvinienceName.Location = new Point(4, 6);
             cbbFilterConvinienceName.Margin = new Padding(4, 6, 4, 6);
             cbbFilterConvinienceName.Name = "cbbFilterConvinienceName";
-            cbbFilterConvinienceName.Size = new Size(718, 36);
+            cbbFilterConvinienceName.Size = new Size(718, 29);
             cbbFilterConvinienceName.TabIndex = 0;
             // 
             // tabControl
@@ -450,11 +450,11 @@
             // tabPageRoom
             // 
             tabPageRoom.Controls.Add(tableLayoutPanel1);
-            tabPageRoom.Location = new Point(4, 37);
+            tabPageRoom.Location = new Point(4, 30);
             tabPageRoom.Margin = new Padding(0);
             tabPageRoom.Name = "tabPageRoom";
             tabPageRoom.Padding = new Padding(4, 3, 4, 3);
-            tabPageRoom.Size = new Size(1424, 705);
+            tabPageRoom.Size = new Size(1424, 712);
             tabPageRoom.TabIndex = 0;
             tabPageRoom.Text = "Phòng";
             tabPageRoom.UseVisualStyleBackColor = true;
@@ -473,7 +473,7 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(1416, 699);
+            tableLayoutPanel1.Size = new Size(1416, 706);
             tableLayoutPanel1.TabIndex = 2;
             // 
             // panel1
@@ -483,7 +483,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1062, 699);
+            panel1.Size = new Size(1062, 706);
             panel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -499,7 +499,7 @@
             tableLayoutPanel2.RowCount = 2;
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(1062, 699);
+            tableLayoutPanel2.Size = new Size(1062, 706);
             tableLayoutPanel2.TabIndex = 0;
             // 
             // panel3
@@ -509,7 +509,7 @@
             panel3.Location = new Point(0, 165);
             panel3.Margin = new Padding(0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1062, 534);
+            panel3.Size = new Size(1062, 541);
             panel3.TabIndex = 1;
             // 
             // groupBox2
@@ -521,10 +521,10 @@
             groupBox2.Margin = new Padding(0);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(4, 3, 4, 3);
-            groupBox2.Size = new Size(1062, 534);
+            groupBox2.Size = new Size(1062, 541);
             groupBox2.TabIndex = 0;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Data";
+            groupBox2.Text = "Dữ liệu";
             // 
             // dtgvShowRoom
             // 
@@ -535,7 +535,7 @@
             dtgvShowRoom.BorderStyle = BorderStyle.None;
             dtgvShowRoom.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvShowRoom.Dock = DockStyle.Fill;
-            dtgvShowRoom.Location = new Point(4, 30);
+            dtgvShowRoom.Location = new Point(4, 25);
             dtgvShowRoom.Margin = new Padding(0);
             dtgvShowRoom.Name = "dtgvShowRoom";
             dtgvShowRoom.ReadOnly = true;
@@ -543,7 +543,7 @@
             dtgvShowRoom.RowHeadersWidth = 51;
             dtgvShowRoom.RowTemplate.Height = 29;
             dtgvShowRoom.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtgvShowRoom.Size = new Size(1054, 501);
+            dtgvShowRoom.Size = new Size(1054, 513);
             dtgvShowRoom.TabIndex = 1;
             dtgvShowRoom.CellClick += dtgvShowRoom_CellClick;
             // 
@@ -569,7 +569,7 @@
             groupBox3.Size = new Size(1062, 165);
             groupBox3.TabIndex = 1;
             groupBox3.TabStop = false;
-            groupBox3.Text = "Filter";
+            groupBox3.Text = "Bộ lọc";
             // 
             // tableLayoutPanel3
             // 
@@ -578,13 +578,13 @@
             tableLayoutPanel3.Controls.Add(tabControl2, 0, 0);
             tableLayoutPanel3.Controls.Add(tableLayoutPanel5, 0, 1);
             tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(4, 30);
+            tableLayoutPanel3.Location = new Point(4, 25);
             tableLayoutPanel3.Margin = new Padding(0);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 2;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 65F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 35F));
-            tableLayoutPanel3.Size = new Size(1054, 132);
+            tableLayoutPanel3.Size = new Size(1054, 137);
             tableLayoutPanel3.TabIndex = 0;
             // 
             // tabControl2
@@ -597,17 +597,17 @@
             tabControl2.Margin = new Padding(0);
             tabControl2.Name = "tabControl2";
             tabControl2.SelectedIndex = 0;
-            tabControl2.Size = new Size(1054, 85);
+            tabControl2.Size = new Size(1054, 89);
             tabControl2.TabIndex = 2;
             // 
             // tabPageMaPhong
             // 
             tabPageMaPhong.Controls.Add(tableLayoutPanel4);
-            tabPageMaPhong.Location = new Point(4, 37);
+            tabPageMaPhong.Location = new Point(4, 30);
             tabPageMaPhong.Margin = new Padding(0);
             tabPageMaPhong.Name = "tabPageMaPhong";
             tabPageMaPhong.Padding = new Padding(4, 3, 4, 3);
-            tabPageMaPhong.Size = new Size(1046, 44);
+            tabPageMaPhong.Size = new Size(1046, 55);
             tabPageMaPhong.TabIndex = 0;
             tabPageMaPhong.Text = "Mã phòng";
             tabPageMaPhong.UseVisualStyleBackColor = true;
@@ -626,7 +626,7 @@
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Size = new Size(1038, 38);
+            tableLayoutPanel4.Size = new Size(1038, 49);
             tableLayoutPanel4.TabIndex = 0;
             // 
             // mbtnDeleteFilterIDRoom
@@ -642,7 +642,7 @@
             mbtnDeleteFilterIDRoom.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnDeleteFilterIDRoom.Name = "mbtnDeleteFilterIDRoom";
             mbtnDeleteFilterIDRoom.NoAccentTextColor = Color.Empty;
-            mbtnDeleteFilterIDRoom.Size = new Size(338, 26);
+            mbtnDeleteFilterIDRoom.Size = new Size(338, 37);
             mbtnDeleteFilterIDRoom.TabIndex = 4;
             mbtnDeleteFilterIDRoom.Text = "XÓA";
             mbtnDeleteFilterIDRoom.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -659,17 +659,17 @@
             cbbFilterIDRoom.Location = new Point(4, 6);
             cbbFilterIDRoom.Margin = new Padding(4, 6, 4, 6);
             cbbFilterIDRoom.Name = "cbbFilterIDRoom";
-            cbbFilterIDRoom.Size = new Size(684, 36);
+            cbbFilterIDRoom.Size = new Size(684, 29);
             cbbFilterIDRoom.TabIndex = 3;
             // 
             // tabPageTrangThai
             // 
             tabPageTrangThai.Controls.Add(tableLayoutPanel6);
-            tabPageTrangThai.Location = new Point(4, 29);
+            tabPageTrangThai.Location = new Point(4, 24);
             tabPageTrangThai.Margin = new Padding(0);
             tabPageTrangThai.Name = "tabPageTrangThai";
             tabPageTrangThai.Padding = new Padding(4, 3, 4, 3);
-            tabPageTrangThai.Size = new Size(1046, 57);
+            tabPageTrangThai.Size = new Size(1046, 64);
             tabPageTrangThai.TabIndex = 1;
             tabPageTrangThai.Text = "Trạng thái";
             tabPageTrangThai.UseVisualStyleBackColor = true;
@@ -688,7 +688,7 @@
             tableLayoutPanel6.Name = "tableLayoutPanel6";
             tableLayoutPanel6.RowCount = 1;
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel6.Size = new Size(1038, 51);
+            tableLayoutPanel6.Size = new Size(1038, 58);
             tableLayoutPanel6.TabIndex = 1;
             // 
             // mbtnDeleteFilterStatusRoom
@@ -704,7 +704,7 @@
             mbtnDeleteFilterStatusRoom.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnDeleteFilterStatusRoom.Name = "mbtnDeleteFilterStatusRoom";
             mbtnDeleteFilterStatusRoom.NoAccentTextColor = Color.Empty;
-            mbtnDeleteFilterStatusRoom.Size = new Size(304, 39);
+            mbtnDeleteFilterStatusRoom.Size = new Size(304, 46);
             mbtnDeleteFilterStatusRoom.TabIndex = 5;
             mbtnDeleteFilterStatusRoom.Text = "XÓA";
             mbtnDeleteFilterStatusRoom.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -721,17 +721,17 @@
             cbbFilterStateRoom.Location = new Point(4, 6);
             cbbFilterStateRoom.Margin = new Padding(4, 6, 4, 6);
             cbbFilterStateRoom.Name = "cbbFilterStateRoom";
-            cbbFilterStateRoom.Size = new Size(718, 36);
+            cbbFilterStateRoom.Size = new Size(718, 29);
             cbbFilterStateRoom.TabIndex = 0;
             // 
             // tabPageLoaiPhong
             // 
             tabPageLoaiPhong.Controls.Add(tableLayoutPanel13);
-            tabPageLoaiPhong.Location = new Point(4, 29);
+            tabPageLoaiPhong.Location = new Point(4, 24);
             tabPageLoaiPhong.Margin = new Padding(0);
             tabPageLoaiPhong.Name = "tabPageLoaiPhong";
             tabPageLoaiPhong.Padding = new Padding(4, 3, 4, 3);
-            tabPageLoaiPhong.Size = new Size(1046, 57);
+            tabPageLoaiPhong.Size = new Size(1046, 64);
             tabPageLoaiPhong.TabIndex = 2;
             tabPageLoaiPhong.Text = "Mã loại phòng";
             tabPageLoaiPhong.UseVisualStyleBackColor = true;
@@ -750,7 +750,7 @@
             tableLayoutPanel13.Name = "tableLayoutPanel13";
             tableLayoutPanel13.RowCount = 1;
             tableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel13.Size = new Size(1038, 51);
+            tableLayoutPanel13.Size = new Size(1038, 58);
             tableLayoutPanel13.TabIndex = 2;
             // 
             // cbbFilterIDTypeRoom
@@ -762,7 +762,7 @@
             cbbFilterIDTypeRoom.Location = new Point(4, 6);
             cbbFilterIDTypeRoom.Margin = new Padding(4, 6, 4, 6);
             cbbFilterIDTypeRoom.Name = "cbbFilterIDTypeRoom";
-            cbbFilterIDTypeRoom.Size = new Size(718, 36);
+            cbbFilterIDTypeRoom.Size = new Size(718, 29);
             cbbFilterIDTypeRoom.TabIndex = 0;
             // 
             // mbtnDeleteFilterIDTypeRoom
@@ -778,7 +778,7 @@
             mbtnDeleteFilterIDTypeRoom.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnDeleteFilterIDTypeRoom.Name = "mbtnDeleteFilterIDTypeRoom";
             mbtnDeleteFilterIDTypeRoom.NoAccentTextColor = Color.Empty;
-            mbtnDeleteFilterIDTypeRoom.Size = new Size(304, 39);
+            mbtnDeleteFilterIDTypeRoom.Size = new Size(304, 46);
             mbtnDeleteFilterIDTypeRoom.TabIndex = 6;
             mbtnDeleteFilterIDTypeRoom.Text = "XÓA";
             mbtnDeleteFilterIDTypeRoom.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -795,13 +795,13 @@
             tableLayoutPanel5.Controls.Add(mbtnFilterRoom, 1, 0);
             tableLayoutPanel5.Controls.Add(mbtnDeleteAllFilterRoom, 0, 0);
             tableLayoutPanel5.Dock = DockStyle.Fill;
-            tableLayoutPanel5.Location = new Point(0, 85);
+            tableLayoutPanel5.Location = new Point(0, 89);
             tableLayoutPanel5.Margin = new Padding(0);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 1;
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.Size = new Size(1054, 47);
+            tableLayoutPanel5.Size = new Size(1054, 48);
             tableLayoutPanel5.TabIndex = 1;
             // 
             // mbtnFilterRoom
@@ -817,7 +817,7 @@
             mbtnFilterRoom.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnFilterRoom.Name = "mbtnFilterRoom";
             mbtnFilterRoom.NoAccentTextColor = Color.Empty;
-            mbtnFilterRoom.Size = new Size(513, 35);
+            mbtnFilterRoom.Size = new Size(513, 36);
             mbtnFilterRoom.TabIndex = 5;
             mbtnFilterRoom.Text = "LỌC";
             mbtnFilterRoom.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -838,7 +838,7 @@
             mbtnDeleteAllFilterRoom.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnDeleteAllFilterRoom.Name = "mbtnDeleteAllFilterRoom";
             mbtnDeleteAllFilterRoom.NoAccentTextColor = Color.Empty;
-            mbtnDeleteAllFilterRoom.Size = new Size(513, 35);
+            mbtnDeleteAllFilterRoom.Size = new Size(513, 36);
             mbtnDeleteAllFilterRoom.TabIndex = 4;
             mbtnDeleteAllFilterRoom.Text = "XÓA TẤT CẢ";
             mbtnDeleteAllFilterRoom.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -853,7 +853,7 @@
             panel4.Location = new Point(1062, 0);
             panel4.Margin = new Padding(0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(354, 699);
+            panel4.Size = new Size(354, 706);
             panel4.TabIndex = 1;
             // 
             // groupBox1
@@ -865,7 +865,7 @@
             groupBox1.Margin = new Padding(0);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4, 3, 4, 3);
-            groupBox1.Size = new Size(354, 699);
+            groupBox1.Size = new Size(354, 706);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Chức năng";
@@ -876,10 +876,10 @@
             panel5.Controls.Add(mbtnEditRoom);
             panel5.Controls.Add(mbtnRoomDetail);
             panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(4, 30);
+            panel5.Location = new Point(4, 25);
             panel5.Margin = new Padding(0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(346, 666);
+            panel5.Size = new Size(346, 678);
             panel5.TabIndex = 0;
             // 
             // mbtnEditRoom
@@ -929,11 +929,11 @@
             // tabPageRoomType
             // 
             tabPageRoomType.Controls.Add(tableLayoutPanel7);
-            tabPageRoomType.Location = new Point(4, 29);
+            tabPageRoomType.Location = new Point(4, 30);
             tabPageRoomType.Margin = new Padding(0);
             tabPageRoomType.Name = "tabPageRoomType";
             tabPageRoomType.Padding = new Padding(4, 3, 4, 3);
-            tabPageRoomType.Size = new Size(1424, 713);
+            tabPageRoomType.Size = new Size(1424, 712);
             tabPageRoomType.TabIndex = 1;
             tabPageRoomType.Text = "Loại phòng";
             tabPageRoomType.UseVisualStyleBackColor = true;
@@ -952,7 +952,7 @@
             tableLayoutPanel7.Name = "tableLayoutPanel7";
             tableLayoutPanel7.RowCount = 1;
             tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel7.Size = new Size(1416, 707);
+            tableLayoutPanel7.Size = new Size(1416, 706);
             tableLayoutPanel7.TabIndex = 3;
             // 
             // panel6
@@ -962,7 +962,7 @@
             panel6.Location = new Point(0, 0);
             panel6.Margin = new Padding(0);
             panel6.Name = "panel6";
-            panel6.Size = new Size(1062, 707);
+            panel6.Size = new Size(1062, 706);
             panel6.TabIndex = 0;
             // 
             // tableLayoutPanel8
@@ -978,7 +978,7 @@
             tableLayoutPanel8.RowCount = 2;
             tableLayoutPanel8.RowStyles.Add(new RowStyle());
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel8.Size = new Size(1062, 707);
+            tableLayoutPanel8.Size = new Size(1062, 706);
             tableLayoutPanel8.TabIndex = 0;
             // 
             // panel7
@@ -988,7 +988,7 @@
             panel7.Location = new Point(0, 165);
             panel7.Margin = new Padding(0);
             panel7.Name = "panel7";
-            panel7.Size = new Size(1062, 542);
+            panel7.Size = new Size(1062, 541);
             panel7.TabIndex = 1;
             // 
             // groupBox4
@@ -996,15 +996,15 @@
             groupBox4.BackColor = Color.White;
             groupBox4.Controls.Add(dtgvShowRoomType);
             groupBox4.Dock = DockStyle.Fill;
-            groupBox4.ForeColor = SystemColors.Desktop;
+            groupBox4.ForeColor = SystemColors.HotTrack;
             groupBox4.Location = new Point(0, 0);
             groupBox4.Margin = new Padding(0);
             groupBox4.Name = "groupBox4";
             groupBox4.Padding = new Padding(4, 3, 4, 3);
-            groupBox4.Size = new Size(1062, 542);
+            groupBox4.Size = new Size(1062, 541);
             groupBox4.TabIndex = 0;
             groupBox4.TabStop = false;
-            groupBox4.Text = "Data";
+            groupBox4.Text = "Dữ liệu";
             // 
             // dtgvShowRoomType
             // 
@@ -1014,7 +1014,7 @@
             dtgvShowRoomType.BorderStyle = BorderStyle.None;
             dtgvShowRoomType.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvShowRoomType.Dock = DockStyle.Fill;
-            dtgvShowRoomType.Location = new Point(4, 30);
+            dtgvShowRoomType.Location = new Point(4, 25);
             dtgvShowRoomType.Margin = new Padding(0);
             dtgvShowRoomType.Name = "dtgvShowRoomType";
             dtgvShowRoomType.ReadOnly = true;
@@ -1022,7 +1022,7 @@
             dtgvShowRoomType.RowHeadersWidth = 51;
             dtgvShowRoomType.RowTemplate.Height = 29;
             dtgvShowRoomType.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtgvShowRoomType.Size = new Size(1054, 509);
+            dtgvShowRoomType.Size = new Size(1054, 513);
             dtgvShowRoomType.TabIndex = 1;
             dtgvShowRoomType.CellClick += dtgvShowRoomType_CellClick;
             // 
@@ -1049,7 +1049,7 @@
             groupBox5.Size = new Size(1062, 165);
             groupBox5.TabIndex = 1;
             groupBox5.TabStop = false;
-            groupBox5.Text = "Filter";
+            groupBox5.Text = "Bộ lọc";
             // 
             // tableLayoutPanel9
             // 
@@ -1058,13 +1058,13 @@
             tableLayoutPanel9.Controls.Add(tabControl3, 0, 0);
             tableLayoutPanel9.Controls.Add(tableLayoutPanel12, 0, 1);
             tableLayoutPanel9.Dock = DockStyle.Fill;
-            tableLayoutPanel9.Location = new Point(4, 30);
+            tableLayoutPanel9.Location = new Point(4, 25);
             tableLayoutPanel9.Margin = new Padding(0);
             tableLayoutPanel9.Name = "tableLayoutPanel9";
             tableLayoutPanel9.RowCount = 2;
             tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Percent, 65F));
             tableLayoutPanel9.RowStyles.Add(new RowStyle(SizeType.Percent, 35F));
-            tableLayoutPanel9.Size = new Size(1054, 132);
+            tableLayoutPanel9.Size = new Size(1054, 137);
             tableLayoutPanel9.TabIndex = 0;
             // 
             // tabControl3
@@ -1076,7 +1076,7 @@
             tabControl3.Margin = new Padding(0);
             tabControl3.Name = "tabControl3";
             tabControl3.SelectedIndex = 0;
-            tabControl3.Size = new Size(1054, 85);
+            tabControl3.Size = new Size(1054, 89);
             tabControl3.TabIndex = 2;
             // 
             // tableLayoutPanel12
@@ -1087,13 +1087,13 @@
             tableLayoutPanel12.Controls.Add(mbtnFilterRoomType, 1, 0);
             tableLayoutPanel12.Controls.Add(mbtnDeleteAllFilterRoomType, 0, 0);
             tableLayoutPanel12.Dock = DockStyle.Fill;
-            tableLayoutPanel12.Location = new Point(0, 85);
+            tableLayoutPanel12.Location = new Point(0, 89);
             tableLayoutPanel12.Margin = new Padding(0);
             tableLayoutPanel12.Name = "tableLayoutPanel12";
             tableLayoutPanel12.RowCount = 1;
             tableLayoutPanel12.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel12.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel12.Size = new Size(1054, 47);
+            tableLayoutPanel12.Size = new Size(1054, 48);
             tableLayoutPanel12.TabIndex = 1;
             // 
             // mbtnFilterRoomType
@@ -1109,7 +1109,7 @@
             mbtnFilterRoomType.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnFilterRoomType.Name = "mbtnFilterRoomType";
             mbtnFilterRoomType.NoAccentTextColor = Color.Empty;
-            mbtnFilterRoomType.Size = new Size(513, 35);
+            mbtnFilterRoomType.Size = new Size(513, 36);
             mbtnFilterRoomType.TabIndex = 8;
             mbtnFilterRoomType.Text = "LỌC";
             mbtnFilterRoomType.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -1130,7 +1130,7 @@
             mbtnDeleteAllFilterRoomType.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnDeleteAllFilterRoomType.Name = "mbtnDeleteAllFilterRoomType";
             mbtnDeleteAllFilterRoomType.NoAccentTextColor = Color.Empty;
-            mbtnDeleteAllFilterRoomType.Size = new Size(513, 35);
+            mbtnDeleteAllFilterRoomType.Size = new Size(513, 36);
             mbtnDeleteAllFilterRoomType.TabIndex = 7;
             mbtnDeleteAllFilterRoomType.Text = "xóa tất cả";
             mbtnDeleteAllFilterRoomType.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -1145,7 +1145,7 @@
             panel9.Location = new Point(1062, 0);
             panel9.Margin = new Padding(0);
             panel9.Name = "panel9";
-            panel9.Size = new Size(354, 707);
+            panel9.Size = new Size(354, 706);
             panel9.TabIndex = 1;
             // 
             // groupBox6
@@ -1158,7 +1158,7 @@
             groupBox6.Margin = new Padding(0);
             groupBox6.Name = "groupBox6";
             groupBox6.Padding = new Padding(4, 3, 4, 3);
-            groupBox6.Size = new Size(354, 707);
+            groupBox6.Size = new Size(354, 706);
             groupBox6.TabIndex = 0;
             groupBox6.TabStop = false;
             groupBox6.Text = "Chức năng";
@@ -1171,10 +1171,10 @@
             panel10.Controls.Add(mbtnAddRoomType);
             panel10.Controls.Add(mbtnRoomTypeDetail);
             panel10.Dock = DockStyle.Fill;
-            panel10.Location = new Point(4, 30);
+            panel10.Location = new Point(4, 25);
             panel10.Margin = new Padding(0);
             panel10.Name = "panel10";
-            panel10.Size = new Size(346, 674);
+            panel10.Size = new Size(346, 678);
             panel10.TabIndex = 0;
             // 
             // mbtnDeleteRoomType
@@ -1268,11 +1268,11 @@
             // tabPageConvinience
             // 
             tabPageConvinience.Controls.Add(tableLayoutPanel14);
-            tabPageConvinience.Location = new Point(4, 37);
+            tabPageConvinience.Location = new Point(4, 30);
             tabPageConvinience.Margin = new Padding(0);
             tabPageConvinience.Name = "tabPageConvinience";
             tabPageConvinience.Padding = new Padding(4, 3, 4, 3);
-            tabPageConvinience.Size = new Size(1424, 705);
+            tabPageConvinience.Size = new Size(1424, 712);
             tabPageConvinience.TabIndex = 2;
             tabPageConvinience.Text = "Tiện nghi";
             tabPageConvinience.UseVisualStyleBackColor = true;
@@ -1291,7 +1291,7 @@
             tableLayoutPanel14.Name = "tableLayoutPanel14";
             tableLayoutPanel14.RowCount = 1;
             tableLayoutPanel14.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel14.Size = new Size(1416, 699);
+            tableLayoutPanel14.Size = new Size(1416, 706);
             tableLayoutPanel14.TabIndex = 3;
             // 
             // panel15
@@ -1301,7 +1301,7 @@
             panel15.Location = new Point(0, 0);
             panel15.Margin = new Padding(0);
             panel15.Name = "panel15";
-            panel15.Size = new Size(1062, 699);
+            panel15.Size = new Size(1062, 706);
             panel15.TabIndex = 0;
             // 
             // tableLayoutPanel15
@@ -1317,7 +1317,7 @@
             tableLayoutPanel15.RowCount = 2;
             tableLayoutPanel15.RowStyles.Add(new RowStyle());
             tableLayoutPanel15.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel15.Size = new Size(1062, 699);
+            tableLayoutPanel15.Size = new Size(1062, 706);
             tableLayoutPanel15.TabIndex = 0;
             // 
             // panel16
@@ -1327,7 +1327,7 @@
             panel16.Location = new Point(0, 165);
             panel16.Margin = new Padding(0);
             panel16.Name = "panel16";
-            panel16.Size = new Size(1062, 534);
+            panel16.Size = new Size(1062, 541);
             panel16.TabIndex = 1;
             // 
             // groupBox7
@@ -1340,7 +1340,7 @@
             groupBox7.Margin = new Padding(0);
             groupBox7.Name = "groupBox7";
             groupBox7.Padding = new Padding(4, 3, 4, 3);
-            groupBox7.Size = new Size(1062, 534);
+            groupBox7.Size = new Size(1062, 541);
             groupBox7.TabIndex = 0;
             groupBox7.TabStop = false;
             groupBox7.Text = "Data";
@@ -1353,7 +1353,7 @@
             dtgvShowConvinience.BorderStyle = BorderStyle.None;
             dtgvShowConvinience.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvShowConvinience.Dock = DockStyle.Fill;
-            dtgvShowConvinience.Location = new Point(4, 30);
+            dtgvShowConvinience.Location = new Point(4, 25);
             dtgvShowConvinience.Margin = new Padding(0);
             dtgvShowConvinience.Name = "dtgvShowConvinience";
             dtgvShowConvinience.ReadOnly = true;
@@ -1361,7 +1361,7 @@
             dtgvShowConvinience.RowHeadersWidth = 51;
             dtgvShowConvinience.RowTemplate.Height = 29;
             dtgvShowConvinience.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtgvShowConvinience.Size = new Size(1054, 501);
+            dtgvShowConvinience.Size = new Size(1054, 513);
             dtgvShowConvinience.TabIndex = 1;
             dtgvShowConvinience.CellClick += dtgvShowConvinience_CellClick;
             // 
@@ -1397,13 +1397,13 @@
             tableLayoutPanel16.Controls.Add(tabControl4, 0, 0);
             tableLayoutPanel16.Controls.Add(tableLayoutPanel20, 0, 1);
             tableLayoutPanel16.Dock = DockStyle.Fill;
-            tableLayoutPanel16.Location = new Point(4, 30);
+            tableLayoutPanel16.Location = new Point(4, 25);
             tableLayoutPanel16.Margin = new Padding(0);
             tableLayoutPanel16.Name = "tableLayoutPanel16";
             tableLayoutPanel16.RowCount = 2;
             tableLayoutPanel16.RowStyles.Add(new RowStyle(SizeType.Percent, 65F));
             tableLayoutPanel16.RowStyles.Add(new RowStyle(SizeType.Percent, 35F));
-            tableLayoutPanel16.Size = new Size(1054, 132);
+            tableLayoutPanel16.Size = new Size(1054, 137);
             tableLayoutPanel16.TabIndex = 0;
             // 
             // tabControl4
@@ -1415,7 +1415,7 @@
             tabControl4.Margin = new Padding(0);
             tabControl4.Name = "tabControl4";
             tabControl4.SelectedIndex = 0;
-            tabControl4.Size = new Size(1054, 85);
+            tabControl4.Size = new Size(1054, 89);
             tabControl4.TabIndex = 2;
             // 
             // tableLayoutPanel20
@@ -1426,13 +1426,13 @@
             tableLayoutPanel20.Controls.Add(mbtnFilterConvinience, 1, 0);
             tableLayoutPanel20.Controls.Add(mbtnDeleteAllFilterConvinience, 0, 0);
             tableLayoutPanel20.Dock = DockStyle.Fill;
-            tableLayoutPanel20.Location = new Point(0, 85);
+            tableLayoutPanel20.Location = new Point(0, 89);
             tableLayoutPanel20.Margin = new Padding(0);
             tableLayoutPanel20.Name = "tableLayoutPanel20";
             tableLayoutPanel20.RowCount = 1;
             tableLayoutPanel20.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel20.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel20.Size = new Size(1054, 47);
+            tableLayoutPanel20.Size = new Size(1054, 48);
             tableLayoutPanel20.TabIndex = 1;
             // 
             // mbtnFilterConvinience
@@ -1448,7 +1448,7 @@
             mbtnFilterConvinience.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnFilterConvinience.Name = "mbtnFilterConvinience";
             mbtnFilterConvinience.NoAccentTextColor = Color.Empty;
-            mbtnFilterConvinience.Size = new Size(513, 35);
+            mbtnFilterConvinience.Size = new Size(513, 36);
             mbtnFilterConvinience.TabIndex = 9;
             mbtnFilterConvinience.Text = "LỌC";
             mbtnFilterConvinience.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -1469,7 +1469,7 @@
             mbtnDeleteAllFilterConvinience.MouseState = MaterialSkin.MouseState.HOVER;
             mbtnDeleteAllFilterConvinience.Name = "mbtnDeleteAllFilterConvinience";
             mbtnDeleteAllFilterConvinience.NoAccentTextColor = Color.Empty;
-            mbtnDeleteAllFilterConvinience.Size = new Size(513, 35);
+            mbtnDeleteAllFilterConvinience.Size = new Size(513, 36);
             mbtnDeleteAllFilterConvinience.TabIndex = 8;
             mbtnDeleteAllFilterConvinience.Text = "XÓA TẤT CẢ";
             mbtnDeleteAllFilterConvinience.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -1484,7 +1484,7 @@
             panel22.Location = new Point(1062, 0);
             panel22.Margin = new Padding(0);
             panel22.Name = "panel22";
-            panel22.Size = new Size(354, 699);
+            panel22.Size = new Size(354, 706);
             panel22.TabIndex = 1;
             // 
             // groupBox9
@@ -1497,7 +1497,7 @@
             groupBox9.Margin = new Padding(0);
             groupBox9.Name = "groupBox9";
             groupBox9.Padding = new Padding(4, 3, 4, 3);
-            groupBox9.Size = new Size(354, 699);
+            groupBox9.Size = new Size(354, 706);
             groupBox9.TabIndex = 0;
             groupBox9.TabStop = false;
             groupBox9.Text = "Chức năng";
@@ -1509,9 +1509,9 @@
             panel23.Controls.Add(mbtnAddConvinience);
             panel23.Controls.Add(mbtnConvinienceDetail);
             panel23.Dock = DockStyle.Fill;
-            panel23.Location = new Point(4, 30);
+            panel23.Location = new Point(4, 25);
             panel23.Name = "panel23";
-            panel23.Size = new Size(346, 666);
+            panel23.Size = new Size(346, 678);
             panel23.TabIndex = 0;
             // 
             // mbtnDeleteConvinience
@@ -1604,7 +1604,7 @@
             // 
             // RoomUI
             // 
-            AutoScaleDimensions = new SizeF(11F, 28F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1432, 746);
             Controls.Add(tabControl);

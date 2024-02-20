@@ -28,7 +28,7 @@ namespace HotelManagement.Ultils
 
         public static Boolean checkCitizenId(string citizenId)
         {
-            return int.TryParse(citizenId, out var result);
+            return double.TryParse(citizenId, out var result);
         }
     }
 

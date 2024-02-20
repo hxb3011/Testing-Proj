@@ -61,9 +61,13 @@ namespace HotelManagement.GUI
                     txbName.Text = string.Empty;
                 }
             }
-            
-        }
 
+        }
+        //kiểm tra dữ liệu trươc khi gửi đi
+        private bool validateForm()
+        {
+            return Validator.Instance.checkTextBox(txbName, errName, new string[] { "not-empty" });
+        }
         #endregion
 
 
@@ -73,6 +77,10 @@ namespace HotelManagement.GUI
             string id = txbID.Text;
             string name = txbName.Text;
 
+            if (!validateForm())
+            {
+                return;
+            }    
             Convinience conv = new Convinience(id, name);
             if (isEdit)
             {
@@ -103,14 +111,15 @@ namespace HotelManagement.GUI
             }
         }
 
+     
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            if(isEdit)
+            if (isEdit)
             {
-                foreach(var conv in convinienceList)
+                foreach (var conv in convinienceList)
                 {
-                    if(conv.Id == txbID.Text)
+                    if (conv.Id == txbID.Text)
                     {
                         txbName.Text = conv.Name;
                         return;
@@ -123,9 +132,14 @@ namespace HotelManagement.GUI
                 return;
             }
         }
+        private void txbName_TextChanged(object sender, EventArgs e)
+        {
+            Validator.Instance.checkTextBox(txbName, errName, new string[] { "not-empty" });
+        }
         #endregion
 
 
-       
+
+
     }
 }
